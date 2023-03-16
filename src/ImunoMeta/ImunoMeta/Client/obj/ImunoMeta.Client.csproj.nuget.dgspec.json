@@ -1,0 +1,152 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\ImunoMeta.Client.csproj": {}
+  },
+  "projects": {
+    "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\ImunoMeta.Client.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\ImunoMeta.Client.csproj",
+        "projectName": "ImunoMeta.Client",
+        "projectPath": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\ImunoMeta.Client.csproj",
+        "packagesPath": "C:\\Users\\f8bru\\.nuget\\packages\\",
+        "outputPath": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\f8bru\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Shared\\ImunoMeta.Shared.csproj": {
+                "projectPath": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Shared\\ImunoMeta.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Components.WebAssembly": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.Authentication": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.1, )"
+            },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
+              "version": "[7.0.1, 7.0.1]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "browser-wasm": {
+          "#import": []
+        }
+      }
+    },
+    "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Shared\\ImunoMeta.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Shared\\ImunoMeta.Shared.csproj",
+        "projectName": "ImunoMeta.Shared",
+        "projectPath": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Shared\\ImunoMeta.Shared.csproj",
+        "packagesPath": "C:\\Users\\f8bru\\.nuget\\packages\\",
+        "outputPath": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Shared\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\f8bru\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
