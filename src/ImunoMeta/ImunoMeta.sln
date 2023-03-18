@@ -3,7 +3,31 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImunoMeta.Server", "ImunoMeta\Server\ImunoMeta.Server.csproj", "{ADF9475D-C451-40B4-8CC1-75D743B15ED3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImunoMeta.Client", "ImunoMeta\Client\ImunoMeta.Client.csproj", "{245CED9C-DC61-4927-8FC7-C622B4CE5382}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImunoMeta.Shared", "ImunoMeta\Shared\ImunoMeta.Shared.csproj", "{742A7416-D368-4C5C-86E3-6C6ACD48D951}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ADF9475D-C451-40B4-8CC1-75D743B15ED3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADF9475D-C451-40B4-8CC1-75D743B15ED3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADF9475D-C451-40B4-8CC1-75D743B15ED3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADF9475D-C451-40B4-8CC1-75D743B15ED3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{245CED9C-DC61-4927-8FC7-C622B4CE5382}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{245CED9C-DC61-4927-8FC7-C622B4CE5382}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{245CED9C-DC61-4927-8FC7-C622B4CE5382}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{245CED9C-DC61-4927-8FC7-C622B4CE5382}.Release|Any CPU.Build.0 = Release|Any CPU
+		{742A7416-D368-4C5C-86E3-6C6ACD48D951}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{742A7416-D368-4C5C-86E3-6C6ACD48D951}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{742A7416-D368-4C5C-86E3-6C6ACD48D951}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{742A7416-D368-4C5C-86E3-6C6ACD48D951}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection

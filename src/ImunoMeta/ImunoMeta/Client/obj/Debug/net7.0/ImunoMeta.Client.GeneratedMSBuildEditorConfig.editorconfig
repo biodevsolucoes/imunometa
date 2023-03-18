@@ -40,6 +40,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExvZ2luRGlzcGxheS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Projetos/biodev/imunometa/imunometa/src/ImunoMeta/ImunoMeta/Client/Shared/MeusPontos.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1ldXNQb250b3MucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projetos/biodev/imunometa/imunometa/src/ImunoMeta/ImunoMeta/Client/Shared/MinhasVacinas.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1pbmhhc1ZhY2luYXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Projetos/biodev/imunometa/imunometa/src/ImunoMeta/ImunoMeta/Client/Shared/RedirectToLogin.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFJlZGlyZWN0VG9Mb2dpbi5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 

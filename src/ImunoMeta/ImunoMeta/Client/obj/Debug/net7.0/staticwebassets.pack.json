@@ -1,0 +1,469 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\obj\\Debug\\net7.0\\build-gz\\kHnkkFvf.gz",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\obj\\Debug\\net7.0\\scopedcss\\bundle\\ImunoMeta.Client.styles.css",
+      "PackagePath": "staticwebassets\\ImunoMeta.Client.styles.css"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\obj\\Debug\\net7.0\\service-worker-assets.js",
+      "PackagePath": "staticwebassets\\service-worker-assets.js"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\obj\\Debug\\net7.0\\service-worker\\service-worker.published.js",
+      "PackagePath": "staticwebassets\\service-worker.js"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\css\\open-iconic\\README.md",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\README.md"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\icon-192.png",
+      "PackagePath": "staticwebassets\\icon-192.png"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\icon-512.png",
+      "PackagePath": "staticwebassets\\icon-512.png"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\manifest.json",
+      "PackagePath": "staticwebassets\\manifest.json"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\_accordion.scss",
+      "PackagePath": "staticwebassets\\scss\\_accordion.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\_alert.scss",
+      "PackagePath": "staticwebassets\\scss\\_alert.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\_badge.scss",
+      "PackagePath": "staticwebassets\\scss\\_badge.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\_breadcrumb.scss",
+      "PackagePath": "staticwebassets\\scss\\_breadcrumb.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\_button-group.scss",
+      "PackagePath": "staticwebassets\\scss\\_button-group.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\_buttons.scss",
+      "PackagePath": "staticwebassets\\scss\\_buttons.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\_card.scss",
+      "PackagePath": "staticwebassets\\scss\\_card.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\_carousel.scss",
+      "PackagePath": "staticwebassets\\scss\\_carousel.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\_close.scss",
+      "PackagePath": "staticwebassets\\scss\\_close.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\_containers.scss",
+      "PackagePath": "staticwebassets\\scss\\_containers.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\_dropdown.scss",
+      "PackagePath": "staticwebassets\\scss\\_dropdown.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\_forms.scss",
+      "PackagePath": "staticwebassets\\scss\\_forms.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\_functions.scss",
+      "PackagePath": "staticwebassets\\scss\\_functions.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\_grid.scss",
+      "PackagePath": "staticwebassets\\scss\\_grid.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\_helpers.scss",
+      "PackagePath": "staticwebassets\\scss\\_helpers.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\_images.scss",
+      "PackagePath": "staticwebassets\\scss\\_images.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\_list-group.scss",
+      "PackagePath": "staticwebassets\\scss\\_list-group.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\_maps.scss",
+      "PackagePath": "staticwebassets\\scss\\_maps.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\_mixins.scss",
+      "PackagePath": "staticwebassets\\scss\\_mixins.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\_modal.scss",
+      "PackagePath": "staticwebassets\\scss\\_modal.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\_nav.scss",
+      "PackagePath": "staticwebassets\\scss\\_nav.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\_navbar.scss",
+      "PackagePath": "staticwebassets\\scss\\_navbar.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\_offcanvas.scss",
+      "PackagePath": "staticwebassets\\scss\\_offcanvas.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\_pagination.scss",
+      "PackagePath": "staticwebassets\\scss\\_pagination.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\_placeholders.scss",
+      "PackagePath": "staticwebassets\\scss\\_placeholders.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\_popover.scss",
+      "PackagePath": "staticwebassets\\scss\\_popover.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\_progress.scss",
+      "PackagePath": "staticwebassets\\scss\\_progress.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\_reboot.scss",
+      "PackagePath": "staticwebassets\\scss\\_reboot.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\_root.scss",
+      "PackagePath": "staticwebassets\\scss\\_root.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\_spinners.scss",
+      "PackagePath": "staticwebassets\\scss\\_spinners.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\_tables.scss",
+      "PackagePath": "staticwebassets\\scss\\_tables.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\_toasts.scss",
+      "PackagePath": "staticwebassets\\scss\\_toasts.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\_tooltip.scss",
+      "PackagePath": "staticwebassets\\scss\\_tooltip.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\_transitions.scss",
+      "PackagePath": "staticwebassets\\scss\\_transitions.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\_type.scss",
+      "PackagePath": "staticwebassets\\scss\\_type.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\_utilities.scss",
+      "PackagePath": "staticwebassets\\scss\\_utilities.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\_variables-dark.scss",
+      "PackagePath": "staticwebassets\\scss\\_variables-dark.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\_variables.scss",
+      "PackagePath": "staticwebassets\\scss\\_variables.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\bootstrap-grid.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap-grid.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\bootstrap-reboot.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap-reboot.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\bootstrap-utilities.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap-utilities.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\bootstrap.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\forms\\_floating-labels.scss",
+      "PackagePath": "staticwebassets\\scss\\forms\\_floating-labels.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\forms\\_form-check.scss",
+      "PackagePath": "staticwebassets\\scss\\forms\\_form-check.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\forms\\_form-control.scss",
+      "PackagePath": "staticwebassets\\scss\\forms\\_form-control.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\forms\\_form-range.scss",
+      "PackagePath": "staticwebassets\\scss\\forms\\_form-range.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\forms\\_form-select.scss",
+      "PackagePath": "staticwebassets\\scss\\forms\\_form-select.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\forms\\_form-text.scss",
+      "PackagePath": "staticwebassets\\scss\\forms\\_form-text.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\forms\\_input-group.scss",
+      "PackagePath": "staticwebassets\\scss\\forms\\_input-group.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\forms\\_labels.scss",
+      "PackagePath": "staticwebassets\\scss\\forms\\_labels.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\forms\\_validation.scss",
+      "PackagePath": "staticwebassets\\scss\\forms\\_validation.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\helpers\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\scss\\helpers\\_clearfix.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\helpers\\_color-bg.scss",
+      "PackagePath": "staticwebassets\\scss\\helpers\\_color-bg.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\helpers\\_colored-links.scss",
+      "PackagePath": "staticwebassets\\scss\\helpers\\_colored-links.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\helpers\\_position.scss",
+      "PackagePath": "staticwebassets\\scss\\helpers\\_position.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\helpers\\_ratio.scss",
+      "PackagePath": "staticwebassets\\scss\\helpers\\_ratio.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\helpers\\_stacks.scss",
+      "PackagePath": "staticwebassets\\scss\\helpers\\_stacks.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\helpers\\_stretched-link.scss",
+      "PackagePath": "staticwebassets\\scss\\helpers\\_stretched-link.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\helpers\\_text-truncation.scss",
+      "PackagePath": "staticwebassets\\scss\\helpers\\_text-truncation.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\helpers\\_visually-hidden.scss",
+      "PackagePath": "staticwebassets\\scss\\helpers\\_visually-hidden.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\helpers\\_vr.scss",
+      "PackagePath": "staticwebassets\\scss\\helpers\\_vr.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\mixins\\_alert.scss",
+      "PackagePath": "staticwebassets\\scss\\mixins\\_alert.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\mixins\\_backdrop.scss",
+      "PackagePath": "staticwebassets\\scss\\mixins\\_backdrop.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\mixins\\_banner.scss",
+      "PackagePath": "staticwebassets\\scss\\mixins\\_banner.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\mixins\\_border-radius.scss",
+      "PackagePath": "staticwebassets\\scss\\mixins\\_border-radius.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\mixins\\_box-shadow.scss",
+      "PackagePath": "staticwebassets\\scss\\mixins\\_box-shadow.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\mixins\\_breakpoints.scss",
+      "PackagePath": "staticwebassets\\scss\\mixins\\_breakpoints.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\mixins\\_buttons.scss",
+      "PackagePath": "staticwebassets\\scss\\mixins\\_buttons.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\mixins\\_caret.scss",
+      "PackagePath": "staticwebassets\\scss\\mixins\\_caret.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\mixins\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\scss\\mixins\\_clearfix.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\mixins\\_color-mode.scss",
+      "PackagePath": "staticwebassets\\scss\\mixins\\_color-mode.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\mixins\\_color-scheme.scss",
+      "PackagePath": "staticwebassets\\scss\\mixins\\_color-scheme.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\mixins\\_container.scss",
+      "PackagePath": "staticwebassets\\scss\\mixins\\_container.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\mixins\\_deprecate.scss",
+      "PackagePath": "staticwebassets\\scss\\mixins\\_deprecate.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\mixins\\_forms.scss",
+      "PackagePath": "staticwebassets\\scss\\mixins\\_forms.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\mixins\\_gradients.scss",
+      "PackagePath": "staticwebassets\\scss\\mixins\\_gradients.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\mixins\\_grid.scss",
+      "PackagePath": "staticwebassets\\scss\\mixins\\_grid.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\mixins\\_image.scss",
+      "PackagePath": "staticwebassets\\scss\\mixins\\_image.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\mixins\\_list-group.scss",
+      "PackagePath": "staticwebassets\\scss\\mixins\\_list-group.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\mixins\\_lists.scss",
+      "PackagePath": "staticwebassets\\scss\\mixins\\_lists.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\mixins\\_pagination.scss",
+      "PackagePath": "staticwebassets\\scss\\mixins\\_pagination.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\mixins\\_reset-text.scss",
+      "PackagePath": "staticwebassets\\scss\\mixins\\_reset-text.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\mixins\\_resize.scss",
+      "PackagePath": "staticwebassets\\scss\\mixins\\_resize.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\mixins\\_table-variants.scss",
+      "PackagePath": "staticwebassets\\scss\\mixins\\_table-variants.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\mixins\\_text-truncate.scss",
+      "PackagePath": "staticwebassets\\scss\\mixins\\_text-truncate.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\mixins\\_transition.scss",
+      "PackagePath": "staticwebassets\\scss\\mixins\\_transition.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\mixins\\_utilities.scss",
+      "PackagePath": "staticwebassets\\scss\\mixins\\_utilities.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\mixins\\_visually-hidden.scss",
+      "PackagePath": "staticwebassets\\scss\\mixins\\_visually-hidden.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\utilities\\_api.scss",
+      "PackagePath": "staticwebassets\\scss\\utilities\\_api.scss"
+    },
+    {
+      "Id": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\wwwroot\\scss\\vendor\\_rfs.scss",
+      "PackagePath": "staticwebassets\\scss\\vendor\\_rfs.scss"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.ImunoMeta.Client.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.ImunoMeta.Client.props",
+      "PackagePath": "build\\ImunoMeta.Client.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.ImunoMeta.Client.props",
+      "PackagePath": "buildMultiTargeting\\ImunoMeta.Client.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.ImunoMeta.Client.props",
+      "PackagePath": "buildTransitive\\ImunoMeta.Client.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

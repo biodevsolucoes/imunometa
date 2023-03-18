@@ -102,7 +102,7 @@ namespace ImunoMeta.Server.Data.Migrations
 
                     b.Property<string>("Data")
                         .IsRequired()
-                        .HasMaxLength(50600)
+                        .HasMaxLength(50010)
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Description")
@@ -153,7 +153,7 @@ namespace ImunoMeta.Server.Data.Migrations
                     b.Property<string>("Data")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)")
-                        .HasMaxLength(50600);
+                        .HasMaxLength(50010);
 
                     b.Property<bool>("DataProtected")
                         .HasColumnType("bit");
@@ -194,7 +194,7 @@ namespace ImunoMeta.Server.Data.Migrations
 
                     b.Property<string>("Data")
                         .IsRequired()
-                        .HasMaxLength(50600)
+                        .HasMaxLength(50010)
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Description")

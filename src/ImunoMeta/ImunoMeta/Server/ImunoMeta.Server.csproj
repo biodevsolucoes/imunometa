@@ -4,7 +4,7 @@
     <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <UserSecretsId>ImunoMeta.Server-65d0cb02-4872-4dda-ade7-8d3720d194af</UserSecretsId>
+    <UserSecretsId>ImunoMeta.Server-f7394331-d3b9-4482-8431-68f141235883</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
