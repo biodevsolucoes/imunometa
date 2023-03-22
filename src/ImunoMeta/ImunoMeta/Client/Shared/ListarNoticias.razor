@@ -1,0 +1,49 @@
+﻿@inject IHttpClientFactory ClientFactory
+<div class="mb-3 border bg-white p-3">
+    <h1 class="mb-3">Notícias</h1>
+
+    @if (NoticiasRecentes.Any())
+    {
+        foreach (var noticia in NoticiasRecentes)
+        {
+            <div class="row mb-4">
+                <img src="@noticia.UrlImagemCapa" class="col-12 mb-2 mb-sm-0 col-sm-4">
+                <div class="col-12 col-sm-8">
+                    <h4>@noticia.Titulo</h4>
+                    <p>@noticia.Resumo</p>
+                </div>
+            </div>
+
+
+        }
+
+    }
+    else
+    {
+        <div class="alert alert-info">
+            Nenhum notícia cadastrada.
+        </div>
+    }
+
+</div>
+
+@code {
+    private List<Noticia> NoticiasRecentes = new List<Noticia>();
+
+    [Parameter]
+    public int Quantidade { get; set; } = 1;
+
+    protected override async Task OnInitializedAsync()
+    {
+        HttpClient Http = ClientFactory.CreateClient("public");
+
+        try
+        {
+            NoticiasRecentes = await Http.GetFromJsonAsync<List<Noticia>>($"Noticias/Recentes/{Quantidade}");
+        }
+        catch (Exception e)
+        {
+            Console.Write(e);
+        }
+    }
+}

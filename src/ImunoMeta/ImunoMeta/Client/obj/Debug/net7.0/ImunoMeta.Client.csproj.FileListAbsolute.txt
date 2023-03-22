@@ -18,8 +18,11 @@ D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Web.dll
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.AspNetCore.Components.WebAssembly.dll
+D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.AspNetCore.Metadata.dll
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.CSharp.dll
+D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.Extensions.Caching.Abstractions.dll
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.Extensions.Configuration.Abstractions.dll
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.Extensions.Configuration.Binder.dll
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.Extensions.Configuration.dll
@@ -31,6 +34,8 @@ D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.Extensions.FileProviders.Physical.dll
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.Extensions.FileSystemGlobbing.dll
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.Extensions.Http.dll
+D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.Extensions.Identity.Core.dll
+D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.Extensions.Identity.Stores.dll
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.Extensions.Logging.Abstractions.dll
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.Extensions.Logging.dll
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.Extensions.Options.dll
@@ -227,6 +232,7 @@ D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\wwwroot\_framework\ImunoMeta.Shared.pdb.gz
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\wwwroot\_framework\System.IO.UnmanagedMemoryStream.dll.gz
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\wwwroot\_framework\System.Numerics.dll.gz
+D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.Extensions.Caching.Abstractions.dll.gz
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\wwwroot\_framework\System.Runtime.CompilerServices.Unsafe.dll.gz
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\wwwroot\_framework\System.Security.Cryptography.dll.gz
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\wwwroot\_framework\System.Reflection.DispatchProxy.dll.gz
@@ -238,6 +244,7 @@ D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\wwwroot\_framework\System.Threading.dll.gz
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\wwwroot\_framework\System.Reflection.Emit.Lightweight.dll.gz
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\wwwroot\_framework\icudt_no_CJK.dat.gz
+D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.Extensions.Identity.Stores.dll.gz
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\wwwroot\_framework\System.Runtime.Serialization.Json.dll.gz
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\wwwroot\_framework\System.Security.Cryptography.OpenSsl.dll.gz
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.Win32.Primitives.dll.gz
@@ -289,6 +296,7 @@ D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\wwwroot\_framework\System.Core.dll.gz
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\wwwroot\_framework\dotnet.timezones.blat.gz
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\wwwroot\_framework\System.IO.Compression.dll.gz
+D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.Extensions.Identity.Core.dll.gz
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\wwwroot\_framework\System.Security.Principal.dll.gz
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\wwwroot\_framework\System.Runtime.Serialization.Xml.dll.gz
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\wwwroot\_framework\System.Console.dll.gz
@@ -324,6 +332,7 @@ D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\wwwroot\_framework\System.Memory.dll.gz
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\wwwroot\_framework\System.Reflection.TypeExtensions.dll.gz
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\wwwroot\_framework\System.Diagnostics.StackTrace.dll.gz
+D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll.gz
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\wwwroot\_framework\System.Diagnostics.FileVersionInfo.dll.gz
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\wwwroot\_framework\System.Runtime.Serialization.Formatters.dll.gz
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\wwwroot\_framework\System.IO.Pipelines.dll.gz
@@ -345,6 +354,7 @@ D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\wwwroot\_framework\System.Runtime.Extensions.dll.gz
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\wwwroot\_framework\System.Xml.XmlDocument.dll.gz
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\wwwroot\_framework\System.Private.Xml.Linq.dll.gz
+D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.AspNetCore.Cryptography.Internal.dll.gz
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\wwwroot\_framework\System.Text.Encoding.CodePages.dll.gz
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\wwwroot\_framework\System.Text.Encoding.dll.gz
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.Extensions.Configuration.Abstractions.dll.gz
@@ -423,7 +433,10 @@ D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\Microsoft.AspNetCore.Components.Web.dll
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\Microsoft.AspNetCore.Components.WebAssembly.dll
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll
+D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\Microsoft.AspNetCore.Metadata.dll
+D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\Microsoft.Extensions.Caching.Abstractions.dll
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\Microsoft.Extensions.Configuration.dll
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\Microsoft.Extensions.Configuration.Abstractions.dll
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\Microsoft.Extensions.Configuration.Binder.dll
@@ -435,6 +448,8 @@ D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\Microsoft.Extensions.FileProviders.Physical.dll
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\Microsoft.Extensions.FileSystemGlobbing.dll
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\Microsoft.Extensions.Http.dll
+D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
+D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\Microsoft.Extensions.Logging.dll
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\Microsoft.Extensions.Logging.Abstractions.dll
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
@@ -632,7 +647,10 @@ D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\obj\Debug\
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\obj\Debug\net7.0\build-gz\9xeLV5Bw.gz
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\obj\Debug\net7.0\build-gz\S8zgp41O.gz
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\obj\Debug\net7.0\build-gz\e57KNXCz.gz
+D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\obj\Debug\net7.0\build-gz\ojsisFFL.gz
+D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\obj\Debug\net7.0\build-gz\mEvu1hC0.gz
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\obj\Debug\net7.0\build-gz\e5RPLbNm.gz
+D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\obj\Debug\net7.0\build-gz\3KCe6Ndd.gz
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\obj\Debug\net7.0\build-gz\5Liy53sI.gz
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\obj\Debug\net7.0\build-gz\oznsXspk.gz
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\obj\Debug\net7.0\build-gz\vaCma9TY.gz
@@ -644,6 +662,8 @@ D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\obj\Debug\
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\obj\Debug\net7.0\build-gz\5o5js+Cd.gz
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\obj\Debug\net7.0\build-gz\FzsuEa+e.gz
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\obj\Debug\net7.0\build-gz\eJmKF26z.gz
+D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\obj\Debug\net7.0\build-gz\gVkYfoVN.gz
+D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\obj\Debug\net7.0\build-gz\6G8KV1p6.gz
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\obj\Debug\net7.0\build-gz\NB2uR5xc.gz
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\obj\Debug\net7.0\build-gz\5L+6dDQ2.gz
 D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Client\obj\Debug\net7.0\build-gz\KLlOTYIm.gz

@@ -36,6 +36,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Projetos/biodev/imunometa/imunometa/src/ImunoMeta/ImunoMeta/Client/Pages/Noticias.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTm90aWNpYXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projetos/biodev/imunometa/imunometa/src/ImunoMeta/ImunoMeta/Client/Shared/ListarNoticias.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExpc3Rhck5vdGljaWFzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Projetos/biodev/imunometa/imunometa/src/ImunoMeta/ImunoMeta/Client/Shared/LoginDisplay.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExvZ2luRGlzcGxheS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 

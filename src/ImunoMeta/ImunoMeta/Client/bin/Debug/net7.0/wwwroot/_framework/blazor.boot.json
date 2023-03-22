@@ -14,7 +14,10 @@
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-uyN0L7t6VFUm3ZbOUfdqsL1B2B5zztk6NdoJzbyZKdY=",
       "Microsoft.AspNetCore.Components.WebAssembly.dll": "sha256-ecggAD0m8Nfz7rxgDHriZVSqjAmNHqoTT6xHnRx\/pwU=",
       "Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll": "sha256-YBlmGX7Ud6L3cxFRDLkr+Kx1Q\/JCitlvJkSdMMpSz+Y=",
+      "Microsoft.AspNetCore.Cryptography.Internal.dll": "sha256-Fj90q2vjUyMAQkAtLld\/Z2xr8oNK77Xi3akV+lx7qJk=",
+      "Microsoft.AspNetCore.Cryptography.KeyDerivation.dll": "sha256-SK+kdk5bxELDJKwcr89CG0AxPvrIdcAwOWDVDp+7IcQ=",
       "Microsoft.AspNetCore.Metadata.dll": "sha256-XWZE0MPVLuLPVAegFKQPS09aa94oGNnImQsjzL5VH0o=",
+      "Microsoft.Extensions.Caching.Abstractions.dll": "sha256-tiD1Xg\/wcoUkJVBDtLfs5EiB1IwSUm0d\/lPffRVbKOc=",
       "Microsoft.Extensions.Configuration.dll": "sha256-PqQvp77oZ4+uuy2ElXk8AU9I6RfZSf18UGTrd4rulOo=",
       "Microsoft.Extensions.Configuration.Abstractions.dll": "sha256-CnS3b9EMFQmETBUVEgtcron4DBsfFdcVt3zfCP6Uflg=",
       "Microsoft.Extensions.Configuration.Binder.dll": "sha256-em\/Vt\/2aVlDQPuXI8gSU7RHK2IflCprFUyVvpA0UefI=",
@@ -26,6 +29,8 @@
       "Microsoft.Extensions.FileProviders.Physical.dll": "sha256-9xkIbIienaRj9Td2MyWYzL9JmVx6CKbGCPrvJ1Pxfn8=",
       "Microsoft.Extensions.FileSystemGlobbing.dll": "sha256-Gm0yiS5fySh2nZXdCRKZIbASK8sSukwjogLc+a9EBZY=",
       "Microsoft.Extensions.Http.dll": "sha256-QqjUvBFxKOeh8XX3IrmuIesFycYZMmwrhsRakmXvrXE=",
+      "Microsoft.Extensions.Identity.Core.dll": "sha256-A70S2PYAkXHmSutw7QvKUAyowaPfAfnzPt0tBDBvTME=",
+      "Microsoft.Extensions.Identity.Stores.dll": "sha256-sPSgqAqYtMdYKG8REs9ieHqu+j6Ads21m0sopr9PrJQ=",
       "Microsoft.Extensions.Logging.dll": "sha256-WMsuY8rhtg+vvssGFSR7ZLKhqYPAzOi538IXMoiJ6bI=",
       "Microsoft.Extensions.Logging.Abstractions.dll": "sha256-7zoKnNaWqWOrjF2eX3dFetJL+I03xqvCzORtFB4Ws08=",
       "Microsoft.Extensions.Options.dll": "sha256-rYT8laJlOlF0qyGuqjSmgDWb3Mk5aO1P2d9ojmaAuL0=",
@@ -201,15 +206,15 @@
       "mscorlib.dll": "sha256-UH9jptJH1wZ3XMBPuMMAEaUKpfRxc5AgXkLdAFAvNVE=",
       "netstandard.dll": "sha256-+jUzj0FB0YcoBUeSkSNEjhVDTG08qbZ2twfCBMbzT+Q=",
       "System.Private.CoreLib.dll": "sha256-l+\/quNqfNCSUDSMJcp0+IxlSdOdnAtwVVWMXmYGHMpg=",
-      "ImunoMeta.Shared.dll": "sha256-M3bwkUW7VLl5OSDGcUrp\/Q4kqqTUn4QSY+Hvo1YHRUE=",
-      "ImunoMeta.Client.dll": "sha256-4v4ny7nYeFQ2C3aPcj8ceBvCsikgPXJx7FLPGVJIp2s="
+      "ImunoMeta.Shared.dll": "sha256-yL9oMHfgHYymsiLv8w62TAY+afqjrMdXkH6MrQln\/08=",
+      "ImunoMeta.Client.dll": "sha256-axGemMpQLf0cuPttZq3pan+PladTWBUB451RClTRx3o="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "ImunoMeta.Shared.pdb": "sha256-4Ky6sEEcK5koq7FMcptIaM6IgYUZ4f717CnqoCs21Tc=",
-      "ImunoMeta.Client.pdb": "sha256-pWOuRTamxgq9fpPsy0vKV5kbj+oC3W48gZULy61QKa8="
+      "ImunoMeta.Shared.pdb": "sha256-7BeoDNxA1\/dwUYydeIVo0VVHcEmaVGD2JN8BlK\/Pc8w=",
+      "ImunoMeta.Client.pdb": "sha256-ZbvI1jfZXiVbSkTEuOFbmQn\/3Jod2q0Tf7yt1+yEUic="
     },
     "runtime": {
       "dotnet.7.0.1.jpq92btbph.js": "sha256-jjax3FMRXzFAziWowdtJf6vipP2xXAaA5gD6VBYB6Y0=",

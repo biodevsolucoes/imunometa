@@ -1,7 +1,7 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
-      "hash": "sha256-Q3P0LIy1SDDfESQMhKoCs3MRkIKkDD0IXspmB3kBUXA=",
+      "hash": "sha256-Le3\/gzW2HCA3upg\/qGYDKZgrvTxwI1HOVVCt5gp6BJc=",
       "url": "css\/app.css"
     },
     {
@@ -61,7 +61,7 @@
       "url": "icon-512.png"
     },
     {
-      "hash": "sha256-CMYcxCIr6Lw6jDad9D6safpyco\/GM3aot+zBxiHi18c=",
+      "hash": "sha256-kmHrKiBPE2GtDWB3jWK\/7XYXK7IgAmqUo2Cw1ByOw10=",
       "url": "index.html"
     },
     {
@@ -461,8 +461,20 @@
       "url": "_framework\/Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll"
     },
     {
+      "hash": "sha256-Fj90q2vjUyMAQkAtLld\/Z2xr8oNK77Xi3akV+lx7qJk=",
+      "url": "_framework\/Microsoft.AspNetCore.Cryptography.Internal.dll"
+    },
+    {
+      "hash": "sha256-SK+kdk5bxELDJKwcr89CG0AxPvrIdcAwOWDVDp+7IcQ=",
+      "url": "_framework\/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll"
+    },
+    {
       "hash": "sha256-XWZE0MPVLuLPVAegFKQPS09aa94oGNnImQsjzL5VH0o=",
       "url": "_framework\/Microsoft.AspNetCore.Metadata.dll"
+    },
+    {
+      "hash": "sha256-tiD1Xg\/wcoUkJVBDtLfs5EiB1IwSUm0d\/lPffRVbKOc=",
+      "url": "_framework\/Microsoft.Extensions.Caching.Abstractions.dll"
     },
     {
       "hash": "sha256-PqQvp77oZ4+uuy2ElXk8AU9I6RfZSf18UGTrd4rulOo=",
@@ -507,6 +519,14 @@
     {
       "hash": "sha256-QqjUvBFxKOeh8XX3IrmuIesFycYZMmwrhsRakmXvrXE=",
       "url": "_framework\/Microsoft.Extensions.Http.dll"
+    },
+    {
+      "hash": "sha256-A70S2PYAkXHmSutw7QvKUAyowaPfAfnzPt0tBDBvTME=",
+      "url": "_framework\/Microsoft.Extensions.Identity.Core.dll"
+    },
+    {
+      "hash": "sha256-sPSgqAqYtMdYKG8REs9ieHqu+j6Ads21m0sopr9PrJQ=",
+      "url": "_framework\/Microsoft.Extensions.Identity.Stores.dll"
     },
     {
       "hash": "sha256-WMsuY8rhtg+vvssGFSR7ZLKhqYPAzOi538IXMoiJ6bI=",
@@ -1237,19 +1257,19 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-M3bwkUW7VLl5OSDGcUrp\/Q4kqqTUn4QSY+Hvo1YHRUE=",
+      "hash": "sha256-yL9oMHfgHYymsiLv8w62TAY+afqjrMdXkH6MrQln\/08=",
       "url": "_framework\/ImunoMeta.Shared.dll"
     },
     {
-      "hash": "sha256-4Ky6sEEcK5koq7FMcptIaM6IgYUZ4f717CnqoCs21Tc=",
+      "hash": "sha256-7BeoDNxA1\/dwUYydeIVo0VVHcEmaVGD2JN8BlK\/Pc8w=",
       "url": "_framework\/ImunoMeta.Shared.pdb"
     },
     {
-      "hash": "sha256-khFwMa\/yfuqBiPzvjd5v4oCM5mCbI7mcQVtgF3DtZjo=",
+      "hash": "sha256-uJYbFIApxozYn0weeZldekvClD8F\/davC+PWC4XcWFo=",
       "url": "_framework\/ImunoMeta.Client.dll"
     },
     {
-      "hash": "sha256-XFt4m5GsAcg6AOj\/ZI31CSdbQoqLTRLFuzvdbkBjKhY=",
+      "hash": "sha256-ufshioOgZ35qvHyr9IOaRHfKz4AxXMTc4moQDKyFaAk=",
       "url": "_framework\/ImunoMeta.Client.pdb"
     },
     {
@@ -1257,7 +1277,7 @@
       "url": "_framework\/blazor.webassembly.js"
     },
     {
-      "hash": "sha256-rLq3G3GqWkaHOS6cp+mT47ZmFRHzraUWN408TZpFRfo=",
+      "hash": "sha256-hIzNURmeYq3JXsnBnGVLin5FLB879p530fnn7ciQ2bA=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -1265,5 +1285,5 @@
       "url": "_content\/Microsoft.AspNetCore.Components.WebAssembly.Authentication\/AuthenticationService.js"
     }
   ],
-  "version": "7v7o3y5E"
+  "version": "irdCJKv6"
 };

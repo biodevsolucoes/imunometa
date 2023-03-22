@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "nf49OGS5GUA4Sfao2+lM8qVeuM0IAZQ5naA4OY0kx9I=",
+  "Hash": "l4mR63wDmnLRNIKzbo2Yk0Nl4QJnascUopwFS/ThnHI=",
   "Source": "ImunoMeta.Client",
   "BasePath": "/",
   "Mode": "Root",
@@ -374,6 +374,40 @@
       "OriginalItemSpec": "C:\\Users\\f8bru\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\7.0.1\\lib\\net7.0\\Microsoft.AspNetCore.Components.WebAssembly.dll"
     },
     {
+      "Identity": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Cryptography.Internal.dll",
+      "SourceId": "ImunoMeta.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Cryptography.Internal.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\f8bru\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\7.0.1\\lib\\net7.0\\Microsoft.AspNetCore.Cryptography.Internal.dll"
+    },
+    {
+      "Identity": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll",
+      "SourceId": "ImunoMeta.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\f8bru\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\7.0.1\\lib\\net7.0\\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll"
+    },
+    {
       "Identity": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Metadata.dll",
       "SourceId": "ImunoMeta.Client",
       "SourceType": "Computed",
@@ -406,6 +440,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\f8bru\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\7.0.1\\runtimes\\browser-wasm\\lib\\net7.0\\Microsoft.CSharp.dll"
+    },
+    {
+      "Identity": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Caching.Abstractions.dll",
+      "SourceId": "ImunoMeta.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Extensions.Caching.Abstractions.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\f8bru\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\lib\\net7.0\\Microsoft.Extensions.Caching.Abstractions.dll"
     },
     {
       "Identity": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Configuration.Abstractions.dll",
@@ -593,6 +644,40 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\f8bru\\.nuget\\packages\\microsoft.extensions.http\\7.0.0\\lib\\net7.0\\Microsoft.Extensions.Http.dll"
+    },
+    {
+      "Identity": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Identity.Core.dll",
+      "SourceId": "ImunoMeta.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Extensions.Identity.Core.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\f8bru\\.nuget\\packages\\microsoft.extensions.identity.core\\7.0.1\\lib\\net7.0\\Microsoft.Extensions.Identity.Core.dll"
+    },
+    {
+      "Identity": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Identity.Stores.dll",
+      "SourceId": "ImunoMeta.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Extensions.Identity.Stores.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\f8bru\\.nuget\\packages\\microsoft.extensions.identity.stores\\7.0.1\\lib\\net7.0\\Microsoft.Extensions.Identity.Stores.dll"
     },
     {
       "Identity": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Logging.Abstractions.dll",
@@ -3927,6 +4012,23 @@
       "OriginalItemSpec": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Numerics.dll"
     },
     {
+      "Identity": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\obj\\Debug\\net7.0\\build-gz\\3KCe6Ndd.gz",
+      "SourceId": "ImunoMeta.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Extensions.Caching.Abstractions.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Caching.Abstractions.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Caching.Abstractions.dll"
+    },
+    {
       "Identity": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\obj\\Debug\\net7.0\\build-gz\\4LQQt6WZ.gz",
       "SourceId": "ImunoMeta.Client",
       "SourceType": "Computed",
@@ -4112,6 +4214,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\icudt_no_CJK.dat"
+    },
+    {
+      "Identity": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\obj\\Debug\\net7.0\\build-gz\\6G8KV1p6.gz",
+      "SourceId": "ImunoMeta.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Extensions.Identity.Stores.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Identity.Stores.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Identity.Stores.dll"
     },
     {
       "Identity": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\obj\\Debug\\net7.0\\build-gz\\6vrW+Gb0.gz",
@@ -4981,6 +5100,23 @@
       "OriginalItemSpec": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.IO.Compression.dll"
     },
     {
+      "Identity": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\obj\\Debug\\net7.0\\build-gz\\gVkYfoVN.gz",
+      "SourceId": "ImunoMeta.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Extensions.Identity.Core.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Identity.Core.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Identity.Core.dll"
+    },
+    {
       "Identity": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\obj\\Debug\\net7.0\\build-gz\\hC+YXuVU.gz",
       "SourceId": "ImunoMeta.Client",
       "SourceType": "Computed",
@@ -5576,6 +5712,23 @@
       "OriginalItemSpec": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Diagnostics.StackTrace.dll"
     },
     {
+      "Identity": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\obj\\Debug\\net7.0\\build-gz\\mEvu1hC0.gz",
+      "SourceId": "ImunoMeta.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll"
+    },
+    {
       "Identity": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\obj\\Debug\\net7.0\\build-gz\\mIuZSoWB.gz",
       "SourceId": "ImunoMeta.Client",
       "SourceType": "Computed",
@@ -5931,6 +6084,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Private.Xml.Linq.dll"
+    },
+    {
+      "Identity": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\obj\\Debug\\net7.0\\build-gz\\ojsisFFL.gz",
+      "SourceId": "ImunoMeta.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Cryptography.Internal.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Cryptography.Internal.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Cryptography.Internal.dll"
     },
     {
       "Identity": "D:\\Projetos\\biodev\\imunometa\\imunometa\\src\\ImunoMeta\\ImunoMeta\\Client\\obj\\Debug\\net7.0\\build-gz\\ONyJOYZz.gz",
