@@ -1,0 +1,54 @@
+﻿@inject IHttpClientFactory ClientFactory
+<div class="mb-3 border bg-white p-3">
+    <h1 class="mb-3">Pontos de Vacinação</h1>
+    <div class="row">
+        @if (ListaPontosVacinacao != null)
+        {
+            int zoom = 15;
+            foreach (var ponto in ListaPontosVacinacao)
+            {
+                <div class="col-4 py-3 border-bottom">
+                    <div class="">
+                        <img class="w-100" src="@($"https://maps.googleapis.com/maps/api/staticmap?center={ponto.Longitude},{ponto.Latitude}&zoom=12&size=400x400&markers=color:red|label:A|{ponto.Longitude},{ponto.Latitude}&key=AIzaSyDmAW7wmqmdXGad7uTul6ziPdRaJVGnJxY")" />
+                        <h4 class="py-3">
+                            @ponto.Nome
+                        </h4>
+                        @($"{ponto.Endereco}")
+                        <br />
+                        @($"{ponto.Cidade} - {ponto.UF}")
+                    </div>
+                </div>
+            }
+        }
+        else
+        {
+            <li>
+                Carregando...
+            </li>
+        }
+    </div>
+</div>
+@code {
+    [Parameter]
+    public int Quantidade { get; set; }
+
+    private IEnumerable<PontoVacinacao>? ListaPontosVacinacao { get; set; } = null;
+    private string UF { get; set; } = "DF";
+    HttpClient Http = null;
+
+    protected override async Task OnInitializedAsync()
+    {
+        Http = ClientFactory.CreateClient("public");
+        ListaPontosVacinacao = await Http.GetFromJsonAsync<IEnumerable<PontoVacinacao>>($"/PontosVacinacao/Listar/{UF}/{Quantidade}");
+    }
+
+    private int GetTileX(double longitude, int zoom)
+    {
+        return (int)((longitude + 180.0) / 360.0 * (1 << zoom));
+    }
+
+    private int GetTileY(double latitude, int zoom)
+    {
+        return (int)((1.0 - Math.Log(Math.Tan(latitude * Math.PI / 180.0) + 1.0 / Math.Cos(latitude * Math.PI / 180.0)) / Math.PI) / 2.0 * (1 << zoom));
+    }
+}

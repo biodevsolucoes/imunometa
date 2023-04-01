@@ -8,9 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="bin\**" />
     <Compile Remove="Models\**" />
+    <Content Remove="bin\**" />
     <Content Remove="Models\**" />
+    <EmbeddedResource Remove="bin\**" />
     <EmbeddedResource Remove="Models\**" />
+    <None Remove="bin\**" />
     <None Remove="Models\**" />
   </ItemGroup>
 
