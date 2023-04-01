@@ -33,7 +33,7 @@ namespace ImunoMeta.Server.Controllers
             int width = 600;
             int height = 400;
 
-            string url = $"https://maps.googleapis.com/maps/api/staticmap?center={longitude},{latitude}&zoom=15&size=400x400&key=AIzaSyDmAW7wmqmdXGad7uTul6ziPdRaJVGnJxY";
+            string url = $"";
 
             return $"{url}?width={width}&height={height}";
         }
