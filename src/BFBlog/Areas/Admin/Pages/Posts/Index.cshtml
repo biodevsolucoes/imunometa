@@ -1,0 +1,38 @@
+﻿@page
+@model BFBlog.Areas.Admin.Pages.Posts.IndexModel
+@{
+}
+<h1>Posts</h1>
+<hr />
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                Título
+            </th>
+            <th>
+                Autor
+            </th>
+            <th>Data Publicação</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var post in Model.Posts)
+        {
+            <tr>
+                <td>
+                    @post.Titulo
+                </td>
+                <th>
+                    @post.Usuario?.Nome
+                </th>
+                <th>@post.DataPublicacao?.ToString("dd/MM/yyyy")</th>
+                <th>
+                    <button class="btn btn-warning"><i class="fa fa-edit"></i></button>
+                    <button class="btn btn-danger"><i class="fa fa-trash"></i></button>
+                </th>
+            </tr>
+        }
+    </tbody>
+</table>
