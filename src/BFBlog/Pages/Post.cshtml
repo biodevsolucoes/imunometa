@@ -1,0 +1,19 @@
+﻿@page "{slug}"
+@model BFBlog.Pages.PostModel
+@{
+}
+<div class="row">
+    <div class="col-8">
+        <div class="post">
+            <img src="/files/@Model.Post.ImagemCapaUrl" class="w-100" />
+            <h1>@Model.Post.Titulo</h1>
+            <h5>@Model.Post.Resumo</h5>
+
+            <div class="py-5 text-justify lead">
+                @Html.Raw(Model.Post.Texto)
+            </div>
+        </div>
+    </div>
+    <div class="col-4">
+    </div>
+</div>

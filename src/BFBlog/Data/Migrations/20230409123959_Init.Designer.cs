@@ -4,6 +4,7 @@ using BFBlog.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BFBlog.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230409123959_Init")]
+    partial class Init
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -42,10 +45,6 @@ namespace BFBlog.Data.Migrations
                         .HasColumnType("bit")
                         .HasDefaultValueSql("0");
 
-                    b.Property<string>("SlugUrl")
-                        .IsRequired()
-                        .HasColumnType("varchar(1000)");
-
                     b.HasKey("Id");
 
                     b.ToTable("Categoria");
@@ -53,35 +52,31 @@ namespace BFBlog.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("c13d795f-925d-4804-94ac-bac4338c4a54"),
+                            Id = new Guid("939ac56e-4ac3-4974-a95c-c19be8f8985c"),
                             DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Nome = "Segurança",
-                            Removido = false,
-                            SlugUrl = ""
+                            Removido = false
                         },
                         new
                         {
-                            Id = new Guid("272fb22f-4b2e-49e6-b591-e27ffbc5822f"),
+                            Id = new Guid("77df7240-d8f3-4365-a58f-25fe2f2d0a75"),
                             DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Nome = "Desenvolvimento",
-                            Removido = false,
-                            SlugUrl = ""
+                            Removido = false
                         },
                         new
                         {
-                            Id = new Guid("9d7520d2-9a59-42c1-82e0-f8af2a462643"),
+                            Id = new Guid("294c9729-fe88-426e-8626-5026c1c9f62f"),
                             DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Nome = "DevOps",
-                            Removido = false,
-                            SlugUrl = ""
+                            Removido = false
                         },
                         new
                         {
-                            Id = new Guid("7cd97d71-4c20-442b-bd09-227c590013e9"),
+                            Id = new Guid("67986aaf-2cee-4ac7-b0d1-a398a8dbe5c7"),
                             DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Nome = "OFF",
-                            Removido = false,
-                            SlugUrl = ""
+                            Removido = false
                         });
                 });
 
@@ -117,10 +112,6 @@ namespace BFBlog.Data.Migrations
                     b.Property<string>("Resumo")
                         .IsRequired()
                         .HasColumnType("varchar(2000)");
-
-                    b.Property<string>("SlugUrl")
-                        .IsRequired()
-                        .HasColumnType("varchar(1000)");
 
                     b.Property<string>("Tags")
                         .IsRequired()

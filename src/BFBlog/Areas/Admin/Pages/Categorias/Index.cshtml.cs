@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using BFBlog.Data;
 using BFBlog.Data.Entities;
 
-namespace BFBlog.Areas.Admin.Pages.Posts
+namespace BFBlog.Areas.Admin.Pages.Categorias
 {
     public class IndexModel : PageModel
     {
@@ -19,15 +19,13 @@ namespace BFBlog.Areas.Admin.Pages.Posts
             _context = context;
         }
 
-        public IList<Post> Post { get;set; } = default!;
+        public IList<Categoria> Categoria { get;set; } = default!;
 
         public async Task OnGetAsync()
         {
-            if (_context.Post != null)
+            if (_context.Categoria != null)
             {
-                Post = await _context.Post
-                .Include(p => p.Categoria)
-                .Include(p => p.Usuario).ToListAsync();
+                Categoria = await _context.Categoria.ToListAsync();
             }
         }
     }

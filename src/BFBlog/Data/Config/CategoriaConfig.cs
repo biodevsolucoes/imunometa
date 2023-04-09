@@ -11,6 +11,10 @@ namespace BFBlog.Data.Config
             builder.Property(x => x.Nome)
                 .IsRequired()
                 .HasColumnType("varchar(100)");
+
+            builder.Property(x => x.SlugUrl)
+                .IsRequired(true)
+                .HasColumnType("varchar(1000)");
         }
     }
 }

@@ -1,0 +1,40 @@
+﻿@page
+@model BFBlog.Areas.Admin.Pages.Categorias.EditModel
+
+@{
+    ViewData["Title"] = "Categorias";
+    ViewData["Subtitle"] = "Editar";
+}
+
+@section DivAcao{
+    <a asp-area="Admin" class="btn btn-outline-secondary" asp-page="/Categorias/Index"><i class="fa fa-arrow-left"></i> Voltar</a>
+}
+
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Categoria.Nome" class="control-label"></label>
+                <input asp-for="Categoria.Nome" class="form-control" />
+                <span asp-validation-for="Categoria.Nome" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="Categoria.Id" />
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Categoria.Removido" /> @Html.DisplayNameFor(model => model.Categoria.Removido)
+                </label>
+            </div>
+            <div class="form-group">
+                <input asp-for="Categoria.SlugUrl" type="hidden" />
+                <input type="submit" value="Salvar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

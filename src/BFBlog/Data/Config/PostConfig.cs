@@ -10,11 +10,11 @@ namespace BFBlog.Data.Config
         {
             builder.Property(x => x.Titulo)
                 .IsRequired()
-                .HasColumnType("varchar(250)");
+                .HasColumnType("varchar(1000)");
 
             builder.Property(x => x.Resumo)
                 .IsRequired()
-                .HasColumnType("varchar(500)");
+                .HasColumnType("varchar(2000)");
 
             builder.Property(x => x.Texto)
                 .IsRequired()
@@ -27,7 +27,11 @@ namespace BFBlog.Data.Config
             builder.Property(x => x.DataPublicacao)
                 .IsRequired(true)
                 .HasColumnType("datetime2")
-                .HasDefaultValue("getdate()");
+                .HasDefaultValueSql("getdate()");
+
+            builder.Property(x => x.SlugUrl)
+                .IsRequired(true)
+                .HasColumnType("varchar(1000)");
         }
     }
 }

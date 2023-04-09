@@ -33,7 +33,7 @@ namespace BFBlog.Data.Migrations
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Nome = table.Column<string>(type: "varchar(100)", nullable: false),
-                    FotoUrl = table.Column<string>(type: "varchar(100)", nullable: false),
+                    FotoUrl = table.Column<string>(type: "varchar(500)", nullable: false),
                     UserName = table.Column<string>(type: "varchar(256)", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "varchar(256)", maxLength: 256, nullable: true),
                     Email = table.Column<string>(type: "varchar(256)", maxLength: 256, nullable: true),
@@ -179,12 +179,12 @@ namespace BFBlog.Data.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Titulo = table.Column<string>(type: "varchar(100)", nullable: false),
-                    Resumo = table.Column<string>(type: "varchar(100)", nullable: false),
-                    Texto = table.Column<string>(type: "varchar(100)", nullable: false),
+                    Titulo = table.Column<string>(type: "varchar(1000)", nullable: false),
+                    Resumo = table.Column<string>(type: "varchar(2000)", nullable: false),
+                    Texto = table.Column<string>(type: "text", nullable: false),
                     UsuarioId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    ImagemCapaUrl = table.Column<string>(type: "varchar(100)", nullable: true),
-                    DataPublicacao = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    ImagemCapaUrl = table.Column<string>(type: "varchar(500)", nullable: false),
+                    DataPublicacao = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValueSql: "getdate()"),
                     CategoriaId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Tags = table.Column<string>(type: "varchar(100)", nullable: false),
                     DataCadastro = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValueSql: "getdate()"),
@@ -212,10 +212,10 @@ namespace BFBlog.Data.Migrations
                 columns: new[] { "Id", "Nome" },
                 values: new object[,]
                 {
-                    { new Guid("189e3620-152f-4c1a-aa99-b1bbce5fcac3"), "Segurança" },
-                    { new Guid("197341ef-6288-4397-b951-0c7a6e779528"), "DevOps" },
-                    { new Guid("26ad4936-162e-42ed-be33-9d8c74dedc4e"), "OFF" },
-                    { new Guid("eb51810d-f099-44e2-a587-1606120f3dba"), "Desenvolvimento" }
+                    { new Guid("294c9729-fe88-426e-8626-5026c1c9f62f"), "DevOps" },
+                    { new Guid("67986aaf-2cee-4ac7-b0d1-a398a8dbe5c7"), "OFF" },
+                    { new Guid("77df7240-d8f3-4365-a58f-25fe2f2d0a75"), "Desenvolvimento" },
+                    { new Guid("939ac56e-4ac3-4974-a95c-c19be8f8985c"), "Segurança" }
                 });
 
             migrationBuilder.CreateIndex(

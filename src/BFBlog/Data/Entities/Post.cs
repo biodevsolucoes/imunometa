@@ -21,5 +21,6 @@ namespace BFBlog.Data.Entities
         public virtual Categoria? Categoria { get; set; }
 
         public string Tags { get; set; } = string.Empty;
+        public string SlugUrl { get; set; } = string.Empty;
     }
 }

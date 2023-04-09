@@ -10,9 +10,9 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3 py-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">BFBlog</a>
+                <a class="navbar-brand" asp-area="Admin" asp-page="/Index"><b>BFBlog</b> <small>Admin</small></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -20,10 +20,13 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                            <a class="nav-link" asp-area="Admin" asp-page="/Categorias/Index">Categorias</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                            <a class="nav-link" asp-area="Admin" asp-page="/Posts/Index">Posts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="Admin" asp-page="/Usuarios/Index">Usuários</a>
                         </li>
                     </ul>
                     <partial name="_LoginPartial" />
@@ -33,6 +36,12 @@
     </header>
     <div class="container">
         <main role="main" class="pb-3">
+            <div class="d-flex justify-content-between">
+                <h1>@ViewData["Title"]</h1>
+                <div>
+                    @RenderSection("DivAcao", required:false)
+                </div>
+            </div>
             @RenderBody()
         </main>
     </div>
@@ -48,6 +57,73 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="~/lib/tinymce/tinymce.min.js"></script>
     <link href="~/lib/fontawesome/css/all.min.css" rel="stylesheet" />
+    <script type="text/javascript">
+        // Text Editor
+        tinymce.init({
+            selector: 'textarea.simple',
+            menubar: false,
+            toolbar: 'undo redo | bold italic underline | subscript superscript',
+            plugins: 'autoresize, paste',
+            height: 150,
+            minHeight: 150,
+            invalid_elements: "form, script, a, h1, h2, h3, h4, h5, h6",
+            paste_as_text: true,
+            entity_encoding: "raw",
+            setup: function (ed) {
+                ed.on('init', function (ed) {
+                    ed.paste_as_text = true;
+                    this.getBody().style.fontSize = '17px';
+                });
+                ed.on('keyup', function (ed) {
+                    var id = $(ed.target).attr("data-id");
+
+                    $("#" + id).text($(ed.target).html());
+                });
+            }
+        });
+
+        tinymce.init({
+            selector: 'textarea.complex',
+            menubar: false,
+            toolbar: 'undo redo | styleselect | bold italic underline | subscript superscript | link table',
+            plugins: 'autoresize, paste, image, table, link',
+            height: 300,
+            minHeight: 300,
+            invalid_elements: "form, script, a, h1, h2, h3, h4, h5, h6",
+            paste_as_text: false,
+            images_upload_url: '/upload',
+            setup: function (ed) {
+                ed.on('init', function (ed) {
+                    ed.paste_as_text = false;
+                    this.getBody().style.fontSize = '17px';
+                });
+                ed.on('keyup', function (ed) {
+                    var id = $(ed.target).attr("data-id");
+                    $("#" + id).text($(ed.target).html());
+                });
+            }, images_upload_handler: function (blobInfo, success, failure) {
+
+                $.ajax({
+                    type: 'POST',
+                    url: '/post/uploadImagem',
+                    data: { fileBytes: blobInfo.base64(), fileName: blobInfo.blob().name },
+                    headers:
+                    {
+                        "RequestVerificationToken": $('input:hidden[name="__RequestVerificationToken"]').val()
+                    },
+                    dataType: 'json',
+                    //contentType: 'application/json',
+                    success: function (result) {
+                        success(result);
+                    },
+                    error: function (xhr, status, error) {
+                        failure(status);
+                    }
+                });
+            }
+        });
+    </script>
+
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

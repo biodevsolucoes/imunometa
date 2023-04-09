@@ -1,37 +1,51 @@
 ﻿@page
 @model BFBlog.Areas.Admin.Pages.Posts.IndexModel
+
 @{
+    ViewData["Title"] = "Posts";
 }
-<h1>Posts</h1>
-<hr />
-<table class="table table-striped">
+
+@section DivAcao{
+    <a asp-area="Admin" class="btn btn-outline-secondary" asp-page="/Posts/Create"><i class="fa fa-plus"></i> Adicionar</a>
+}
+<table class="table">
     <thead>
         <tr>
             <th>
-                Título
+                @Html.DisplayNameFor(model => model.Post[0].Titulo)
             </th>
             <th>
-                Autor
+                @Html.DisplayNameFor(model => model.Post[0].Usuario)
             </th>
-            <th>Data Publicação</th>
-            <th>Ações</th>
+            <th>
+                @Html.DisplayNameFor(model => model.Post[0].DataPublicacao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Post[0].Categoria)
+            </th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var post in Model.Posts)
+        @foreach (var item in Model.Post)
         {
             <tr>
                 <td>
-                    @post.Titulo
+                    @Html.DisplayFor(modelItem => item.Titulo)
                 </td>
-                <th>
-                    @post.Usuario?.Nome
-                </th>
-                <th>@post.DataPublicacao?.ToString("dd/MM/yyyy")</th>
-                <th>
-                    <button class="btn btn-warning"><i class="fa fa-edit"></i></button>
-                    <button class="btn btn-danger"><i class="fa fa-trash"></i></button>
-                </th>
+                <td>
+                    @item.Usuario?.Nome
+                </td>
+                <td>
+                    @item.DataPublicacao?.ToString("dd/MM/yyyy")
+                </td>
+                <td>
+                    @item.Categoria?.Nome
+                </td>
+                <td>
+                    <a asp-page="./Edit" class="btn btn-warning" asp-route-id="@item.Id"><i class="fa fa-edit"></i></a>
+                    <a asp-page="./Delete" class="btn btn-danger" asp-route-id="@item.Id"><i class="fa fa-trash"></i></a>
+                </td>
             </tr>
         }
     </tbody>

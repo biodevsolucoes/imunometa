@@ -1,6 +1,7 @@
 ﻿using BFBlog.Data.Entities;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 
 namespace BFBlog.Data
 {
@@ -44,6 +45,7 @@ namespace BFBlog.Data
             }
 
             Seed(modelBuilder);
+            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         }
         private void Seed(ModelBuilder modelBuilder)
         {

@@ -1,0 +1,40 @@
+﻿@page
+@model BFBlog.Areas.Admin.Pages.Categorias.IndexModel
+
+@{
+    ViewData["Title"] = "Categorias";
+}
+
+@section DivAcao{
+    <a class="btn btn-outline-secondary" asp-page="Create"><i class="fa fa-plus"></i> Adicionar</a>
+}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Categoria[0].Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Categoria[0].Removido)
+            </th>
+            <th width="110"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Categoria)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Removido)
+                </td>
+                <td>
+                    <a asp-page="./Edit" class="btn btn-warning" asp-route-id="@item.Id"><i class="fa fa-edit"></i></a>
+                    <a asp-page="./Delete" class="btn btn-danger" asp-route-id="@item.Id"><i class="fa fa-trash"></i></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
