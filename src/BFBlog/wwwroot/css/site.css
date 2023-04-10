@@ -38,3 +38,19 @@ body {
     .post-list a:hover h3 {
         text-decoration: underline;
     }
+
+
+.post-list h3 {
+    font-weight: 600;
+    margin: 15px 0;
+    line-height: 120%;
+}
+
+.post-list .badge {
+    margin-bottom: 15px;
+}
+
+.post h1 {
+    font-weight: 600;
+    margin: 15px 0;
+}

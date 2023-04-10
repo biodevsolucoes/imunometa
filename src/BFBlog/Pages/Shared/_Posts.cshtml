@@ -2,17 +2,24 @@
 <div class="row d-flex post-list">
     @foreach (var post in Model)
     {
-        <div class="col-md-4 d-flex mb-5">
-            <div class="py-5">
+        <div class="col-12 col-lg-6 d-flex mb-5">
+            <div class="p-0 px-lg-3">
                 <a href="/post/@post.SlugUrl">
-                    <img src="/files/@post.ImagemCapaUrl" class="w-100 d-flex" />
+                    <div class="d-flex bg-light justify-content-center align-items-center" style="height:250px; overflow:hidden">
+                        <img src="/files/@post.ImagemCapaUrl" style="max-width:100%;" />
+                    </div>
                 </a>
                 <a href="/post/@post.SlugUrl">
                     <h3>@post.Titulo</h3>
                 </a>
-                <a asp-page="/Categoria" asp-route-id="@post.CategoriaId">
-                    <span class="badge bg-info">@post.Categoria?.Nome</span>
-                </a>
+                <div class="d-flex justify-content-between">
+                    <a asp-page="/Categoria" asp-route-id="@post.CategoriaId">
+                        <span class="badge bg-info">@post.Categoria?.Nome</span>
+                    </a>
+                    <span>
+                        Por <a asp-page="/Autor/@post.Usuario?.Id">@post.Usuario?.Nome</a>
+                    </span>
+                </div>
                 <div class="text-justify lead">
                     <a href="/post/@post.SlugUrl">
                         @post.Resumo
