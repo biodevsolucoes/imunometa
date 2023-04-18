@@ -13,10 +13,11 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-builder.Services.AddDefaultIdentity<Usuario>(options => options.SignIn.RequireConfirmedAccount = true)
+builder.Services.AddDefaultIdentity<Usuario>(options => options.SignIn.RequireConfirmedAccount = false)
     .AddEntityFrameworkStores<ApplicationDbContext>();
 
 builder.Services.AddIdentityServer()
+        //.AddDeveloperSigningCredential()
     .AddApiAuthorization<Usuario, ApplicationDbContext>();
 
 builder.Services.AddAuthentication()
@@ -29,18 +30,23 @@ builder.Services.AddScoped(typeof(IRepository<>), typeof(ImunoMetaRepository<>))
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseMigrationsEndPoint();
-    app.UseWebAssemblyDebugging();
-}
-else
-{
-    app.UseExceptionHandler("/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
-}
+app.UseMigrationsEndPoint();
+app.UseWebAssemblyDebugging();
+
+app.UseMigrationsEndPoint();
+app.UseWebAssemblyDebugging();
+//// Configure the HTTP request pipeline.
+//if (app.Environment.IsDevelopment())
+//{
+//    app.UseMigrationsEndPoint();
+//    app.UseWebAssemblyDebugging();
+//}
+//else
+//{
+//    app.UseExceptionHandler("/Error");
+//    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+//    app.UseHsts();
+//}
 
 app.UseHttpsRedirection();
 

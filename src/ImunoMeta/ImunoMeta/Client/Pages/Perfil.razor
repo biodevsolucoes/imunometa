@@ -1,0 +1,33 @@
+﻿@using Microsoft.AspNetCore.Authorization;
+@using Microsoft.AspNetCore.Components.Authorization
+@attribute [Authorize]
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@inject UserManager<Usuario> UserManager
+@page "/Perfil"
+<h1>Perfil</h1>
+@if (Usuario == null)
+{
+    <p>Carregando...</p>
+}
+else
+{
+    <h3>@Usuario.Nome</h3>
+    <h3>@Usuario.Email</h3>
+}
+@code {
+
+    private Usuario Usuario { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+        var userName = user.Identity?.Name;
+
+        Usuario = await UserManager.GetUserAsync(user);
+
+        Console.WriteLine(userName);
+
+    }
+
+}

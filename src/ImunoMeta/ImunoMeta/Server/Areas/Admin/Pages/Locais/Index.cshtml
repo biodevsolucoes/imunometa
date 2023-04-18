@@ -1,0 +1,90 @@
+﻿@page
+@model ImunoMeta.Server.Areas.Admin.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PontoVacinacao[0].UsuarioId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PontoVacinacao[0].Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PontoVacinacao[0].Longitude)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PontoVacinacao[0].Latitude)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PontoVacinacao[0].Cidade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PontoVacinacao[0].UF)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PontoVacinacao[0].Endereco)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PontoVacinacao[0].DataCadastro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PontoVacinacao[0].DataCadastroUTC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PontoVacinacao[0].Removido)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.PontoVacinacao) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UsuarioId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Longitude)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Latitude)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cidade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UF)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Endereco)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataCadastro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataCadastroUTC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Removido)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

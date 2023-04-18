@@ -65,8 +65,8 @@ namespace ImunoMeta.Server.Data
                 Id = Guid.NewGuid(),
                 Nome = "UBS 1 Lago Norte",
                 Endereco = "QI 3",
-                Longitude = 0,
-                Latitude = 0,
+                Longitude = -47.87385383699987,
+                Latitude = -15.725453043781098,
                 Cidade = "Brasília",
                 UF = "DF"
             };
@@ -175,8 +175,8 @@ namespace ImunoMeta.Server.Data
                 Id = Guid.NewGuid(),
                 Nome = "UBS 3 Sobradinho – Nova Colina",
                 Endereco = "Área Especial – Novo Setor de Mansões Nova Colina",
-                Longitude = 0,
-                Latitude = 0,
+                Longitude = -15.64796549335305,
+                Latitude = -47.75527347168611,
                 Cidade = "Sobradinho",
                 UF = "DF"
             };
@@ -245,8 +245,8 @@ namespace ImunoMeta.Server.Data
                 Id = Guid.NewGuid(),
                 Nome = "UBS 7 Sobradinho II – Vila Buritizinho",
                 Endereco = "Quadra 5, Área Especial A, nº 1. Vila Buritizinho",
-                Longitude = 0,
-                Latitude = 0,
+                Longitude = -15.65127289695881,
+                Latitude = -47.82815052000412,
                 Cidade = "Sobradinho",
                 UF = "DF"
             };

@@ -17,7 +17,7 @@ namespace ImunoMeta.Server.Data.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.1")
+                .HasAnnotation("ProductVersion", "7.0.4")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -38,8 +38,7 @@ namespace ImunoMeta.Server.Data.Migrations
 
                     b.Property<string>("Data")
                         .IsRequired()
-                        .HasMaxLength(50000)
-                        .HasColumnType("varchar(100)");
+                        .HasColumnType("varchar(max)");
 
                     b.Property<string>("Description")
                         .HasMaxLength(200)
@@ -87,7 +86,7 @@ namespace ImunoMeta.Server.Data.Migrations
 
                     b.Property<string>("Data")
                         .IsRequired()
-                        .HasColumnType("varchar(100)");
+                        .HasColumnType("varchar(max)");
 
                     b.Property<bool>("DataProtected")
                         .HasColumnType("bit");
@@ -127,8 +126,7 @@ namespace ImunoMeta.Server.Data.Migrations
 
                     b.Property<string>("Data")
                         .IsRequired()
-                        .HasMaxLength(50000)
-                        .HasColumnType("varchar(100)");
+                        .HasColumnType("varchar(max)");
 
                     b.Property<string>("Description")
                         .HasMaxLength(200)
@@ -336,7 +334,7 @@ namespace ImunoMeta.Server.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("852e84ca-29a7-4cb4-9edc-c0bcdd61ed88"),
+                            Id = new Guid("f77a0058-fd20-48df-b85f-ac875da252fe"),
                             DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Removido = false,
@@ -347,7 +345,7 @@ namespace ImunoMeta.Server.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("6dc65d4d-b60a-42ab-900c-cb8def69bf87"),
+                            Id = new Guid("6c2a6bb4-0439-4795-afa6-57fe8de1fb1e"),
                             DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Removido = false,
@@ -358,7 +356,7 @@ namespace ImunoMeta.Server.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("47d2d1b8-73f8-4bcb-bd3e-dd25ef6efe8c"),
+                            Id = new Guid("1bf99edf-a37e-4665-9194-3c1dd51ee531"),
                             DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Removido = false,
@@ -427,20 +425,20 @@ namespace ImunoMeta.Server.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("62bfdebe-e068-4934-828a-26b58da7aad4"),
+                            Id = new Guid("8ce37bb4-e0d9-4d5f-bc24-c2c53adba423"),
                             Cidade = "Brasília",
                             DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Endereco = "QI 3",
-                            Latitude = 0.0,
-                            Longitude = 0.0,
+                            Latitude = -15.725453043781098,
+                            Longitude = -47.873853836999871,
                             Nome = "UBS 1 Lago Norte",
                             Removido = false,
                             UF = "DF"
                         },
                         new
                         {
-                            Id = new Guid("732f6bb8-3e94-433d-9d8b-7bc1531126bd"),
+                            Id = new Guid("779305b6-3537-4aa3-8bf1-ed9e72c8e982"),
                             Cidade = "Brasília",
                             DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -453,7 +451,7 @@ namespace ImunoMeta.Server.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("203f501f-a908-4e64-a767-42827ea6e331"),
+                            Id = new Guid("eaee9b78-96e2-4683-a46b-0dc95325db8b"),
                             Cidade = "Brasília",
                             DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -466,7 +464,7 @@ namespace ImunoMeta.Server.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("8f84ff82-90e8-4f2d-bb23-8f9b3e39b315"),
+                            Id = new Guid("848c5c1b-35c8-48c2-bc5e-093b2a45112b"),
                             Cidade = "Brasília",
                             DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -479,7 +477,7 @@ namespace ImunoMeta.Server.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("ab2347ed-4271-42be-90a2-4a36e937e9a4"),
+                            Id = new Guid("2dcc459a-67ed-4e4b-b85f-d43baa060cbe"),
                             Cidade = "Brasília",
                             DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -492,7 +490,7 @@ namespace ImunoMeta.Server.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("7fc90716-4950-48a7-8aa7-b8f2cc62d867"),
+                            Id = new Guid("abd252da-d7b2-468a-9890-f9e1210ed263"),
                             Cidade = "Brasília",
                             DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -505,7 +503,7 @@ namespace ImunoMeta.Server.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("c1e4e375-f41c-4e18-a18c-c95144862b42"),
+                            Id = new Guid("9637a93b-5bf7-4f3c-8a30-fbda392ad6bb"),
                             Cidade = "Brasília",
                             DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -518,7 +516,7 @@ namespace ImunoMeta.Server.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b9559937-e734-4c81-a5b4-3e4c62f8ad8b"),
+                            Id = new Guid("a39f72e6-adff-4ba8-a81a-b67fe686e25a"),
                             Cidade = "Brasília",
                             DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -531,7 +529,7 @@ namespace ImunoMeta.Server.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b519a054-2aac-40e2-a71d-29f5e48e9b67"),
+                            Id = new Guid("5cb64c4c-d31f-4713-9e0d-d4b6973ac9db"),
                             Cidade = "Brasília",
                             DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -544,7 +542,7 @@ namespace ImunoMeta.Server.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e4006b8d-4b1a-46e1-a76f-bc99d4985b66"),
+                            Id = new Guid("6e1a720e-c8c1-4f59-965f-f54fa1e64b03"),
                             Cidade = "Sobradinho",
                             DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -557,7 +555,7 @@ namespace ImunoMeta.Server.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("c73febf8-82c3-44db-ac31-e69b50ade191"),
+                            Id = new Guid("b097ea92-ac65-425d-b6fa-0940e907dbdb"),
                             Cidade = "Sobradinho",
                             DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -570,20 +568,20 @@ namespace ImunoMeta.Server.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("95b0f18e-76d2-4907-b080-085b60e6d4b3"),
+                            Id = new Guid("d86ff3f2-5053-48e7-b849-ddc4d7e7bbea"),
                             Cidade = "Sobradinho",
                             DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Endereco = "Área Especial – Novo Setor de Mansões Nova Colina",
-                            Latitude = 0.0,
-                            Longitude = 0.0,
+                            Latitude = -47.75527347168611,
+                            Longitude = -15.64796549335305,
                             Nome = "UBS 3 Sobradinho – Nova Colina",
                             Removido = false,
                             UF = "DF"
                         },
                         new
                         {
-                            Id = new Guid("c5a1a8ec-f359-494e-ba0b-ec950275ffd9"),
+                            Id = new Guid("d39c1020-b256-40db-bbb5-0cdc4454f7b7"),
                             Cidade = "Sobradinho",
                             DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -596,7 +594,7 @@ namespace ImunoMeta.Server.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f46a0d5c-ccf0-412c-8568-fe3c61b6b936"),
+                            Id = new Guid("a8ed3cb5-9acf-48e2-ba3a-130b702a896b"),
                             Cidade = "Sobradinho",
                             DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -609,7 +607,7 @@ namespace ImunoMeta.Server.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2d6a0f01-db8a-4e63-b0ef-91cc114041c2"),
+                            Id = new Guid("d9e163c5-0ab4-4ea0-958d-37df15287253"),
                             Cidade = "Sobradinho",
                             DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -622,7 +620,7 @@ namespace ImunoMeta.Server.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f28b07a4-a198-4227-875c-58f1f50c722f"),
+                            Id = new Guid("d5ef630b-6c15-4607-a206-2181296d30cc"),
                             Cidade = "Sobradinho",
                             DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -635,7 +633,7 @@ namespace ImunoMeta.Server.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("38c4f56e-5a6b-4441-9286-9a599bbe9b08"),
+                            Id = new Guid("8596da97-bfe3-4957-b38d-bf61657bb7d1"),
                             Cidade = "Sobradinho",
                             DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -648,7 +646,7 @@ namespace ImunoMeta.Server.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("53ee40c5-6de2-4ecf-80d4-85f52b61bc1c"),
+                            Id = new Guid("b0e84dca-dbac-4c10-aae1-06b3ada858ed"),
                             Cidade = "Sobradinho",
                             DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -661,20 +659,20 @@ namespace ImunoMeta.Server.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("aef1d9b1-d345-4f52-a8c8-1a671a930cc5"),
+                            Id = new Guid("fe44f672-00db-484c-922d-d7a51b457129"),
                             Cidade = "Sobradinho",
                             DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Endereco = "Quadra 5, Área Especial A, nº 1. Vila Buritizinho",
-                            Latitude = 0.0,
-                            Longitude = 0.0,
+                            Latitude = -47.828150520004122,
+                            Longitude = -15.65127289695881,
                             Nome = "UBS 7 Sobradinho II – Vila Buritizinho",
                             Removido = false,
                             UF = "DF"
                         },
                         new
                         {
-                            Id = new Guid("39c8f952-19a8-4fbf-aa66-d1a3e7be5811"),
+                            Id = new Guid("df89252b-fceb-4040-ae9f-b54ac033645a"),
                             Cidade = "Sobradinho",
                             DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -761,7 +759,7 @@ namespace ImunoMeta.Server.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("0c266f32-23b5-4e06-9167-02cd44b36290"),
+                            Id = new Guid("2fec7f33-2126-4d97-b8af-072ea89fb60e"),
                             DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Descricao = "Denuncia",
@@ -770,7 +768,7 @@ namespace ImunoMeta.Server.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("c21eba19-20e8-402a-9b5b-c380753701c7"),
+                            Id = new Guid("8c3ea3b9-0b97-4bce-8e40-ba060e00c877"),
                             DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Descricao = "Compartilhar",
@@ -779,7 +777,7 @@ namespace ImunoMeta.Server.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("7ed1c701-8c6b-4cc5-b618-1c30bd4a0f60"),
+                            Id = new Guid("ed2a1a55-b8e5-4390-8815-4e2e332c2d8c"),
                             DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Descricao = "Vacinas",

@@ -1,0 +1,80 @@
+﻿@page
+@model ImunoMeta.Server.Areas.Admin.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>PontoVacinacao</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="PontoVacinacao.UsuarioId" class="control-label"></label>
+                <input asp-for="PontoVacinacao.UsuarioId" class="form-control" />
+                <span asp-validation-for="PontoVacinacao.UsuarioId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PontoVacinacao.Nome" class="control-label"></label>
+                <input asp-for="PontoVacinacao.Nome" class="form-control" />
+                <span asp-validation-for="PontoVacinacao.Nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PontoVacinacao.Longitude" class="control-label"></label>
+                <input asp-for="PontoVacinacao.Longitude" class="form-control" />
+                <span asp-validation-for="PontoVacinacao.Longitude" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PontoVacinacao.Latitude" class="control-label"></label>
+                <input asp-for="PontoVacinacao.Latitude" class="form-control" />
+                <span asp-validation-for="PontoVacinacao.Latitude" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PontoVacinacao.Cidade" class="control-label"></label>
+                <input asp-for="PontoVacinacao.Cidade" class="form-control" />
+                <span asp-validation-for="PontoVacinacao.Cidade" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PontoVacinacao.UF" class="control-label"></label>
+                <input asp-for="PontoVacinacao.UF" class="form-control" />
+                <span asp-validation-for="PontoVacinacao.UF" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PontoVacinacao.Endereco" class="control-label"></label>
+                <input asp-for="PontoVacinacao.Endereco" class="form-control" />
+                <span asp-validation-for="PontoVacinacao.Endereco" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="PontoVacinacao.Id" />
+            <div class="form-group">
+                <label asp-for="PontoVacinacao.DataCadastro" class="control-label"></label>
+                <input asp-for="PontoVacinacao.DataCadastro" class="form-control" />
+                <span asp-validation-for="PontoVacinacao.DataCadastro" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PontoVacinacao.DataCadastroUTC" class="control-label"></label>
+                <input asp-for="PontoVacinacao.DataCadastroUTC" class="form-control" />
+                <span asp-validation-for="PontoVacinacao.DataCadastroUTC" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="PontoVacinacao.Removido" /> @Html.DisplayNameFor(model => model.PontoVacinacao.Removido)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

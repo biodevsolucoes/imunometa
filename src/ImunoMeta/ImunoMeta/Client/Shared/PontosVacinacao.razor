@@ -9,7 +9,7 @@
             {
                 <div class="col-4 py-3 border-bottom">
                     <div class="">
-                        <img class="w-100" src="@($"https://maps.googleapis.com/maps/api/staticmap?center={ponto.Longitude},{ponto.Latitude}&zoom=12&size=400x400&markers=color:red|label:A|{ponto.Longitude},{ponto.Latitude}&key=")" />
+                        <img class="w-100" src="@($"https://maps.googleapis.com/maps/api/staticmap?center={ponto.Longitude},{ponto.Latitude}&zoom=12&size=400x400&markers=color:red|label:A|{ponto.Longitude},{ponto.Latitude}&key=AIzaSyDmAW7wmqmdXGad7uTul6ziPdRaJVGnJxY")" />
                         <h4 class="py-3">
                             @ponto.Nome
                         </h4>
@@ -28,6 +28,7 @@
         }
     </div>
 </div>
+
 @code {
     [Parameter]
     public int Quantidade { get; set; }

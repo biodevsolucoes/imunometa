@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
@@ -83,7 +84,7 @@ namespace ImunoMeta.Server.Data.Migrations
                     Algorithm = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false),
                     IsX509Certificate = table.Column<bool>(type: "bit", nullable: false),
                     DataProtected = table.Column<bool>(type: "bit", nullable: false),
-                    Data = table.Column<string>(type: "varchar(100)", nullable: false)
+                    Data = table.Column<string>(type: "varchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -121,7 +122,7 @@ namespace ImunoMeta.Server.Data.Migrations
                     CreationTime = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Expiration = table.Column<DateTime>(type: "datetime2", nullable: true),
                     ConsumedTime = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    Data = table.Column<string>(type: "varchar(max)", nullable: false)
+                    Data = table.Column<string>(type: "varchar(5000)", maxLength: 5000, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -485,9 +486,9 @@ namespace ImunoMeta.Server.Data.Migrations
                 columns: new[] { "Id", "Resumo", "Texto", "Titulo", "UrlImagemCapa" },
                 values: new object[,]
                 {
-                    { new Guid("47d2d1b8-73f8-4bcb-bd3e-dd25ef6efe8c"), "Palestra em unidade de saúde de Sobradinho busca tornar o atendimento a vítimas mais empático e aprofundar temas sensíveis, como traumas e agressões sexuais", "Atendimento ainda mais empático. Esse foi um dos objetivos da palestra Violência sexual e compreensão das reações das vítimas realizada nessa segunda-feira (20), no Hospital Regional de Sobradinho (HRS). A iniciativa visa capacitar a rede que atua no acolhimento de casos de violência, incluindo profissionais da saúde e servidores da rede-adjunta, como educação, órgãos da justiça e conselhos tutelares.", "Hospital capacita servidores para acolher pessoas em situação de violência", "https://www.saude.df.gov.br/image/journal/article?img_id=3019264" },
-                    { new Guid("6dc65d4d-b60a-42ab-900c-cb8def69bf87"), "Secretaria nomeia novos profissionais e abre leitos de UTI e de enfermaria pediátrica, além de capacitar equipes para atender ao público infantil", "A chegada do outono e do inverno nos meses de março a junho ocasiona a propagação de vírus que causam doenças respiratórias, majoritariamente, entre as crianças – em especial naquelas de até dois anos de idade, cujo sistema imunológico não é tão fortalecido.", "Saúde reforça serviços de atendimento às crianças", "https://www.saude.df.gov.br/image/journal/article?img_id=3019298" },
-                    { new Guid("852e84ca-29a7-4cb4-9edc-c0bcdd61ed88"), "Nesta etapa, poderão receber o imunizante profissionais de saúde, trabalhadores do sistema prisional, pessoas com deficiência e população privada de liberdade", "A Secretaria de Saúde do Distrito Federal inicia nesta quarta-feira (22) a imunização de profissionais de saúde, trabalhadores prisionais, população privada de liberdade e pessoas com deficiência permanente com a versão bivalente da vacina contra a covid-19. O imunizante estará disponível em mais de 90 locais com atendimento das 8h às 17h.", "DF inicia vacinação bivalente contra a covid-19 para novos grupos", "https://www.saude.df.gov.br/image/journal/article?img_id=3019334" }
+                    { new Guid("1bf99edf-a37e-4665-9194-3c1dd51ee531"), "Palestra em unidade de saúde de Sobradinho busca tornar o atendimento a vítimas mais empático e aprofundar temas sensíveis, como traumas e agressões sexuais", "Atendimento ainda mais empático. Esse foi um dos objetivos da palestra Violência sexual e compreensão das reações das vítimas realizada nessa segunda-feira (20), no Hospital Regional de Sobradinho (HRS). A iniciativa visa capacitar a rede que atua no acolhimento de casos de violência, incluindo profissionais da saúde e servidores da rede-adjunta, como educação, órgãos da justiça e conselhos tutelares.", "Hospital capacita servidores para acolher pessoas em situação de violência", "https://www.saude.df.gov.br/image/journal/article?img_id=3019264" },
+                    { new Guid("6c2a6bb4-0439-4795-afa6-57fe8de1fb1e"), "Secretaria nomeia novos profissionais e abre leitos de UTI e de enfermaria pediátrica, além de capacitar equipes para atender ao público infantil", "A chegada do outono e do inverno nos meses de março a junho ocasiona a propagação de vírus que causam doenças respiratórias, majoritariamente, entre as crianças – em especial naquelas de até dois anos de idade, cujo sistema imunológico não é tão fortalecido.", "Saúde reforça serviços de atendimento às crianças", "https://www.saude.df.gov.br/image/journal/article?img_id=3019298" },
+                    { new Guid("f77a0058-fd20-48df-b85f-ac875da252fe"), "Nesta etapa, poderão receber o imunizante profissionais de saúde, trabalhadores do sistema prisional, pessoas com deficiência e população privada de liberdade", "A Secretaria de Saúde do Distrito Federal inicia nesta quarta-feira (22) a imunização de profissionais de saúde, trabalhadores prisionais, população privada de liberdade e pessoas com deficiência permanente com a versão bivalente da vacina contra a covid-19. O imunizante estará disponível em mais de 90 locais com atendimento das 8h às 17h.", "DF inicia vacinação bivalente contra a covid-19 para novos grupos", "https://www.saude.df.gov.br/image/journal/article?img_id=3019334" }
                 });
 
             migrationBuilder.InsertData(
@@ -495,26 +496,26 @@ namespace ImunoMeta.Server.Data.Migrations
                 columns: new[] { "Id", "Cidade", "Endereco", "Latitude", "Longitude", "Nome", "UF", "UsuarioId", "UsuarioId1" },
                 values: new object[,]
                 {
-                    { new Guid("203f501f-a908-4e64-a767-42827ea6e331"), "Brasília", "SGAN 905", 0.0, 0.0, "UBS 1 Asa Norte", "DF", null, null },
-                    { new Guid("2d6a0f01-db8a-4e63-b0ef-91cc114041c2"), "Sobradinho", "Rodovia DF 420, Complexo de Saúde, Setor de Mansões, ao lado da UPA Sobradinho", 0.0, 0.0, "UBS 1 Sobradinho II", "DF", null, null },
-                    { new Guid("38c4f56e-5a6b-4441-9286-9a599bbe9b08"), "Sobradinho", "Condomínio Mini-Chácaras, QMS 16 Rua 14 Casa 01 – Sobradinho II", 0.0, 0.0, "UBS 5 Sobradinho II", "DF", null, null },
-                    { new Guid("39c8f952-19a8-4fbf-aa66-d1a3e7be5811"), "Sobradinho", "DF 150 Km 12 Quadra 10 Casa 14 ", 0.0, 0.0, "UBS 1 Fercal", "DF", null, null },
-                    { new Guid("53ee40c5-6de2-4ecf-80d4-85f52b61bc1c"), "Sobradinho", "Condomínio Vale das Acácias, Quadra 12, Lote 01, Sobradinho II", 0.0, 0.0, "UBS 6 Sobradinho II", "DF", null, null },
-                    { new Guid("62bfdebe-e068-4934-828a-26b58da7aad4"), "Brasília", "QI 3", 0.0, 0.0, "UBS 1 Lago Norte", "DF", null, null },
-                    { new Guid("732f6bb8-3e94-433d-9d8b-7bc1531126bd"), "Brasília", "Vila Varjão Quadra 5 Conjunto A Lote 17", 0.0, 0.0, "UBS 1 Varjão", "DF", null, null },
-                    { new Guid("7fc90716-4950-48a7-8aa7-b8f2cc62d867"), "Brasília", "QS 514/515 – W3 Sul ", 0.0, 0.0, "Policlínica 514 Sul", "DF", null, null },
-                    { new Guid("8f84ff82-90e8-4f2d-bb23-8f9b3e39b315"), "Brasília", "EQN 114/115", 0.0, 0.0, "UBS 2 Asa Norte", "DF", null, null },
-                    { new Guid("95b0f18e-76d2-4907-b080-085b60e6d4b3"), "Sobradinho", "Área Especial – Novo Setor de Mansões Nova Colina", 0.0, 0.0, "UBS 3 Sobradinho – Nova Colina", "DF", null, null },
-                    { new Guid("ab2347ed-4271-42be-90a2-4a36e937e9a4"), "Brasília", "Rua Piau – Acampamento Pacheco", 0.0, 0.0, "UBS 3 Vila Planalto", "DF", null, null },
-                    { new Guid("aef1d9b1-d345-4f52-a8c8-1a671a930cc5"), "Sobradinho", "Quadra 5, Área Especial A, nº 1. Vila Buritizinho", 0.0, 0.0, "UBS 7 Sobradinho II – Vila Buritizinho", "DF", null, null },
-                    { new Guid("b519a054-2aac-40e2-a71d-29f5e48e9b67"), "Brasília", "SHIS QI 21 – Área Especial/23 – AE LT E – Lago Sul", 0.0, 0.0, "Policlínica do Lago Sul", "DF", null, null },
-                    { new Guid("b9559937-e734-4c81-a5b4-3e4c62f8ad8b"), "Brasília", "Setor Escolar Lote 04 - Cruzeiro Velho", 0.0, 0.0, "UBS 2 Cruzeiro", "DF", null, null },
-                    { new Guid("c1e4e375-f41c-4e18-a18c-c95144862b42"), "Brasília", "SHCES 601 - Lote 01 - Cruzeiro Novo", 0.0, 0.0, "UBS 1 Cruzeiro", "DF", null, null },
-                    { new Guid("c5a1a8ec-f359-494e-ba0b-ec950275ffd9"), "Sobradinho", "Área Especial 01, Lote 01, Associação de Moradores, Vila BASEVI", 0.0, 0.0, "UBS 5 Sobradinho - Basevi", "DF", null, null },
-                    { new Guid("c73febf8-82c3-44db-ac31-e69b50ade191"), "Sobradinho", "Quadra 3 Área Especial Conjuntos D/E", 0.0, 0.0, "UBS 2 Sobradinho", "DF", null, null },
-                    { new Guid("e4006b8d-4b1a-46e1-a76f-bc99d4985b66"), "Sobradinho", "Quadra 14 Área Especial 22/23", 0.0, 0.0, "UBS 1 Sobradinho", "DF", null, null },
-                    { new Guid("f28b07a4-a198-4227-875c-58f1f50c722f"), "Sobradinho", "Condomínio Vale dos Pinheiros, Quadra 45 A, Conjunto A, Lote 56, Sobradinho II", 0.0, 0.0, "UBS 3 Sobradinho II", "DF", null, null },
-                    { new Guid("f46a0d5c-ccf0-412c-8568-fe3c61b6b936"), "Sobradinho", "DF 001 KM 120 Rua 08 Chácara 187 Lago Oeste, Sobradinho", 0.0, 0.0, "UBS 6 Sobradinho - Lago Oeste", "DF", null, null }
+                    { new Guid("2dcc459a-67ed-4e4b-b85f-d43baa060cbe"), "Brasília", "Rua Piau – Acampamento Pacheco", 0.0, 0.0, "UBS 3 Vila Planalto", "DF", null, null },
+                    { new Guid("5cb64c4c-d31f-4713-9e0d-d4b6973ac9db"), "Brasília", "SHIS QI 21 – Área Especial/23 – AE LT E – Lago Sul", 0.0, 0.0, "Policlínica do Lago Sul", "DF", null, null },
+                    { new Guid("6e1a720e-c8c1-4f59-965f-f54fa1e64b03"), "Sobradinho", "Quadra 14 Área Especial 22/23", 0.0, 0.0, "UBS 1 Sobradinho", "DF", null, null },
+                    { new Guid("779305b6-3537-4aa3-8bf1-ed9e72c8e982"), "Brasília", "Vila Varjão Quadra 5 Conjunto A Lote 17", 0.0, 0.0, "UBS 1 Varjão", "DF", null, null },
+                    { new Guid("848c5c1b-35c8-48c2-bc5e-093b2a45112b"), "Brasília", "EQN 114/115", 0.0, 0.0, "UBS 2 Asa Norte", "DF", null, null },
+                    { new Guid("8596da97-bfe3-4957-b38d-bf61657bb7d1"), "Sobradinho", "Condomínio Mini-Chácaras, QMS 16 Rua 14 Casa 01 – Sobradinho II", 0.0, 0.0, "UBS 5 Sobradinho II", "DF", null, null },
+                    { new Guid("8ce37bb4-e0d9-4d5f-bc24-c2c53adba423"), "Brasília", "QI 3", -15.725453043781098, -47.873853836999871, "UBS 1 Lago Norte", "DF", null, null },
+                    { new Guid("9637a93b-5bf7-4f3c-8a30-fbda392ad6bb"), "Brasília", "SHCES 601 - Lote 01 - Cruzeiro Novo", 0.0, 0.0, "UBS 1 Cruzeiro", "DF", null, null },
+                    { new Guid("a39f72e6-adff-4ba8-a81a-b67fe686e25a"), "Brasília", "Setor Escolar Lote 04 - Cruzeiro Velho", 0.0, 0.0, "UBS 2 Cruzeiro", "DF", null, null },
+                    { new Guid("a8ed3cb5-9acf-48e2-ba3a-130b702a896b"), "Sobradinho", "DF 001 KM 120 Rua 08 Chácara 187 Lago Oeste, Sobradinho", 0.0, 0.0, "UBS 6 Sobradinho - Lago Oeste", "DF", null, null },
+                    { new Guid("abd252da-d7b2-468a-9890-f9e1210ed263"), "Brasília", "QS 514/515 – W3 Sul ", 0.0, 0.0, "Policlínica 514 Sul", "DF", null, null },
+                    { new Guid("b097ea92-ac65-425d-b6fa-0940e907dbdb"), "Sobradinho", "Quadra 3 Área Especial Conjuntos D/E", 0.0, 0.0, "UBS 2 Sobradinho", "DF", null, null },
+                    { new Guid("b0e84dca-dbac-4c10-aae1-06b3ada858ed"), "Sobradinho", "Condomínio Vale das Acácias, Quadra 12, Lote 01, Sobradinho II", 0.0, 0.0, "UBS 6 Sobradinho II", "DF", null, null },
+                    { new Guid("d39c1020-b256-40db-bbb5-0cdc4454f7b7"), "Sobradinho", "Área Especial 01, Lote 01, Associação de Moradores, Vila BASEVI", 0.0, 0.0, "UBS 5 Sobradinho - Basevi", "DF", null, null },
+                    { new Guid("d5ef630b-6c15-4607-a206-2181296d30cc"), "Sobradinho", "Condomínio Vale dos Pinheiros, Quadra 45 A, Conjunto A, Lote 56, Sobradinho II", 0.0, 0.0, "UBS 3 Sobradinho II", "DF", null, null },
+                    { new Guid("d86ff3f2-5053-48e7-b849-ddc4d7e7bbea"), "Sobradinho", "Área Especial – Novo Setor de Mansões Nova Colina", -47.75527347168611, -15.64796549335305, "UBS 3 Sobradinho – Nova Colina", "DF", null, null },
+                    { new Guid("d9e163c5-0ab4-4ea0-958d-37df15287253"), "Sobradinho", "Rodovia DF 420, Complexo de Saúde, Setor de Mansões, ao lado da UPA Sobradinho", 0.0, 0.0, "UBS 1 Sobradinho II", "DF", null, null },
+                    { new Guid("df89252b-fceb-4040-ae9f-b54ac033645a"), "Sobradinho", "DF 150 Km 12 Quadra 10 Casa 14 ", 0.0, 0.0, "UBS 1 Fercal", "DF", null, null },
+                    { new Guid("eaee9b78-96e2-4683-a46b-0dc95325db8b"), "Brasília", "SGAN 905", 0.0, 0.0, "UBS 1 Asa Norte", "DF", null, null },
+                    { new Guid("fe44f672-00db-484c-922d-d7a51b457129"), "Sobradinho", "Quadra 5, Área Especial A, nº 1. Vila Buritizinho", -47.828150520004122, -15.65127289695881, "UBS 7 Sobradinho II – Vila Buritizinho", "DF", null, null }
                 });
 
             migrationBuilder.InsertData(
@@ -522,9 +523,9 @@ namespace ImunoMeta.Server.Data.Migrations
                 columns: new[] { "Id", "Descricao", "Valor" },
                 values: new object[,]
                 {
-                    { new Guid("0c266f32-23b5-4e06-9167-02cd44b36290"), "Denuncia", (short)50 },
-                    { new Guid("7ed1c701-8c6b-4cc5-b618-1c30bd4a0f60"), "Vacinas", (short)10 },
-                    { new Guid("c21eba19-20e8-402a-9b5b-c380753701c7"), "Compartilhar", (short)25 }
+                    { new Guid("2fec7f33-2126-4d97-b8af-072ea89fb60e"), "Denuncia", (short)50 },
+                    { new Guid("8c3ea3b9-0b97-4bce-8e40-ba060e00c877"), "Compartilhar", (short)25 },
+                    { new Guid("ed2a1a55-b8e5-4390-8815-4e2e332c2d8c"), "Vacinas", (short)10 }
                 });
 
             migrationBuilder.CreateIndex(
