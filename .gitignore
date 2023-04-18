@@ -1,3 +1,5 @@
 *\.vs
 [Bb]in
 [oO]bj
+appsettings.Release.json
+/src/ImunoMeta/ImunoMeta/Server/appsettings.Release.json
