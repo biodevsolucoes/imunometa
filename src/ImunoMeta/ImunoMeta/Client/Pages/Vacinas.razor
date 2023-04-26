@@ -1,6 +1,15 @@
 ﻿@page "/Vacinas"
-<h3>Vacinas</h3>
+@using Microsoft.AspNetCore.Authorization;
+@attribute [Authorize]
+<div class="d-flex justify-content-between mb-3">
+    <div>
+        <h1>Vacinas</h1>
+    </div>
 
+    <button class="btn btn-outline-dark" onclick="history.back(-1)">
+        Voltar
+    </button>
+</div>
 @code {
 
 }

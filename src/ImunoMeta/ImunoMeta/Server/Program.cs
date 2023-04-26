@@ -1,6 +1,7 @@
 using ImunoMeta.Server.Data;
 using ImunoMeta.Server.Interfaces;
 using ImunoMeta.Server.Repository;
+using ImunoMeta.Server.Services;
 using ImunoMeta.Shared.Models;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.EntityFrameworkCore;
@@ -17,7 +18,7 @@ builder.Services.AddDefaultIdentity<Usuario>(options => options.SignIn.RequireCo
     .AddEntityFrameworkStores<ApplicationDbContext>();
 
 builder.Services.AddIdentityServer()
-        //.AddDeveloperSigningCredential()
+    //.AddDeveloperSigningCredential()
     .AddApiAuthorization<Usuario, ApplicationDbContext>();
 
 builder.Services.AddAuthentication()
@@ -27,6 +28,8 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 
 builder.Services.AddScoped(typeof(IRepository<>), typeof(ImunoMetaRepository<>));
+
+builder.Services.AddScoped<IArquivoService, ArquivoService>();
 
 var app = builder.Build();
 

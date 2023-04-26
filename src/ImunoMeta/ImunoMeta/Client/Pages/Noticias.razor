@@ -1,8 +1,8 @@
 ﻿@page "/Noticias"
-<ListarNoticias Quantidade="10" />
+@using Microsoft.AspNetCore.Authorization;
+@attribute [Authorize]
+
+<ListarNoticias Quantidade="10" ExibirBotaoVoltar="true" />
 @code {
 
 }
-bin
-obj
-.vs

@@ -1,6 +1,16 @@
 ﻿@inject IHttpClientFactory ClientFactory
 <div class="mb-3 border bg-white p-3">
-    <h1 class="mb-3">Pontos de Vacinação</h1>
+    <div class="d-flex justify-content-between mb-3">
+        <div>
+            <h1>Locais de Vacinação</h1>
+        </div>
+        @if (ExibirBotaoVoltar)
+        {
+            <button class="btn btn-outline-dark" onclick="history.back(-1)">
+                Voltar
+            </button>
+        }
+    </div>
     <div class="row">
         @if (ListaPontosVacinacao != null)
         {
@@ -32,6 +42,9 @@
 @code {
     [Parameter]
     public int Quantidade { get; set; }
+
+    [Parameter]
+    public bool ExibirBotaoVoltar { get; set; } = false;
 
     private IEnumerable<PontoVacinacao>? ListaPontosVacinacao { get; set; } = null;
     private string UF { get; set; } = "DF";

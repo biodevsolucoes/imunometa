@@ -1,0 +1,88 @@
+﻿@page "/contatos"
+@using ImunoMeta.Shared.DTO;
+@using ImunoMeta.Shared.Models;
+@using System.Text.Json;
+@using Microsoft.AspNetCore.Authorization;
+@using System.Net.Http.Json;
+@using Microsoft.AspNetCore.Components.Authorization;
+@using System.Security.Claims;
+@inject IHttpClientFactory ClientFactory;
+@inject AuthenticationStateProvider AuthState
+
+<style type="text/css">
+    #avatar {
+        /* make a square container */
+        width: 120px;
+        height: 120px;
+        /* fill the container, preserving aspect ratio, and cropping to fit */
+        background-size: cover;
+        /* center the image vertically and horizontally */
+        background-position: center;
+        /* round the edges to a circle with border radius 1/2 container size */
+        border-radius: 50%;
+    }
+</style>
+<div class="d-flex justify-content-between ">
+    <div>
+        <h1>Contatos</h1>
+    </div>
+    <button class="btn btn-outline-dark" onclick="history.back(-1)">
+        Voltar
+    </button>
+
+</div>
+@foreach (var contato in ListaContatos)
+{
+    <div class="row py-3 border-bottom align-items-center">
+        <div class="col-4 col-md-2 overflow-hidden d-flex align-items-center justify-content-center">
+            <a href="/Perfil/@contato.Id">
+                <div id="avatar" style="background-image:url(./avatar/@contato.UrlAvatar)">
+                    @*<img src="" class="rounded-circle bg-dark" style="max-width:100%; max-height:100%;">*@
+                </div>
+            </a>
+        </div>
+        <div class="col-8 col-md-10 d-flex align-items-center">
+            <div class="d-flex w-100 justify-content-between">
+                <h4 class="">
+                    <a href="/Perfil/@contato.Id">
+                        @contato.Nome
+                    </a>
+                </h4>
+                <div>
+                    @if (contato.Email == User.Identity?.Name)
+                    {
+                        <a href="/Perfil">
+                            <button class="btn bg-light border text-dark" disabled="disabled">Seu perfil</button>
+                        </a>
+                    }
+                    else
+                    {
+                        <a href="/Perfil/@contato.Id">
+                            <button class="btn btn-success" disabled="disabled">Adicionado</button>
+                        </a>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+}
+@code {
+    public IEnumerable<UsuarioDTO> ListaContatos { get; set; } = new List<UsuarioDTO>();
+    public ClaimsPrincipal User { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        var authState = await AuthState.GetAuthenticationStateAsync();
+        User = authState.User;
+
+        HttpClient Http = ClientFactory.CreateClient("private");
+        try
+        {
+            ListaContatos = await Http.GetFromJsonAsync<IEnumerable<UsuarioDTO>>($"Contato/Obter");
+        }
+        catch (Exception e)
+        {
+            Console.Write(e);
+        }
+    }
+}

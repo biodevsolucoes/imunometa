@@ -18,7 +18,6 @@ builder.Services.AddHttpClient("public", client => client.BaseAddress = new Uri(
 builder.Services.AddScoped(sp => sp.GetRequiredService<IHttpClientFactory>().CreateClient("ImunoMeta.ServerAPI"));
 
 
-
 builder.Services.AddApiAuthorization();
 
 await builder.Build().RunAsync();

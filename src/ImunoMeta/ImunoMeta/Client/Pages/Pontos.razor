@@ -1,6 +1,16 @@
 ﻿@page "/Pontos"
-<h3>Pontos</h3>
+@using Microsoft.AspNetCore.Authorization;
+@attribute [Authorize]
+<div class="d-flex justify-content-between mb-3">
+    <div>
+        <h1>Pontos</h1>
+    </div>
 
+    <button class="btn btn-outline-dark" onclick="history.back(-1)">
+        Voltar
+    </button>
+</div>
 @code {
-
+    [Parameter]
+    public bool ExibirBotaoVoltar { get; set; } = false;
 }

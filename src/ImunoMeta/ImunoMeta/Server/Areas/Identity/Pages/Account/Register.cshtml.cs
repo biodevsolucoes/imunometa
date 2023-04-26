@@ -2,23 +2,17 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 #nullable disable
 
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Text.Encodings.Web;
-using System.Threading;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authorization;
+using ImunoMeta.Server.Interfaces;
 using ImunoMeta.Shared.Models;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
-using Microsoft.Extensions.Logging;
+using System.ComponentModel.DataAnnotations;
+using System.Text;
+using System.Text.Encodings.Web;
 
 namespace ImunoMeta.Server.Areas.Identity.Pages.Account
 {
@@ -30,13 +24,15 @@ namespace ImunoMeta.Server.Areas.Identity.Pages.Account
         private readonly IUserEmailStore<Usuario> _emailStore;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
+        private readonly IArquivoService _arquivoService;
 
         public RegisterModel(
             UserManager<Usuario> userManager,
             IUserStore<Usuario> userStore,
             SignInManager<Usuario> signInManager,
             ILogger<RegisterModel> logger,
-            IEmailSender emailSender)
+            IEmailSender emailSender,
+            IArquivoService arquivoService)
         {
             _userManager = userManager;
             _userStore = userStore;
@@ -44,6 +40,7 @@ namespace ImunoMeta.Server.Areas.Identity.Pages.Account
             _signInManager = signInManager;
             _logger = logger;
             _emailSender = emailSender;
+            _arquivoService = arquivoService;
         }
 
         /// <summary>
@@ -77,7 +74,7 @@ namespace ImunoMeta.Server.Areas.Identity.Pages.Account
             /// </summary>
             [Required]
             [EmailAddress]
-            [Display(Name = "Email")]
+            [Display(Name = "E-mail")]
             public string Email { get; set; }
 
             /// <summary>
@@ -87,7 +84,7 @@ namespace ImunoMeta.Server.Areas.Identity.Pages.Account
             [Required]
             [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
             [DataType(DataType.Password)]
-            [Display(Name = "Password")]
+            [Display(Name = "Senha")]
             public string Password { get; set; }
 
             /// <summary>
@@ -95,9 +92,15 @@ namespace ImunoMeta.Server.Areas.Identity.Pages.Account
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
             [DataType(DataType.Password)]
-            [Display(Name = "Confirm password")]
+            [Display(Name = "Confirme a Senha")]
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
+
+            [Required]
+            [Display(Name = "Nome completo")]
+            public string Nome { get; set; }
+
+            public IFormFile Foto { get; set; }
         }
 
 
@@ -111,6 +114,7 @@ namespace ImunoMeta.Server.Areas.Identity.Pages.Account
         {
             returnUrl ??= Url.Content("~/");
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
+
             if (ModelState.IsValid)
             {
                 var user = CreateUser();
@@ -124,7 +128,18 @@ namespace ImunoMeta.Server.Areas.Identity.Pages.Account
                     _logger.LogInformation("User created a new account with password.");
 
                     var userId = await _userManager.GetUserIdAsync(user);
+                    string urlAvatar = string.Empty;
+
+                    if (Input.Foto != null)
+                        urlAvatar = await _arquivoService.UploadAvatar(Input.Foto, userId);
+
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+
+                    user.Nome = Input.Nome;
+                    user.UrlFoto = urlAvatar;
+
+                    await _userManager.UpdateAsync(user);
+
                     code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
                     var callbackUrl = Url.Page(
                         "/Account/ConfirmEmail",

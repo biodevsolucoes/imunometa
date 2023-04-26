@@ -1,33 +1,79 @@
 ﻿@using Microsoft.AspNetCore.Authorization;
 @using Microsoft.AspNetCore.Components.Authorization
+@using System.Security.Claims;
+@using System.Text.Json;
+@inject IHttpClientFactory ClientFactory
+@inject AuthenticationStateProvider AuthState
+@page "/Perfil/{id?}"
 @attribute [Authorize]
-@inject AuthenticationStateProvider AuthenticationStateProvider
-@inject UserManager<Usuario> UserManager
-@page "/Perfil"
-<h1>Perfil</h1>
+<div class="d-flex justify-content-between ">
+    <div>
+        <h1>Perfil</h1>
+    </div>
+    <button class="btn btn-outline-dark" onclick="history.back(-1)">
+        Voltar
+    </button>
+
+</div>
+
+
+
+
 @if (Usuario == null)
 {
     <p>Carregando...</p>
 }
 else
 {
-    <h3>@Usuario.Nome</h3>
-    <h3>@Usuario.Email</h3>
+    <div class="row">
+        <div class="col-3">
+            <img src="/Avatar/@Usuario.UrlAvatar" class="w-100 mb-3">
+            <h4>@Usuario.Nome</h4>
+            <a href="/identity/account/logout">Sair</a>
+        </div>
+        <div class="col-9">
+            <h3>Timeline</h3>
+        </div>
+    </div>
+
 }
 @code {
+    [Parameter]
+    public string? Id { get; set; }
+    public bool autenticado { get; set; }
 
-    private Usuario Usuario { get; set; }
+    private UsuarioDTO? Usuario { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
-        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
-        var user = authState.User;
-        var userName = user.Identity?.Name;
+        HttpClient Http = ClientFactory.CreateClient("private");
 
-        Usuario = await UserManager.GetUserAsync(user);
+        try
+        {
 
-        Console.WriteLine(userName);
+            var authState = await AuthState.GetAuthenticationStateAsync();
+            var user = authState.User;
+            autenticado = user.Identity.IsAuthenticated;
 
+            HttpResponseMessage result;
+
+            var email = user.Identity.Name;
+            if (string.IsNullOrEmpty(Id))
+            {
+                result = await Http.PostAsJsonAsync<UsuarioDTO>($"Usuarios/ObterUsuarioLogado", new UsuarioDTO { Email = email });
+
+                if (result.IsSuccessStatusCode)
+                    Usuario = await result.Content.ReadFromJsonAsync<UsuarioDTO>();
+            }
+            else
+            {
+                Usuario = await Http.GetFromJsonAsync<UsuarioDTO>($"Usuarios/Obter/{Id}");
+            }
+        }
+        catch (Exception e)
+        {
+            Console.Write(e);
+        }
     }
 
 }

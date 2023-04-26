@@ -1,7 +1,16 @@
 ﻿@inject IHttpClientFactory ClientFactory
 <div class="mb-3 border bg-white p-3">
-    <h1 class="mb-3">Notícias</h1>
-
+    <div class="d-flex justify-content-between mb-3">
+        <div>
+            <h1>Notícias</h1>
+        </div>
+        @if (ExibirBotaoVoltar)
+        {
+            <button class="btn btn-outline-dark" onclick="history.back(-1)">
+                Voltar
+            </button>
+        }
+    </div>
     @if (NoticiasRecentes.Any())
     {
         foreach (var noticia in NoticiasRecentes)
@@ -32,6 +41,9 @@
 
     [Parameter]
     public int Quantidade { get; set; } = 1;
+
+    [Parameter]
+    public bool ExibirBotaoVoltar { get; set; } = false;
 
     protected override async Task OnInitializedAsync()
     {

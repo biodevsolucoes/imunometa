@@ -1,7 +1,16 @@
 ﻿
 <div class="mb-3 bg-white p-3 border">
-    <h1>Meus Pontos</h1>
-
+    <div class="d-flex justify-content-between mb-3">
+        <div>
+            <h1>Meus Pontos</h1>
+        </div>
+        @if (ExibirBotaoVoltar)
+        {
+            <button class="btn btn-outline-dark" onclick="history.back(-1)">
+                Voltar
+            </button>
+        }
+    </div>
     <h4 class="text-primary">
         <span class="pb-3 d-block">
             <i class=""></i> 260 pontos
@@ -13,5 +22,7 @@
 </div>
 
 @code {
+    [Parameter]
+    public bool ExibirBotaoVoltar { get; set; } = false;
 
 }

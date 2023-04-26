@@ -1,8 +1,11 @@
 ﻿@page "/Locais"
+@using Microsoft.AspNetCore.Authorization;
+@attribute [Authorize]
+
 <JanelaModal Visivel="true" Titulo="Teste">
 </JanelaModal>
 
-<PontosVacinacao Quantidade="20" />
+<PontosVacinacao Quantidade="20" ExibirBotaoVoltar="true" />
 @code {
 
 }

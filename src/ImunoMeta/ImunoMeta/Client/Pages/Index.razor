@@ -1,5 +1,8 @@
 ﻿@page "/"
+@using Microsoft.AspNetCore.Authorization;
+@attribute [Authorize]
+
 <MinhasVacinas />
-<MeusPontos />
+<MeusPontos/>
 <PontosVacinacao Quantidade="3" />
-<ListarNoticias Quantidade="3" />
+<ListarNoticias Quantidade="3"  />
