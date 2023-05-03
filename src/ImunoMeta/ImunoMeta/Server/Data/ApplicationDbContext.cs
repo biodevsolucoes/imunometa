@@ -28,7 +28,7 @@ namespace ImunoMeta.Server.Data
                 property.SetColumnType("varchar(100)");
             }
 
-            foreach(var property in modelBuilder.Model.GetEntityTypes().SelectMany(t=>t.GetProperties()).Where(x=>x.Name.Equals("Removido")))
+            foreach (var property in modelBuilder.Model.GetEntityTypes().SelectMany(t => t.GetProperties()).Where(x => x.Name.Equals("Removido")))
             {
                 property.SetColumnType("bit");
                 property.SetDefaultValueSql("0");
@@ -53,9 +53,142 @@ namespace ImunoMeta.Server.Data
 
         private void Seed(ModelBuilder modelBuilder)
         {
+            SeedVacinas(modelBuilder);
             SeedNoticias(modelBuilder);
             SeedTipoPontuacao(modelBuilder);
             SeedPontosVacinacao(modelBuilder);
+        }
+
+        private void SeedVacinas(ModelBuilder modelBuilder)
+        {
+            var v1 = new Vacina()
+            {
+                Id = Guid.NewGuid(),
+                Nome = "BCG",
+                Descricao = "A vacina BCG protege contra a tuberculose – doença contagiosa, provocada pela bactéria Mycobacterium tuberculosis. Foi criada em 1.921 por Léon Calmette e Alphonse Guérin, dando origem ao nome BCG.",
+                CssClass = "bg-secondary"
+            };
+            var v2 = new Vacina()
+            {
+                Id = Guid.NewGuid(),
+                Nome = "Hepatite A",
+                Descricao = "É uma infecção causada pelo vírus A (HAV) da hepatite, também conhecida como “hepatite infecciosa”. Na maioria dos casos, a hepatite A é uma doença de caráter benigno, contudo o curso sintomático e a letalidade aumentam com a idade.",
+                CssClass = "bg-info"
+            };
+            var v3 = new Vacina()
+            {
+                Id = Guid.NewGuid(),
+                Nome = "Hepatite B",
+                Descricao = "A hepatite B é uma doença que provoca mal-estar, febre, dor de cabeça, cansaço, dor no abdômen, náuseas e vômitos. Na sua forma mais grave, pode causar infecções e até tumores no fígado. A vacina que previne contra a hepatite B deve ser aplicada ainda nas primeiras horas após o nascimento, fornecendo uma proteção entre 80 e 100%. É aplicada com uma injeção e as doses de reforço estão presentes na vacina pentavalente, que também protege contra tétano, coqueluche, difteria e meningite, causada pela Haemophilus influenza tipo B.",
+                CssClass = "bg-dark"
+            };
+            var v4 = new Vacina()
+            {
+                Id = Guid.NewGuid(),
+                Nome = "Penta (DTP/Hib/Hep. B)",
+                Descricao = "A vacina pentavalente é a combinação de cinco vacinas individuais em uma. O objetivo é proteger as pessoas contra múltiplas doenças ao mesmo tempo. Desde 2012, o Programa Nacional de Imunizações (PNI), do Ministério da Saúde, oferta a vacina pentavalente na rotina do Calendário Nacional de Vacinação.",
+                CssClass = "bg-warning"
+            };
+            var v5 = new Vacina()
+            {
+                Id = Guid.NewGuid(),
+                Nome = "Pneumocócica 10 valente",
+                Descricao = "O Ministério da Saúde recomenda a vacinação de todas as crianças menores de cinco anos de acordo com o Calendário Nacional de Vacinação. A imunização com as doses recomendadas é fundamental para evitar o adoecimento, além de complicações e óbitos.",
+                CssClass = "bg-danger"
+            };
+            var v6 = new Vacina()
+            {
+                Id = Guid.NewGuid(),
+                Nome = "Vacina Inativada Poliomielite (VIP)",
+                Descricao = "A vacina é indicada para prevenir contra a poliomielite causada por vírus dos tipos 1, 2 e 3.",
+                CssClass = "bg-success"
+            };
+            var v7 = new Vacina()
+            {
+                Id = Guid.NewGuid(),
+                Nome = "Vacina Oral Poliomielite (VOP)",
+                Descricao = "A vacina é indicada para prevenir contra a poliomielite causada por vírus dos tipos 1, 2 e 3.",
+                CssClass = "bg-light border"
+            };
+            var v8 = new Vacina()
+            {
+                Id = Guid.NewGuid(),
+                Nome = "Vacina Rotavírus Humano (VRH)",
+                Descricao = "AO imunizante que previne contra o rotavírus humano é a vacina VRH/VORH. A aplicação acontece com uma gotinha na boca dos bebês, a partir da sexta semana de vida, para proteger contra infecções provocadas pelo rotavírus, como a diarreia, uma das principais causas de problemas estomacais nas crianças.",
+                CssClass = "bg-secondary"
+            };
+            var v9 = new Vacina()
+            {
+                Id = Guid.NewGuid(),
+                Nome = "Meningocócica C (conjugada)",
+                Descricao = "A vacina é composta pelo oligossacarídeo meningocócico C conjugado com a proteína CRM197 e não possui o micro-organismo causador da doença, o que a torna mais segura. É indicada para imunização ativa de crianças a partir de 2 meses de idade, adolescentes e adultos para a prevenção da doença invasiva causada por Neisseria meningitidis do sorogrupo C. Esta bactéria pode causar infecções graves, às vezes fatais, como a meningite e a sepse (infecção grave no sangue – infecção generalizada).",
+                CssClass = "bg-secondary"
+            };
+            var v10 = new Vacina()
+            {
+                Id = Guid.NewGuid(),
+                Nome = "Febre amarela",
+                Descricao = "É uma doença de notificação compulsória imediata, ou seja, todo evento suspeito (tanto morte de primatas não humanos, quanto casos humanos com sintomatologia compatível) deve ser prontamente comunicado, em até 24 horas após a suspeita inicial, às autoridades locais competentes pela via mais rápida (telefone, fax, email, etc). Às autoridades estaduais de saúde cabe notificar os eventos de febre amarela suspeitos ao Ministério da Saúde. Atualmente, a febre amarela silvestre (FA) é uma doença endêmica no Brasil (região amazônica). ",
+                CssClass = "bg-warning"
+            };
+            var v11 = new Vacina()
+            {
+                Id = Guid.NewGuid(),
+                Nome = "Tríplice viral",
+                Descricao = "No Sistema Único de Saúde (SUS), a vacina previne o sarampo, a caxumba e a rubéola. No Calendário Nacional de Vacinação, o imunizante está disponível para pessoas de 12 meses a 59 anos de idade, sendo recomendadas duas doses até 29 anos e uma dose de 30 a 59 anos, em pessoas não vacinadas. A vacinação é a forma mais eficaz de prevenção contra o sarampo e o objetivo é interromper a circulação do vírus e reduzir complicações e o número de óbitos pela doença.",
+                CssClass = "bg-danger"
+            };
+            var v12 = new Vacina()
+            {
+                Id = Guid.NewGuid(),
+                Nome = "Tetraviral",
+                Descricao = "A vacina contra sarampo, caxumba, rubéola e varicela, também conhecida como tetra viral ou tetravalente viral é indicada para a vacinação de crianças com 15 meses de idade que já tenham recebido a primeira dose da vacina tríplice viral.",
+                CssClass = "bg-danger"
+            };
+            var v13 = new Vacina()
+            {
+                Id = Guid.NewGuid(),
+                Nome = "DTP (tríplice bacteriana)",
+                Descricao = "A vacina DTP (tríplice bacteriana), previne contra doenças como difteria, tétano e coqueluche, e é destinada a crianças entre 15 meses e quatro anos de idade como uma forma de reforço para as que já tenham se vacinado com a pentavalente.",
+                CssClass = "bg-secondary"
+            };
+            var v14 = new Vacina()
+            {
+                Id = Guid.NewGuid(),
+                Nome = "Varicela",
+                Descricao = "A vacina contra sarampo, caxumba, rubéola e varicela, também conhecida como tetra viral ou tetravalente viral é indicada para a vacinação de crianças com 15 meses de idade que já tenham recebido a primeira dose da vacina tríplice viral.",
+                CssClass = "bg-secondary"
+            };
+            var v15 = new Vacina()
+            {
+                Id = Guid.NewGuid(),
+                Nome = "HPV quadrivalente",
+                Descricao = "Segundo a Organização Mundial de Saúde (OMS), estima-se que haja de 9 a 10 milhões de infectados por esse vírus no Brasil e que a cada ano surjam 700 mil novos casos de infecção. O risco de desenvolvimento de cânceres associados ao HPV é cerca de quatro vezes maior entre pessoas vivendo com HIV/Aids e transplantados do que na população sem a doença ou transplante.",
+                CssClass = "bg-dark text-white"
+            };
+            var v16 = new Vacina()
+            {
+                Id = Guid.NewGuid(),
+                Nome = "dT (dupla adulto)",
+                Descricao = "Proteção contra o tétano acidental e a difteria.\r\nA difteriadifteriadifteriadifteriadifteria é causada por um bacilo, produtor de uma toxina\r\n(substância tóxica), que atinge as amídalas, a faringe, o nariz e a\r\npele, onde provoca placas branco-acinzentadas. É transmitida, por\r\nmeio de tosse ou espirro, de uma pessoa contaminada para outra.\r\nO tétanotétanotétanotétanotétano é uma infecção, causada por uma toxina (substância tóxica)\r\nproduzida pelo bacilo tetânico, que entra no organismo por meio de\r\nferimentos ou lesões na pele (tétano acidental) ou pelo coto do cordão\r\numbilical (tétano neonatal ou mal dos sete dias) e atinge o sistema\r\nnervoso central. Caracteriza-se por contrações e espasmos,\r\ndificuldade em engolir e rigidez no pescoço.",
+                CssClass = "bg-primary"
+            };
+            var v17 = new Vacina()
+            {
+                Id = Guid.NewGuid(),
+                Nome = "dTpa (DTP adulto)",
+                Descricao = "A vacina dTpa é uma associação de toxóide diftérico, toxóide tetânico e\r\ncomponentes purificados dos antígenos da Bordetella pertussis – toxina\r\npertussis, tendo o hidróxido e o fosfato de alumínio como adjuvante.",
+                CssClass = "bg-info"
+            };
+            var v18 = new Vacina()
+            {
+                Id = Guid.NewGuid(),
+                Nome = "dMenigocócica ACWY",
+                Descricao = "Previne as meningites e as doenças meningocócicas causadas pela bactéria meningococo dos tipos A, C, W e Y. Meningite meningocócica é uma forma grave de meningite bacteriana, altamente contagiosa, causada pela bactéria Neisseria meningitidis, também conhecida como meningococo.",
+                CssClass = "bg-warning"
+            };
+
+            modelBuilder.Entity<Vacina>().HasData(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18);
         }
 
         private void SeedPontosVacinacao(ModelBuilder modelBuilder)

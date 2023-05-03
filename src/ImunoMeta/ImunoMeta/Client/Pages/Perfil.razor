@@ -6,7 +6,7 @@
 @inject AuthenticationStateProvider AuthState
 @page "/Perfil/{id?}"
 @attribute [Authorize]
-<div class="d-flex justify-content-between ">
+<div class="d-flex justify-content-between mb-3">
     <div>
         <h1>Perfil</h1>
     </div>
@@ -29,10 +29,13 @@ else
         <div class="col-3">
             <img src="/Avatar/@Usuario.UrlAvatar" class="w-100 mb-3">
             <h4>@Usuario.Nome</h4>
-            <a href="/identity/account/logout">Sair</a>
+            <a href="#">Alterar senha</a> <br />
+            <a href="/identity/account/logout">Sair</a> <br />
         </div>
         <div class="col-9">
-            <h3>Timeline</h3>
+            <div class="alert alert-info">
+                Página em construção.
+            </div>
         </div>
     </div>
 

@@ -9,6 +9,12 @@
   "icons": [
     {
       "src": "imunometa.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "imunometa.png",
       "type": "image/png",
       "sizes": "512x512"
     },

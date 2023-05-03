@@ -29,7 +29,7 @@ namespace ImunoMeta.Server.Areas.Identity.Pages.Account
             await _signInManager.SignOutAsync();
             if (returnUrl != null)
             {
-                return LocalRedirect(returnUrl);
+                return LocalRedirect("Login.cshtml");
             }
             else
             {

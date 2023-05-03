@@ -1,0 +1,33 @@
+﻿
+<style type="text/css">
+    .vacinaListItem {
+        cursor: pointer;
+    }
+
+        .vacinaListItem:hover .d-flex {
+            background: #eee;
+        }
+
+</style>
+<div class="vacinaListItem border-bottom" @onclick="()=>Detalhar = !Detalhar">
+    <div class="d-flex justify-content-between p-3 ">
+        <h6 class="">
+            @Vacina.Nome
+        </h6>
+        <div class="d-flex align-items-center">
+            <button class="btn btn-info">Detalhar</button>
+        </div>
+    </div>
+    <div class="bg-light @(Detalhar ? "" : "collapse")">
+        <div class=" p-3 border" id="detalhasVacina">
+            @Vacina.Descricao
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public Vacina Vacina { get; set; }
+
+    public bool Detalhar { get; set; } = false;
+}

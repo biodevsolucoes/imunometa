@@ -1,7 +1,16 @@
 ﻿
 <div class="mb-3 border bg-white p-3">
-    <h1 class="mb-3">Minhas Vacinas</h1>
-
+    <div class="d-flex justify-content-between mb-3">
+        <div>
+            <h1>Minhas Vacinas</h1>
+        </div>
+        @if (ExibirBotaoVoltar)
+        {
+                <button class="btn btn-outline-dark" onclick="history.back(-1)">
+                    Voltar
+                </button>
+        }
+    </div>
     <div class="row">
         <div class="col-6 col-sm-4 mb-3 mb-sm-0">
             <div class="box p-3 bg-secondary d-flex align-items-center text-white">
@@ -23,4 +32,6 @@
 
 @code {
 
+    [Parameter]
+    public bool ExibirBotaoVoltar { get; set; } = false;
 }

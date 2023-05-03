@@ -38,7 +38,8 @@ namespace ImunoMeta.Server.Data.Migrations
 
                     b.Property<string>("Data")
                         .IsRequired()
-                        .HasColumnType("varchar(max)");
+                        .HasMaxLength(50000)
+                        .HasColumnType("varchar(100)");
 
                     b.Property<string>("Description")
                         .HasMaxLength(200)
@@ -86,7 +87,7 @@ namespace ImunoMeta.Server.Data.Migrations
 
                     b.Property<string>("Data")
                         .IsRequired()
-                        .HasColumnType("varchar(max)");
+                        .HasColumnType("varchar(100)");
 
                     b.Property<bool>("DataProtected")
                         .HasColumnType("bit");
@@ -126,7 +127,8 @@ namespace ImunoMeta.Server.Data.Migrations
 
                     b.Property<string>("Data")
                         .IsRequired()
-                        .HasColumnType("varchar(max)");
+                        .HasMaxLength(50000)
+                        .HasColumnType("varchar(100)");
 
                     b.Property<string>("Description")
                         .HasMaxLength(200)
@@ -334,7 +336,7 @@ namespace ImunoMeta.Server.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("f77a0058-fd20-48df-b85f-ac875da252fe"),
+                            Id = new Guid("0fb75976-7321-4578-b779-752f4b65f507"),
                             DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Removido = false,
@@ -345,7 +347,7 @@ namespace ImunoMeta.Server.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("6c2a6bb4-0439-4795-afa6-57fe8de1fb1e"),
+                            Id = new Guid("53a83cad-7ff0-4e3e-a0cc-163dae4cce6c"),
                             DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Removido = false,
@@ -356,7 +358,7 @@ namespace ImunoMeta.Server.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("1bf99edf-a37e-4665-9194-3c1dd51ee531"),
+                            Id = new Guid("c30a49a8-4c66-4b95-b63e-0c24e5b00fcb"),
                             DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Removido = false,
@@ -425,7 +427,7 @@ namespace ImunoMeta.Server.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("8ce37bb4-e0d9-4d5f-bc24-c2c53adba423"),
+                            Id = new Guid("057d4c17-c940-4e49-b4f7-f1b030f043a7"),
                             Cidade = "Brasília",
                             DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -438,7 +440,7 @@ namespace ImunoMeta.Server.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("779305b6-3537-4aa3-8bf1-ed9e72c8e982"),
+                            Id = new Guid("804abaa7-5b45-4fe6-b1a9-878079f75d59"),
                             Cidade = "Brasília",
                             DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -451,7 +453,7 @@ namespace ImunoMeta.Server.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("eaee9b78-96e2-4683-a46b-0dc95325db8b"),
+                            Id = new Guid("8be7b68c-aa00-458c-bc26-efb6b9b920b0"),
                             Cidade = "Brasília",
                             DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -464,7 +466,7 @@ namespace ImunoMeta.Server.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("848c5c1b-35c8-48c2-bc5e-093b2a45112b"),
+                            Id = new Guid("6d5be054-beee-41f5-8990-d8bb341c84e5"),
                             Cidade = "Brasília",
                             DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -477,7 +479,7 @@ namespace ImunoMeta.Server.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2dcc459a-67ed-4e4b-b85f-d43baa060cbe"),
+                            Id = new Guid("ed5fca6d-a6b8-4a10-a311-898d507d9715"),
                             Cidade = "Brasília",
                             DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -490,7 +492,7 @@ namespace ImunoMeta.Server.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("abd252da-d7b2-468a-9890-f9e1210ed263"),
+                            Id = new Guid("3565a0a8-dddd-4d3e-9e81-fceaf0813aef"),
                             Cidade = "Brasília",
                             DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -503,7 +505,7 @@ namespace ImunoMeta.Server.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("9637a93b-5bf7-4f3c-8a30-fbda392ad6bb"),
+                            Id = new Guid("7ff1b674-b849-4eb3-a3cf-97fcaee6930a"),
                             Cidade = "Brasília",
                             DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -516,7 +518,7 @@ namespace ImunoMeta.Server.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("a39f72e6-adff-4ba8-a81a-b67fe686e25a"),
+                            Id = new Guid("32fa6133-07b6-4808-9b20-3c9eda200eb7"),
                             Cidade = "Brasília",
                             DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -529,7 +531,7 @@ namespace ImunoMeta.Server.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("5cb64c4c-d31f-4713-9e0d-d4b6973ac9db"),
+                            Id = new Guid("939bd4f4-08d1-4ee8-a227-9d30b96ad2e5"),
                             Cidade = "Brasília",
                             DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -542,7 +544,7 @@ namespace ImunoMeta.Server.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("6e1a720e-c8c1-4f59-965f-f54fa1e64b03"),
+                            Id = new Guid("73013701-dc2b-4508-9f4c-e8339d7ebdf4"),
                             Cidade = "Sobradinho",
                             DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -555,7 +557,7 @@ namespace ImunoMeta.Server.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b097ea92-ac65-425d-b6fa-0940e907dbdb"),
+                            Id = new Guid("011de263-2ea3-41f2-bbb9-62dfe88d1560"),
                             Cidade = "Sobradinho",
                             DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -568,7 +570,7 @@ namespace ImunoMeta.Server.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("d86ff3f2-5053-48e7-b849-ddc4d7e7bbea"),
+                            Id = new Guid("daaa47cf-5cc2-466b-92a2-0618ff52b594"),
                             Cidade = "Sobradinho",
                             DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -581,7 +583,7 @@ namespace ImunoMeta.Server.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("d39c1020-b256-40db-bbb5-0cdc4454f7b7"),
+                            Id = new Guid("fc901dfc-55d2-4346-87e5-adafc8d82303"),
                             Cidade = "Sobradinho",
                             DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -594,7 +596,7 @@ namespace ImunoMeta.Server.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("a8ed3cb5-9acf-48e2-ba3a-130b702a896b"),
+                            Id = new Guid("c74a0d3b-31bd-4375-a268-fece8b1ce935"),
                             Cidade = "Sobradinho",
                             DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -607,7 +609,7 @@ namespace ImunoMeta.Server.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("d9e163c5-0ab4-4ea0-958d-37df15287253"),
+                            Id = new Guid("76bc2488-a2e1-4f40-b59f-2ab7bcd1fffe"),
                             Cidade = "Sobradinho",
                             DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -620,7 +622,7 @@ namespace ImunoMeta.Server.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("d5ef630b-6c15-4607-a206-2181296d30cc"),
+                            Id = new Guid("5c48e0b1-063a-446e-8a10-cc72a09b2cd4"),
                             Cidade = "Sobradinho",
                             DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -633,7 +635,7 @@ namespace ImunoMeta.Server.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("8596da97-bfe3-4957-b38d-bf61657bb7d1"),
+                            Id = new Guid("345660eb-3f29-4f6a-a730-97e42b8dc8e1"),
                             Cidade = "Sobradinho",
                             DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -646,7 +648,7 @@ namespace ImunoMeta.Server.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b0e84dca-dbac-4c10-aae1-06b3ada858ed"),
+                            Id = new Guid("ab0d7f3e-8091-4169-b720-daee6e130c23"),
                             Cidade = "Sobradinho",
                             DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -659,7 +661,7 @@ namespace ImunoMeta.Server.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("fe44f672-00db-484c-922d-d7a51b457129"),
+                            Id = new Guid("4aa86664-5972-42f1-8491-2f18c58b6baf"),
                             Cidade = "Sobradinho",
                             DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -672,7 +674,7 @@ namespace ImunoMeta.Server.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("df89252b-fceb-4040-ae9f-b54ac033645a"),
+                            Id = new Guid("f35080ac-2d01-4658-b658-bcafbcb0020c"),
                             Cidade = "Sobradinho",
                             DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -759,7 +761,7 @@ namespace ImunoMeta.Server.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("2fec7f33-2126-4d97-b8af-072ea89fb60e"),
+                            Id = new Guid("e508ba2e-d41f-44ef-a0b4-9783a17bfd6a"),
                             DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Descricao = "Denuncia",
@@ -768,7 +770,7 @@ namespace ImunoMeta.Server.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("8c3ea3b9-0b97-4bce-8e40-ba060e00c877"),
+                            Id = new Guid("894f442d-07fc-4c36-99c7-3f74dfdd7db8"),
                             DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Descricao = "Compartilhar",
@@ -777,7 +779,7 @@ namespace ImunoMeta.Server.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("ed2a1a55-b8e5-4390-8815-4e2e332c2d8c"),
+                            Id = new Guid("33ba1010-adc4-4d57-822d-627acf7a9e08"),
                             DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Descricao = "Vacinas",
@@ -979,6 +981,10 @@ namespace ImunoMeta.Server.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("CssClass")
+                        .IsRequired()
+                        .HasColumnType("varchar(100)");
+
                     b.Property<DateTime>("DataCadastro")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
@@ -989,9 +995,13 @@ namespace ImunoMeta.Server.Data.Migrations
                         .HasColumnType("datetime2")
                         .HasDefaultValueSql("getutcdate()");
 
+                    b.Property<string>("Descricao")
+                        .IsRequired()
+                        .HasColumnType("varchar(max)");
+
                     b.Property<string>("Nome")
                         .IsRequired()
-                        .HasColumnType("varchar(100)");
+                        .HasColumnType("varchar(250)");
 
                     b.Property<bool>("Removido")
                         .ValueGeneratedOnAdd()
@@ -1006,6 +1016,188 @@ namespace ImunoMeta.Server.Data.Migrations
                     b.HasIndex("UsuarioId");
 
                     b.ToTable("Vacina");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("605d534a-7a92-4eac-b02f-e47b50fb1126"),
+                            CssClass = "bg-secondary",
+                            DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Descricao = "A vacina BCG protege contra a tuberculose – doença contagiosa, provocada pela bactéria Mycobacterium tuberculosis. Foi criada em 1.921 por Léon Calmette e Alphonse Guérin, dando origem ao nome BCG.",
+                            Nome = "BCG",
+                            Removido = false
+                        },
+                        new
+                        {
+                            Id = new Guid("82192a6b-8f8a-404e-b38a-52b2b7e9b17d"),
+                            CssClass = "bg-info",
+                            DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Descricao = "É uma infecção causada pelo vírus A (HAV) da hepatite, também conhecida como “hepatite infecciosa”. Na maioria dos casos, a hepatite A é uma doença de caráter benigno, contudo o curso sintomático e a letalidade aumentam com a idade.",
+                            Nome = "Hepatite A",
+                            Removido = false
+                        },
+                        new
+                        {
+                            Id = new Guid("1248fa30-5042-4049-8e72-fad3e152b7cf"),
+                            CssClass = "bg-dark",
+                            DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Descricao = "A hepatite B é uma doença que provoca mal-estar, febre, dor de cabeça, cansaço, dor no abdômen, náuseas e vômitos. Na sua forma mais grave, pode causar infecções e até tumores no fígado. A vacina que previne contra a hepatite B deve ser aplicada ainda nas primeiras horas após o nascimento, fornecendo uma proteção entre 80 e 100%. É aplicada com uma injeção e as doses de reforço estão presentes na vacina pentavalente, que também protege contra tétano, coqueluche, difteria e meningite, causada pela Haemophilus influenza tipo B.",
+                            Nome = "Hepatite B",
+                            Removido = false
+                        },
+                        new
+                        {
+                            Id = new Guid("98866d5d-6aed-4419-b83b-47edde60d095"),
+                            CssClass = "bg-warning",
+                            DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Descricao = "A vacina pentavalente é a combinação de cinco vacinas individuais em uma. O objetivo é proteger as pessoas contra múltiplas doenças ao mesmo tempo. Desde 2012, o Programa Nacional de Imunizações (PNI), do Ministério da Saúde, oferta a vacina pentavalente na rotina do Calendário Nacional de Vacinação.",
+                            Nome = "Penta (DTP/Hib/Hep. B)",
+                            Removido = false
+                        },
+                        new
+                        {
+                            Id = new Guid("fc3696ab-288f-4796-8760-e65b9b6cefaf"),
+                            CssClass = "bg-danger",
+                            DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Descricao = "O Ministério da Saúde recomenda a vacinação de todas as crianças menores de cinco anos de acordo com o Calendário Nacional de Vacinação. A imunização com as doses recomendadas é fundamental para evitar o adoecimento, além de complicações e óbitos.",
+                            Nome = "Pneumocócica 10 valente",
+                            Removido = false
+                        },
+                        new
+                        {
+                            Id = new Guid("609bb9e1-c085-49f6-9d9c-61b32fe031d3"),
+                            CssClass = "bg-success",
+                            DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Descricao = "A vacina é indicada para prevenir contra a poliomielite causada por vírus dos tipos 1, 2 e 3.",
+                            Nome = "Vacina Inativada Poliomielite (VIP)",
+                            Removido = false
+                        },
+                        new
+                        {
+                            Id = new Guid("b95ef933-8714-49b2-bd50-696e4c439fab"),
+                            CssClass = "bg-light border",
+                            DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Descricao = "A vacina é indicada para prevenir contra a poliomielite causada por vírus dos tipos 1, 2 e 3.",
+                            Nome = "Vacina Oral Poliomielite (VOP)",
+                            Removido = false
+                        },
+                        new
+                        {
+                            Id = new Guid("da2ca772-6611-40d6-8a72-d73894293bfa"),
+                            CssClass = "bg-secondary",
+                            DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Descricao = "AO imunizante que previne contra o rotavírus humano é a vacina VRH/VORH. A aplicação acontece com uma gotinha na boca dos bebês, a partir da sexta semana de vida, para proteger contra infecções provocadas pelo rotavírus, como a diarreia, uma das principais causas de problemas estomacais nas crianças.",
+                            Nome = "Vacina Rotavírus Humano (VRH)",
+                            Removido = false
+                        },
+                        new
+                        {
+                            Id = new Guid("270eb4ea-f727-40bf-9add-c1d914da5889"),
+                            CssClass = "bg-secondary",
+                            DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Descricao = "A vacina é composta pelo oligossacarídeo meningocócico C conjugado com a proteína CRM197 e não possui o micro-organismo causador da doença, o que a torna mais segura. É indicada para imunização ativa de crianças a partir de 2 meses de idade, adolescentes e adultos para a prevenção da doença invasiva causada por Neisseria meningitidis do sorogrupo C. Esta bactéria pode causar infecções graves, às vezes fatais, como a meningite e a sepse (infecção grave no sangue – infecção generalizada).",
+                            Nome = "Meningocócica C (conjugada)",
+                            Removido = false
+                        },
+                        new
+                        {
+                            Id = new Guid("316d7af5-be61-4790-829a-60bbcdc1ed09"),
+                            CssClass = "bg-warning",
+                            DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Descricao = "É uma doença de notificação compulsória imediata, ou seja, todo evento suspeito (tanto morte de primatas não humanos, quanto casos humanos com sintomatologia compatível) deve ser prontamente comunicado, em até 24 horas após a suspeita inicial, às autoridades locais competentes pela via mais rápida (telefone, fax, email, etc). Às autoridades estaduais de saúde cabe notificar os eventos de febre amarela suspeitos ao Ministério da Saúde. Atualmente, a febre amarela silvestre (FA) é uma doença endêmica no Brasil (região amazônica). ",
+                            Nome = "Febre amarela",
+                            Removido = false
+                        },
+                        new
+                        {
+                            Id = new Guid("c50a9723-8e62-45af-9d29-9fbcbd94d6e9"),
+                            CssClass = "bg-danger",
+                            DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Descricao = "No Sistema Único de Saúde (SUS), a vacina previne o sarampo, a caxumba e a rubéola. No Calendário Nacional de Vacinação, o imunizante está disponível para pessoas de 12 meses a 59 anos de idade, sendo recomendadas duas doses até 29 anos e uma dose de 30 a 59 anos, em pessoas não vacinadas. A vacinação é a forma mais eficaz de prevenção contra o sarampo e o objetivo é interromper a circulação do vírus e reduzir complicações e o número de óbitos pela doença.",
+                            Nome = "Tríplice viral",
+                            Removido = false
+                        },
+                        new
+                        {
+                            Id = new Guid("f125c4a0-b01d-4cc7-8f46-b5682a1be921"),
+                            CssClass = "bg-danger",
+                            DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Descricao = "A vacina contra sarampo, caxumba, rubéola e varicela, também conhecida como tetra viral ou tetravalente viral é indicada para a vacinação de crianças com 15 meses de idade que já tenham recebido a primeira dose da vacina tríplice viral.",
+                            Nome = "Tetraviral",
+                            Removido = false
+                        },
+                        new
+                        {
+                            Id = new Guid("a97d6bcc-a7d9-4dd9-b479-60b8e9e92f95"),
+                            CssClass = "bg-secondary",
+                            DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Descricao = "A vacina DTP (tríplice bacteriana), previne contra doenças como difteria, tétano e coqueluche, e é destinada a crianças entre 15 meses e quatro anos de idade como uma forma de reforço para as que já tenham se vacinado com a pentavalente.",
+                            Nome = "DTP (tríplice bacteriana)",
+                            Removido = false
+                        },
+                        new
+                        {
+                            Id = new Guid("aaaf3e44-fee6-4ce0-8a50-e05ad0728d8d"),
+                            CssClass = "bg-secondary",
+                            DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Descricao = "A vacina contra sarampo, caxumba, rubéola e varicela, também conhecida como tetra viral ou tetravalente viral é indicada para a vacinação de crianças com 15 meses de idade que já tenham recebido a primeira dose da vacina tríplice viral.",
+                            Nome = "Varicela",
+                            Removido = false
+                        },
+                        new
+                        {
+                            Id = new Guid("fcb93b24-3eee-40e4-b586-b350616f2afe"),
+                            CssClass = "bg-dark text-white",
+                            DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Descricao = "Segundo a Organização Mundial de Saúde (OMS), estima-se que haja de 9 a 10 milhões de infectados por esse vírus no Brasil e que a cada ano surjam 700 mil novos casos de infecção. O risco de desenvolvimento de cânceres associados ao HPV é cerca de quatro vezes maior entre pessoas vivendo com HIV/Aids e transplantados do que na população sem a doença ou transplante.",
+                            Nome = "HPV quadrivalente",
+                            Removido = false
+                        },
+                        new
+                        {
+                            Id = new Guid("9beeb99b-99dc-4460-9e4d-08864199b4df"),
+                            CssClass = "bg-primary",
+                            DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Descricao = "Proteção contra o tétano acidental e a difteria.\r\nA difteriadifteriadifteriadifteriadifteria é causada por um bacilo, produtor de uma toxina\r\n(substância tóxica), que atinge as amídalas, a faringe, o nariz e a\r\npele, onde provoca placas branco-acinzentadas. É transmitida, por\r\nmeio de tosse ou espirro, de uma pessoa contaminada para outra.\r\nO tétanotétanotétanotétanotétano é uma infecção, causada por uma toxina (substância tóxica)\r\nproduzida pelo bacilo tetânico, que entra no organismo por meio de\r\nferimentos ou lesões na pele (tétano acidental) ou pelo coto do cordão\r\numbilical (tétano neonatal ou mal dos sete dias) e atinge o sistema\r\nnervoso central. Caracteriza-se por contrações e espasmos,\r\ndificuldade em engolir e rigidez no pescoço.",
+                            Nome = "dT (dupla adulto)",
+                            Removido = false
+                        },
+                        new
+                        {
+                            Id = new Guid("f8ffd6bd-3a53-4e26-a05c-a1e4c9cac739"),
+                            CssClass = "bg-info",
+                            DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Descricao = "A vacina dTpa é uma associação de toxóide diftérico, toxóide tetânico e\r\ncomponentes purificados dos antígenos da Bordetella pertussis – toxina\r\npertussis, tendo o hidróxido e o fosfato de alumínio como adjuvante.",
+                            Nome = "dTpa (DTP adulto)",
+                            Removido = false
+                        },
+                        new
+                        {
+                            Id = new Guid("0f688e05-d401-42ac-a925-13eb218d70cb"),
+                            CssClass = "bg-warning",
+                            DataCadastro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DataCadastroUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Descricao = "Previne as meningites e as doenças meningocócicas causadas pela bactéria meningococo dos tipos A, C, W e Y. Meningite meningocócica é uma forma grave de meningite bacteriana, altamente contagiosa, causada pela bactéria Neisseria meningitidis, também conhecida como meningococo.",
+                            Nome = "dMenigocócica ACWY",
+                            Removido = false
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
