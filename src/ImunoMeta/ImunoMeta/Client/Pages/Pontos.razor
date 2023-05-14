@@ -1,16 +1,96 @@
 ﻿@page "/Pontos"
 @using Microsoft.AspNetCore.Authorization;
+@inject AuthenticationStateProvider AuthState
+@inject IHttpClientFactory ClientFactory
 @attribute [Authorize]
-<div class="d-flex justify-content-between mb-3">
-    <div>
-        <h1>Pontos</h1>
-    </div>
+<MeusPontos />
 
-    <button class="btn btn-outline-dark" onclick="history.back(-1)">
-        Voltar
-    </button>
+<div class="row flex-column-reverse flex-md-row">
+    <div class="col-12 col-md-8">
+
+        <div class="mb-3 bg-white p-3 border">
+            <div class=" mb-3">
+                <div>
+                    <h1>Histórico de Pontuação</h1>
+                </div>
+            </div>
+
+            @if (Pontuacao != null)
+                foreach (var ponto in Pontuacao.HistoricoPontuacao)
+                {
+                    <p class="py-3 border-bottom">
+                        <h5>@($"{ponto.Data} - {ponto.Descricao} - {ponto.Valor} pontos. ")</h5>
+                    </p>
+                }
+        </div>
+    </div>
+    <div class="col-12 col-md-4 mb-3">
+        <div class="border-bottom-0 bg-white p-3 border">
+            <div class=" mb-3">
+                <div>
+                    <h1>Resgatar Pontuação</h1>
+                </div>
+            </div>
+        </div>
+        <ul class="list-group bordert-top-0">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Acelerar devolução imposto de renda
+                <span class="badge bg-primary badge-pill">100</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Desconto IPVA
+                <span class="badge bg-primary badge-pill">80</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Desconto IPTU
+                <span class="badge bg-primary badge-pill">50</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Crédito em trasporte público
+                <span class="badge bg-primary badge-pill">50</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Trocar por créditos no restaurante comunitário
+                <span class="badge bg-primary badge-pill">50</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Desconto concursos
+                <span class="badge bg-primary badge-pill">200</span>
+            </li>
+        </ul>
+    </div>
 </div>
 @code {
     [Parameter]
     public bool ExibirBotaoVoltar { get; set; } = false;
+
+    private PontuacaoDTO? Pontuacao { get; set; }
+    private UsuarioDTO? UsuarioLogado { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        HttpClient Http = ClientFactory.CreateClient("private");
+
+        try
+        {
+
+            var authState = await AuthState.GetAuthenticationStateAsync();
+            var user = authState.User;
+
+            HttpResponseMessage result;
+            var email = user.Identity.Name;
+            result = await Http.PostAsJsonAsync<UsuarioDTO>($"Usuarios/ObterUsuarioLogado", new UsuarioDTO { Email = email });
+
+            if (result.IsSuccessStatusCode)
+                UsuarioLogado = await result.Content.ReadFromJsonAsync<UsuarioDTO>();
+
+            var resultPontuacao = await Http.PostAsJsonAsync<UsuarioDTO>($"Pontuacoes/ObterPorUsuario", new UsuarioDTO { Id = UsuarioLogado?.Id });
+            if (resultPontuacao.IsSuccessStatusCode)
+                Pontuacao = await resultPontuacao.Content.ReadFromJsonAsync<PontuacaoDTO>();
+        }
+        catch (Exception e)
+        {
+            Console.Write(e);
+        }
+    }
 }

@@ -1,32 +1,45 @@
-﻿
+﻿@using Microsoft.AspNetCore.Authorization;
+@inject AuthenticationStateProvider AuthState
+@inject IHttpClientFactory ClientFactory
 <div class="mb-3 border bg-white p-3">
     <div class="d-flex justify-content-between mb-3">
         <div>
-            <h1>Minhas Vacinas</h1>
+            <h1>
+                <a href="/Vacinas" class="text-dark text-decoration-none">
+                    Minhas Vacinas
+                </a>
+            </h1>
         </div>
         @if (ExibirBotaoVoltar)
         {
-                <button class="btn btn-outline-dark" onclick="history.back(-1)">
-                    Voltar
-                </button>
+            <button class="btn btn-outline-dark" onclick="history.back(-1)">
+                Voltar
+            </button>
         }
     </div>
     <div class="row">
         <div class="col-6 col-sm-4 mb-3 mb-sm-0">
-            <div class="box p-3 bg-secondary d-flex align-items-center text-white">
+            <div class="box p-3 bg-secondary d-flex align-items-center text-white mb-3">
                 <h3>Covid-19</h3>
             </div>
         </div>
-        <div class="col-6 col-sm-4 mb-3 mb-sm-0">
-            <div class="box p-3 bg-info d-flex align-items-center text-white">
-                <h3>Febre Amarela</h3>
-            </div>
-        </div>
-        <div class="col-6 col-sm-4 mb-3 mb-sm-0">
-            <div class="box p-3 bg-warning d-flex align-items-center text-white">
-                <h3>Gripe</h3>
-            </div>
-        </div>
+
+        @if (Vacinas != null)
+        {
+            if (!ExibirBotaoVoltar)
+            {
+                Vacinas = Vacinas.Take(2);
+            }
+
+            foreach (var vacina in Vacinas)
+            {
+                <div class="col-6 col-sm-4 mb-3 mb-sm-0">
+                    <div class="box p-3  @vacina.Vacina.CssClass d-flex align-items-center text-white mb-3">
+                        <h3>@vacina.Vacina.Nome</h3>
+                    </div>
+                </div>
+            }
+        }
     </div>
 </div>
 
@@ -34,4 +47,34 @@
 
     [Parameter]
     public bool ExibirBotaoVoltar { get; set; } = false;
+
+    private IEnumerable<UsuarioVacina>? Vacinas { get; set; }
+    private UsuarioDTO? UsuarioLogado { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        HttpClient Http = ClientFactory.CreateClient("private");
+
+        try
+        {
+
+            var authState = await AuthState.GetAuthenticationStateAsync();
+            var user = authState.User;
+
+            HttpResponseMessage result;
+            var email = user.Identity.Name;
+            result = await Http.PostAsJsonAsync<UsuarioDTO>($"Usuarios/ObterUsuarioLogado", new UsuarioDTO { Email = email });
+
+            if (result.IsSuccessStatusCode)
+                UsuarioLogado = await result.Content.ReadFromJsonAsync<UsuarioDTO>();
+
+            var resultVacinas = await Http.PostAsJsonAsync<UsuarioDTO>($"Vacinas/ObterListaPorUsuario", new UsuarioDTO { Id = UsuarioLogado?.Id });
+            if (resultVacinas.IsSuccessStatusCode)
+                Vacinas = await resultVacinas.Content.ReadFromJsonAsync<IEnumerable<UsuarioVacina>>();
+        }
+        catch (Exception e)
+        {
+            Console.Write(e);
+        }
+    }
 }

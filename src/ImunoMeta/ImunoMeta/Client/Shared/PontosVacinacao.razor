@@ -2,7 +2,11 @@
 <div class="mb-3 border bg-white p-3">
     <div class="d-flex justify-content-between mb-3">
         <div>
-            <h1>Locais de Vacinação</h1>
+            <h1>
+                <a href="/Locais" class="text-dark text-decoration-none">
+                    Locais de Vacinação
+                </a>
+            </h1>
         </div>
         @if (ExibirBotaoVoltar)
         {
@@ -23,9 +27,11 @@
                         <h4 class="py-3">
                             @ponto.Nome
                         </h4>
-                        @($"{ponto.Endereco}")
-                        <br />
-                        @($"{ponto.Cidade} - {ponto.UF}")
+                        <div class="d-none d-md-block">
+                            @($"{ponto.Endereco}")
+                            <br />
+                            @($"{ponto.Cidade} - {ponto.UF}")
+                        </div>
                     </div>
                 </div>
             }

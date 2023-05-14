@@ -1,8 +1,14 @@
-﻿
+﻿@using Microsoft.AspNetCore.Authorization;
+@inject AuthenticationStateProvider AuthState
+@inject IHttpClientFactory ClientFactory
 <div class="mb-3 bg-white p-3 border">
     <div class="d-flex justify-content-between mb-3">
         <div>
-            <h1>Meus Pontos</h1>
+            <h1>
+                <a href="/Pontos" class="text-dark text-decoration-none">
+                    Meus Pontos
+                </a>
+            </h1>
         </div>
         @if (ExibirBotaoVoltar)
         {
@@ -11,18 +17,58 @@
             </button>
         }
     </div>
-    <h4 class="text-primary">
-        <span class="pb-3 d-block">
-            <i class=""></i> 260 pontos
-        </span>
-        <span class="d-block">
-            3 troféus
-        </span>
-    </h4>
+    @if (Pontuacao != null)
+    {
+        <h4 class="text-primary w-100 d-block">
+            <span class="pb-3 d-block">
+                <i class="fa fa-medal"></i> @Pontuacao.totalPontos pontos
+            </span>
+            <span class="d-block">
+                <small>
+
+                    <i class="fa fa-trophy" /> @Pontuacao.totalTrofeus troféus
+                </small>
+            </span>
+        </h4>
+    }
+    else
+    {
+        <span>Carregando pontos...</span>
+    }
 </div>
 
 @code {
     [Parameter]
     public bool ExibirBotaoVoltar { get; set; } = false;
+
+    private PontuacaoDTO? Pontuacao { get; set; }
+    private UsuarioDTO? UsuarioLogado { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        HttpClient Http = ClientFactory.CreateClient("private");
+
+        try
+        {
+
+            var authState = await AuthState.GetAuthenticationStateAsync();
+            var user = authState.User;
+
+            HttpResponseMessage result;
+            var email = user.Identity.Name;
+            result = await Http.PostAsJsonAsync<UsuarioDTO>($"Usuarios/ObterUsuarioLogado", new UsuarioDTO { Email = email });
+
+            if (result.IsSuccessStatusCode)
+                UsuarioLogado = await result.Content.ReadFromJsonAsync<UsuarioDTO>();
+
+            var resultPontuacao = await Http.PostAsJsonAsync<UsuarioDTO>($"Pontuacoes/ObterPorUsuario", new UsuarioDTO { Id = UsuarioLogado?.Id });
+            if (resultPontuacao.IsSuccessStatusCode)
+                Pontuacao = await resultPontuacao.Content.ReadFromJsonAsync<PontuacaoDTO>();
+        }
+        catch (Exception e)
+        {
+            Console.Write(e);
+        }
+    }
 
 }

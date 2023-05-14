@@ -1,0 +1,49 @@
+﻿@page
+@model ImunoMeta.Server.Areas.Admin.Pages.PontuacaoUsuario.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Pontuacao</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Pontuacao.UsuarioId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Pontuacao.UsuarioId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Pontuacao.TipoPontuacao)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Pontuacao.TipoPontuacao.Descricao)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Pontuacao.DataCadastro)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Pontuacao.DataCadastro)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Pontuacao.DataCadastroUTC)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Pontuacao.DataCadastroUTC)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Pontuacao.Removido)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Pontuacao.Removido)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Pontuacao?.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

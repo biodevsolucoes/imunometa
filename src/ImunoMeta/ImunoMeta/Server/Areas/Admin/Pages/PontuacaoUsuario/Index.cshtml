@@ -1,0 +1,60 @@
+﻿@page
+@model ImunoMeta.Server.Areas.Admin.Pages.PontuacaoUsuario.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Pontuacao[0].UsuarioId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pontuacao[0].TipoPontuacao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pontuacao[0].DataCadastro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pontuacao[0].DataCadastroUTC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pontuacao[0].Removido)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Pontuacao) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UsuarioId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoPontuacao.Descricao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataCadastro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataCadastroUTC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Removido)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

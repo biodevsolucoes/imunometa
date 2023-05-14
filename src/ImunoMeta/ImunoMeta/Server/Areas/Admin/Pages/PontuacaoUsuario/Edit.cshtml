@@ -1,0 +1,55 @@
+﻿@page
+@model ImunoMeta.Server.Areas.Admin.Pages.PontuacaoUsuario.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Pontuacao</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Pontuacao.UsuarioId" class="control-label"></label>
+                <input asp-for="Pontuacao.UsuarioId" class="form-control" />
+                <span asp-validation-for="Pontuacao.UsuarioId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pontuacao.TipoPontuacaoId" class="control-label"></label>
+                <select asp-for="Pontuacao.TipoPontuacaoId" class="form-control" asp-items="ViewBag.TipoPontuacaoId"></select>
+                <span asp-validation-for="Pontuacao.TipoPontuacaoId" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="Pontuacao.Id" />
+            <div class="form-group">
+                <label asp-for="Pontuacao.DataCadastro" class="control-label"></label>
+                <input asp-for="Pontuacao.DataCadastro" class="form-control" />
+                <span asp-validation-for="Pontuacao.DataCadastro" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pontuacao.DataCadastroUTC" class="control-label"></label>
+                <input asp-for="Pontuacao.DataCadastroUTC" class="form-control" />
+                <span asp-validation-for="Pontuacao.DataCadastroUTC" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Pontuacao.Removido" /> @Html.DisplayNameFor(model => model.Pontuacao.Removido)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
