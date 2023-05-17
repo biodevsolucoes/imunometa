@@ -6,40 +6,43 @@
 @inject AuthenticationStateProvider AuthState
 @page "/Perfil/{id?}"
 @attribute [Authorize]
-<div class="d-flex justify-content-between mb-3">
-    <div>
-        <h1>Perfil</h1>
-    </div>
-    <button class="btn btn-outline-dark" onclick="history.back(-1)">
-        Voltar
-    </button>
-
-</div>
-
-
-
-
-@if (Usuario == null)
-{
-    <p>Carregando...</p>
-}
-else
-{
-    <div class="row">
-        <div class="col-3">
-            <img src="/Avatar/@Usuario.UrlAvatar" class="w-100 mb-3">
-            <h4>@Usuario.Nome</h4>
-            <a href="#">Alterar senha</a> <br />
-            <a href="/identity/account/logout">Sair</a> <br />
+<div class="mb-3 border bg-white p-3">
+    <div class="d-flex justify-content-between mb-3">
+        <div>
+            <h1>Perfil</h1>
         </div>
-        <div class="col-9">
-            <div class="alert alert-info">
-                Página em construção.
+        <button class="btn btn-outline-dark" onclick="history.back(-1)">
+            Voltar
+        </button>
+
+    </div>
+
+
+
+
+
+    @if (Usuario == null)
+    {
+        <p>Carregando...</p>
+    }
+    else
+    {
+        <div class="row">
+            <div class="col-3">
+                <img src="/Avatar/@Usuario.UrlAvatar" class="w-100 mb-3">
+                <h4>@Usuario.Nome</h4>
+                <a href="#">Alterar senha</a> <br />
+                <a href="/identity/account/logout">Sair</a> <br />
+            </div>
+            <div class="col-9">
+                <div class="alert alert-info">
+                    Página em construção.
+                </div>
             </div>
         </div>
-    </div>
 
-}
+    }
+</div>
 @code {
     [Parameter]
     public string? Id { get; set; }
