@@ -1,4 +1,6 @@
 ﻿@inject IHttpClientFactory ClientFactory
+@inject IJSRuntime JSRuntime
+
 <div class="mb-3 border bg-white p-3">
     <div class="d-flex justify-content-between mb-3">
         <div>
@@ -16,14 +18,14 @@
         }
     </div>
     <div class="row">
-        @if (ListaPontosVacinacao != null)
+        @if (ListaPontosVacinacao != null && ExibirBotaoVoltar)
         {
             int zoom = 15;
             foreach (var ponto in ListaPontosVacinacao)
             {
                 <div class="col-4 py-3 border-bottom">
                     <div class="">
-                        <img class="w-100" src="@($"https://maps.googleapis.com/maps/api/staticmap?center={ponto.Longitude},{ponto.Latitude}&zoom=12&size=400x400&markers=color:red|label:A|{ponto.Longitude},{ponto.Latitude}&key=AIzaSyDmAW7wmqmdXGad7uTul6ziPdRaJVGnJxY")" />
+                        <img class="w-100" src="@($"https://maps.googleapis.com/maps/api/staticmap?center={ponto.Latitude},{ponto.Longitude}&zoom=12&size=400x400&markers=color:red|label:A|{ponto.Latitude},{ponto.Longitude}&key=AIzaSyDmAW7wmqmdXGad7uTul6ziPdRaJVGnJxY")" />
                         <h4 class="py-3">
                             @ponto.Nome
                         </h4>
@@ -36,6 +38,50 @@
                 </div>
             }
         }
+        else if (!ExibirBotaoVoltar)
+        {
+            <div style="height: 500px;" id="mapCanvas"></div>
+            <div id="modal" class="modal d-none">
+                <div id="paginaInformacao" class="modal-content">
+                    <span class="modal-close" onclick="handleFecharModal()"><i class="fa-solid fa-xmark"></i></span>
+                    <span id="localTitulo" class="h4"></span>
+                    <img id="localImg" class="img-fluid border-1 rounded" />
+                    <p id="localEndereco" class="h5 mt-2"></p>
+                    <p><strong>Vacinas disponíveis: </strong><span>CoronaVírus, febre amarela, Penta (DTP/Hib/Hep. B), Hepatite A, Tríplice viral, Tetraviral e BCG.</span></p>
+                    <button onclick="handleTrocarModal()" class="btn btn-primary text-white" type="button">Confirmar lugar e vacinação.</button>
+                </div>
+                <div id="paginaConfirmacao" class="modal-content d-none">
+                    <span class="modal-close" onclick="handleFecharModal()"><i class="fa-solid fa-xmark"></i></span>
+                    <span class="h5">Dados do atendimento</span>
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <label for="iptData">Data do seu atendimento</label>
+                            <input id="iptData" class="form-control" type="date" placeholder="Data que foi atendido">
+                        </div>
+                        <div>
+                            <label for="ipthorario">Horario do seu atendimento</label>
+                            <input id="iptHorario" class="form-control" type="time" placeholder="Horário que foi atendido">
+                        </div>
+                    </div>
+                    <label for="iptVacina" class="mt-3">Vacina aplicada</label>
+                    <select name="plataforma" class="form-control">
+                        @if (ListaVacinas != null)
+                        {
+                            <option value="">Selecione uma vacina</option>
+                            @foreach (var vacina in ListaVacinas)
+                            {
+                                <option value="@vacina.Id">@vacina.Nome</option>
+                            }
+                        }
+                        else
+                        {
+                            <option value="">Selecione uma vacina</option>
+                        }
+                    </select>
+                    <button onclick="handleCompletarModal()" class="btn btn-primary text-white mt-3" type="button">Enviar</button>
+                </div>
+            </div>
+        }
         else
         {
             <li>
@@ -46,6 +92,139 @@
 </div>
 
 @code {
+
+    protected override async Task OnInitializedAsync()
+    {
+        Http = ClientFactory.CreateClient("public");
+        ListaPontosVacinacao = await Http.GetFromJsonAsync<IEnumerable<PontoVacinacao>>($"/PontosVacinacao/Listar/{UF}/{Quantidade}");
+        ListaVacinas = await Http.GetFromJsonAsync<IEnumerable<Vacina>>("Vacinas/ObterLista");
+        await GetLocation();
+    }
+
+    //Google Maps API - Começa aqui
+
+    //Latitude, Longitude e callback function para obter geolocalização.
+    public List<Local> Locais { get; set; }
+    private double Latitude { get; set; } = -15.7801;
+    private double Longitude { get; set; } = -47.9292;
+    private GeolocationCallback callback;
+
+    //Modelo para obtenção dos resultados da geolocalização
+    public class GeolocationResult
+    {
+        public bool Success { get; set; }
+        public Dictionary<string, double> Coordinates { get; set; }
+    }
+
+    public class Local
+    {
+        public string Nome { get; set; }
+        public double Longitude { get; set; }
+        public double Latitude { get; set; }
+        public string Cidade { get; set; }
+        public string Uf { get; set; }
+        public string Endereco { get; set; }
+    }
+
+    //Callback function - Ponte entre JS e C#
+    public class GeolocationCallback
+    {
+        public TaskCompletionSource<GeolocationResult> TaskCompletionSource { get; set; }
+
+        [JSInvokable]
+        public void Invoke(bool success, double latitude, double longitude)
+        {
+            var result = new GeolocationResult
+                {
+                    Success = success,
+                    Coordinates = new Dictionary<string, double>
+            {
+                { "latitude", latitude },
+                { "longitude", longitude }
+            }
+                };
+
+            TaskCompletionSource.SetResult(result);
+        }
+    }
+
+    //Obter a localização
+    private async Task GetLocation()
+    {
+        callback = new GeolocationCallback
+            {
+                TaskCompletionSource = new TaskCompletionSource<GeolocationResult>()
+            };
+
+        await JSRuntime.InvokeVoidAsync("getCurrentPosition", DotNetObjectReference.Create(callback));
+        var result = await callback.TaskCompletionSource.Task;
+
+        if (result.Success)
+        {
+            // Se a geolocalização foi obtida com sucesso, atualiza as propriedades Latitude e Longitude
+            double latitude = result.Coordinates["latitude"];
+            double longitude = result.Coordinates["longitude"];
+
+            Latitude = latitude;
+            Longitude = longitude;
+
+            await InitializeMap();
+
+            StateHasChanged();
+        }
+        else
+        {
+            // Caso não seja possível obter a geolocalização, utiliza valores padrões (Brasília)
+            double latitude = -15.7801;
+            double longitude = -47.9292;
+
+            Latitude = latitude;
+            Longitude = longitude;
+
+            StateHasChanged();
+        }
+    }
+
+
+    //Cria os marcadores e inicia o mapa no JS
+    private async Task InitializeMap()
+    {
+
+        if (!ExibirBotaoVoltar)
+        {
+
+            Locais = new List<Local>();
+
+            foreach (var lugar in ListaPontosVacinacao)
+            {
+                var local = new Local
+                    {
+                        Nome = lugar.Nome,
+                        Longitude = lugar.Longitude,
+                        Latitude = lugar.Latitude,
+                        Cidade = lugar.Cidade,
+                        Uf = lugar.UF,
+                        Endereco = lugar.Endereco
+                    };
+
+                Locais.Add(local);
+            }
+
+            // Carrega a API JavaScript do Google Maps
+            await JSRuntime.InvokeVoidAsync("loadGoogleMapsScript");
+
+            // Aguarda um pequeno intervalo para garantir que a API seja carregada
+            await Task.Delay(1000);
+
+            // Inicializa o mapa
+            await JSRuntime.InvokeVoidAsync("initializeMap", Latitude, Longitude, Locais.ToArray());
+            //await AddCustomMarkers();
+        }
+    }
+
+    // Google Maps API - Acaba aqui
+
+
     [Parameter]
     public int Quantidade { get; set; }
 
@@ -53,14 +232,9 @@
     public bool ExibirBotaoVoltar { get; set; } = false;
 
     private IEnumerable<PontoVacinacao>? ListaPontosVacinacao { get; set; } = null;
+    private IEnumerable<Vacina>? ListaVacinas { get; set; } = null;
     private string UF { get; set; } = "DF";
     HttpClient Http = null;
-
-    protected override async Task OnInitializedAsync()
-    {
-        Http = ClientFactory.CreateClient("public");
-        ListaPontosVacinacao = await Http.GetFromJsonAsync<IEnumerable<PontoVacinacao>>($"/PontosVacinacao/Listar/{UF}/{Quantidade}");
-    }
 
     private int GetTileX(double longitude, int zoom)
     {
