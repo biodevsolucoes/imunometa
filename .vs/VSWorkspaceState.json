@@ -1,6 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src",
+    "\\src\\ImunoMeta",
+    "\\src\\ImunoMeta\\ImunoMeta",
+    "\\src\\ImunoMeta\\ImunoMeta\\Client",
+    "\\src\\ImunoMeta\\ImunoMeta\\Client\\Pages"
   ],
+  "SelectedNode": "\\src\\ImunoMeta\\ImunoMeta\\Client\\Pages\\Reportar.razor",
   "PreviewInSolutionExplorer": false
 }
