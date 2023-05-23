@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using ImunoMeta.Server.Data;
 using ImunoMeta.Shared.Models;
 
-namespace ImunoMeta.Server.Areas.Admin
+namespace ImunoMeta.Server.Areas.Admin.Pages.LocaisVacinacao
 {
     public class CreateModel : PageModel
     {

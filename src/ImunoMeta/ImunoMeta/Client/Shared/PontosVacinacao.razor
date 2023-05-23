@@ -46,7 +46,7 @@
                     <span class="modal-close" onclick="handleFecharModal()"><i class="fa-solid fa-xmark"></i></span>
                     <span id="localTitulo" class="h4"></span>
                     <img id="localImg" class="img-fluid border-1 rounded" />
-                    <p id="localEndereco" class="h5 mt-2"></p>
+                    <p id="localEndereco" class="h5 my-4"></p>
                     <p><strong>Vacinas disponíveis: </strong><span>CoronaVírus, febre amarela, Penta (DTP/Hib/Hep. B), Hepatite A, Tríplice viral, Tetraviral e BCG.</span></p>
                     <button onclick="handleTrocarModal()" class="btn btn-primary text-white" type="button">Confirmar lugar e vacinação.</button>
                 </div>
@@ -167,10 +167,6 @@
 
             Latitude = latitude;
             Longitude = longitude;
-
-            await InitializeMap();
-
-            StateHasChanged();
         }
         else
         {
@@ -181,8 +177,10 @@
             Latitude = latitude;
             Longitude = longitude;
 
-            StateHasChanged();
         }
+
+        await InitializeMap();
+        StateHasChanged();
     }
 
 

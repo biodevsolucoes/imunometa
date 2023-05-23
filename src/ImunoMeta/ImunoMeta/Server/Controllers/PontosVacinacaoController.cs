@@ -19,10 +19,15 @@ namespace ImunoMeta.Server.Controllers
         [HttpGet("Listar/{uf}/{quantidade}")]
         public async Task<IResult> Obter(string uf, int quantidade)
         {
+
             var pontosVacinacao = await _pontosVacinacaoRepository._tableAsNoTracking
                 .Where(x => x.UF == uf)
-                .Take(quantidade)
                 .ToListAsync();
+
+
+            if (quantidade > 0)
+                pontosVacinacao.Take(quantidade);
+
             return Results.Ok(pontosVacinacao);
         }
 

@@ -1,11 +1,12 @@
 ﻿@page
-@model ImunoMeta.Server.Areas.Admin.EditModel
+@model ImunoMeta.Server.Areas.Admin.Pages.LocaisVacinacao.CreateModel
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Create";
+    Layout = "~/Pages/_Layout.cshtml";
 }
 
-<h1>Edit</h1>
+<h1>Create</h1>
 
 <h4>PontoVacinacao</h4>
 <hr />
@@ -48,31 +49,15 @@
                 <input asp-for="PontoVacinacao.Endereco" class="form-control" />
                 <span asp-validation-for="PontoVacinacao.Endereco" class="text-danger"></span>
             </div>
-            <input type="hidden" asp-for="PontoVacinacao.Id" />
             <div class="form-group">
-                <label asp-for="PontoVacinacao.DataCadastro" class="control-label"></label>
-                <input asp-for="PontoVacinacao.DataCadastro" class="form-control" />
-                <span asp-validation-for="PontoVacinacao.DataCadastro" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="PontoVacinacao.DataCadastroUTC" class="control-label"></label>
-                <input asp-for="PontoVacinacao.DataCadastroUTC" class="form-control" />
-                <span asp-validation-for="PontoVacinacao.DataCadastroUTC" class="text-danger"></span>
-            </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="PontoVacinacao.Removido" /> @Html.DisplayNameFor(model => model.PontoVacinacao.Removido)
-                </label>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-page="./Index">Back to List</a>
+    <a asp-page="Index">Back to List</a>
 </div>
 
 @section Scripts {

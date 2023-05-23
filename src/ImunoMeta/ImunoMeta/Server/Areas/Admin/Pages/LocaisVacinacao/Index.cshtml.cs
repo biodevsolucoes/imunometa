@@ -1,11 +1,15 @@
-﻿using ImunoMeta.Shared.Models;
-using Microsoft.AspNetCore.Authorization;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
+using ImunoMeta.Server.Data;
+using ImunoMeta.Shared.Models;
 
-namespace ImunoMeta.Server.Areas.Admin
+namespace ImunoMeta.Server.Areas.Admin.Pages.LocaisVacinacao
 {
-    [Authorize]
     public class IndexModel : PageModel
     {
         private readonly ImunoMeta.Server.Data.ApplicationDbContext _context;

@@ -8,19 +8,18 @@ using Microsoft.EntityFrameworkCore;
 using ImunoMeta.Server.Data;
 using ImunoMeta.Shared.Models;
 
-namespace ImunoMeta.Server.Areas.Admin
+namespace ImunoMeta.Server.Areas.Admin.Pages.LocaisVacinacao
 {
-    public class DeleteModel : PageModel
+    public class DetailsModel : PageModel
     {
         private readonly ImunoMeta.Server.Data.ApplicationDbContext _context;
 
-        public DeleteModel(ImunoMeta.Server.Data.ApplicationDbContext context)
+        public DetailsModel(ImunoMeta.Server.Data.ApplicationDbContext context)
         {
             _context = context;
         }
 
-        [BindProperty]
-      public PontoVacinacao PontoVacinacao { get; set; } = default!;
+      public PontoVacinacao PontoVacinacao { get; set; } = default!; 
 
         public async Task<IActionResult> OnGetAsync(Guid? id)
         {
@@ -30,7 +29,6 @@ namespace ImunoMeta.Server.Areas.Admin
             }
 
             var pontovacinacao = await _context.PontoVacinacao.FirstOrDefaultAsync(m => m.Id == id);
-
             if (pontovacinacao == null)
             {
                 return NotFound();
@@ -40,24 +38,6 @@ namespace ImunoMeta.Server.Areas.Admin
                 PontoVacinacao = pontovacinacao;
             }
             return Page();
-        }
-
-        public async Task<IActionResult> OnPostAsync(Guid? id)
-        {
-            if (id == null || _context.PontoVacinacao == null)
-            {
-                return NotFound();
-            }
-            var pontovacinacao = await _context.PontoVacinacao.FindAsync(id);
-
-            if (pontovacinacao != null)
-            {
-                PontoVacinacao = pontovacinacao;
-                _context.PontoVacinacao.Remove(PontoVacinacao);
-                await _context.SaveChangesAsync();
-            }
-
-            return RedirectToPage("./Index");
         }
     }
 }

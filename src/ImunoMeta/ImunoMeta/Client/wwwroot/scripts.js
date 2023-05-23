@@ -12,7 +12,7 @@ window.loadGoogleMapsScript = function () {
             resolve();
         } else {
             const script = document.createElement("script");
-            script.src = "https://maps.googleapis.com/maps/api/js?key={chave}&libraries=places";
+            script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDmAW7wmqmdXGad7uTul6ziPdRaJVGnJxY&libraries=places";
             script.async = true;
             script.defer = true;
             script.onload = resolve;
@@ -42,7 +42,7 @@ function handleFecharModal() {
 window.initializeMap = function (latitude, longitude, locais) {
     const mapOptions = {
         center: { lat: latitude, lng: longitude },
-        zoom: 17
+        zoom: 14
     };
 
     const map = new google.maps.Map(document.getElementById("mapCanvas"), mapOptions);
@@ -64,6 +64,9 @@ window.initializeMap = function (latitude, longitude, locais) {
         title: 'Você'
     });
 
+    console.log("======== locais ===========")
+    console.log(locais);
+
     locais.forEach(local => {
         var marcador = new google.maps.Marker({
             position: { lat: local.latitude, lng: local.longitude },
@@ -84,7 +87,7 @@ window.initializeMap = function (latitude, longitude, locais) {
 
             titulo.innerHTML = local.nome
             img.removeAttribute("src")
-            img.setAttribute("src", `https://maps.googleapis.com/maps/api/staticmap?center=${local.latitude},${local.longitude}&zoom=12&size=300x300&markers=color:red|label:A|${local.latitude},${local.longitude}&key={chave}`)
+            img.setAttribute("src", `https://maps.googleapis.com/maps/api/staticmap?center=${local.latitude},${local.longitude}&zoom=12&size=300x300&markers=color:red|label:A|${local.latitude},${local.longitude}&key=AIzaSyDmAW7wmqmdXGad7uTul6ziPdRaJVGnJxY`)
             endereco.innerHTML = `${local.endereco}, ${local.cidade}, ${local.uf}`
 
 
