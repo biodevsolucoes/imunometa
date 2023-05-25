@@ -21,23 +21,6 @@ window.loadGoogleMapsScript = function () {
         }
     });
 }
-function handleTrocarModal() {
-    paginaInformacao.classList.add("d-none")
-    paginaConfirmacao.classList.remove("d-none")
-}
-
-function handleCompletarModal() {
-    paginaInformacao.classList.remove("d-none")
-    paginaConfirmacao.classList.add("d-none")
-    modal.classList.add("d-none")
-    alert("A disponibilidade de vacinas por inteligência coletiva não foi implementada a nível de protótipo.");
-}
-
-function handleFecharModal() {
-    paginaInformacao.classList.remove("d-none")
-    paginaConfirmacao.classList.add("d-none")
-    modal.classList.add("d-none")
-}
 
 window.initializeMap = function (latitude, longitude, locais) {
     const mapOptions = {
@@ -64,9 +47,6 @@ window.initializeMap = function (latitude, longitude, locais) {
         title: 'Você'
     });
 
-    console.log("======== locais ===========")
-    console.log(locais);
-
     locais.forEach(local => {
         var marcador = new google.maps.Marker({
             position: { lat: local.latitude, lng: local.longitude },
@@ -79,6 +59,7 @@ window.initializeMap = function (latitude, longitude, locais) {
             var modal = document.getElementById("modal");
             var paginaInformacao = document.getElementById("paginaInformacao");
             var paginaConfirmacao = document.getElementById("paginaConfirmacao");
+            var paginaAviso = document.getElementById("paginaAviso");
             var btnFechar = document.getElementsByClassName("modal-close");
 
             var titulo = document.getElementById("localTitulo");
@@ -87,11 +68,49 @@ window.initializeMap = function (latitude, longitude, locais) {
 
             titulo.innerHTML = local.nome
             img.removeAttribute("src")
-            img.setAttribute("src", `https://maps.googleapis.com/maps/api/staticmap?center=${local.latitude},${local.longitude}&zoom=12&size=300x300&markers=color:red|label:A|${local.latitude},${local.longitude}&key=AIzaSyDmAW7wmqmdXGad7uTul6ziPdRaJVGnJxY`)
+            img.setAttribute("src", `https://maps.googleapis.com/maps/api/staticmap?center=${local.latitude},${local.longitude}&zoom=12&size=600x600&scale=2&markers=color:red|label:A|${local.latitude},${local.longitude}&key=AIzaSyDmAW7wmqmdXGad7uTul6ziPdRaJVGnJxY`)
             endereco.innerHTML = `${local.endereco}, ${local.cidade}, ${local.uf}`
 
 
             modal.classList.remove("d-none");
         })
     })
+}
+
+//Funções
+function adicionarVacina() {
+    var container = document.querySelector('.vacina-container');
+    var divAtual = container.lastElementChild;
+    var novaDiv = divAtual.cloneNode(true);
+    novaDiv.lastChild.remove()
+
+    const btnRemover = document.createElement("button");
+    btnRemover.setAttribute("class", "btn btn-danger rounded-0  rounded-end");
+    btnRemover.setAttribute("type", "button");
+    btnRemover.innerHTML = '<i class="fa-solid fa-times" style="color: #ffffff;"></i>';
+
+    btnRemover.addEventListener("click", function () {
+        novaDiv.remove();
+    })
+    novaDiv.appendChild(btnRemover)
+
+    novaDiv.classList.add("mt-3")
+    container.appendChild(novaDiv);
+}
+function handleTrocarModal() {
+    paginaInformacao.classList.add("d-none")
+    paginaConfirmacao.classList.remove("d-none")
+    paginaAviso.classList.add("d-none")
+}
+
+function handleCompletarModal() {
+    paginaConfirmacao.classList.add("d-none")
+    paginaAviso.classList.remove("d-none")
+}
+
+function handleFecharModal() {
+    paginaInformacao.classList.remove("d-none")
+    paginaConfirmacao.classList.add("d-none")
+    modal.classList.add("d-none")
+    paginaAviso.classList.add("d-none")
 }

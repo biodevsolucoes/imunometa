@@ -3,38 +3,85 @@
 
 <div class="mb-3 border bg-white p-3">
     <div class="d-flex justify-content-between mb-3">
-        <div>
-            <h1>
-                <a href="/Locais" class="text-dark text-decoration-none">
-                    Locais de Vacinação
-                </a>
-            </h1>
-        </div>
         @if (ExibirBotaoVoltar)
         {
+            <div>
+                <h1>
+                    <a href="/Locais" class="text-dark text-decoration-none">
+                        Locais de Vacinação
+                    </a>
+                </h1>
+            </div>
             <button class="btn btn-outline-dark" onclick="history.back(-1)">
                 Voltar
             </button>
+        }
+        else
+        {
+            <div>
+                <h1>
+                    <a href="/Locais" class="text-dark text-decoration-none">
+                        Pontos de vacinação próximos de você.
+                    </a>
+                </h1>
+            </div>
         }
     </div>
     <div class="row">
         @if (ListaPontosVacinacao != null && ExibirBotaoVoltar)
         {
+            
             int zoom = 15;
-            foreach (var ponto in ListaPontosVacinacao)
+
+            <div class="d-flex">
+                <input @bind="termoPesquisa" class="form-control rounded-0 rounded-start" placeholder="Pesquise por endereço ou nome" type="text" />
+                <button @onclick="RealizarPesquisa" class="btn btn-outline-primary rounded-0 rounded-end">Pesquisar</button>
+            </div>
+
+            if (ListaPontosVacinacao.Any())
             {
-                <div class="col-4 py-3 border-bottom">
-                    <div class="">
-                        <img class="w-100" src="@($"https://maps.googleapis.com/maps/api/staticmap?center={ponto.Latitude},{ponto.Longitude}&zoom=12&size=400x400&markers=color:red|label:A|{ponto.Latitude},{ponto.Longitude}&key=AIzaSyDmAW7wmqmdXGad7uTul6ziPdRaJVGnJxY")" />
-                        <h4 class="py-3">
-                            @ponto.Nome
-                        </h4>
-                        <div class="d-none d-md-block">
-                            @($"{ponto.Endereco}")
-                            <br />
-                            @($"{ponto.Cidade} - {ponto.UF}")
+                foreach (var ponto in ListaPontosVacinacao)
+                {
+                    <div class="col-4 py-3 border-bottom">
+                        <div class="">
+                            <img class="w-100" src="@($"https://maps.googleapis.com/maps/api/staticmap?center={ponto.Latitude},{ponto.Longitude}&zoom=12&size=400x400&markers=color:red|label:A|{ponto.Latitude},{ponto.Longitude}&key=AIzaSyDmAW7wmqmdXGad7uTul6ziPdRaJVGnJxY")" />
+                            <h4 class="py-3">
+                                @ponto.Nome
+                            </h4>
+                            <div class="d-none d-md-block">
+                                @($"{ponto.Endereco}")
+                                <br />
+                                @($"{ponto.Cidade} - {ponto.UF}")
+                            </div>
+                            <div>
+                                <strong>Estrutura: </strong>
+                                @{
+                                    var random = new Random();
+                                    int numeroAleatorio = random.Next(1, 6);
+                                }
+                                @for (int i = 0; i < numeroAleatorio; i++)
+                                {
+                                    <span><i class="fa-solid fa-star" style="color: #e6b400;"></i></span>
+                                }
+                            </div>
+                            <div>
+                                <strong>Atendimento: </strong>
+                                @{
+                                    numeroAleatorio = random.Next(1, 6);
+                                }
+                                @for (int i = 0; i < numeroAleatorio; i++)
+                                {
+                                    <span><i class="fa-solid fa-star" style="color: #e6b400;"></i></span>
+                                }
+                            </div>
                         </div>
                     </div>
+                }
+            }
+            else
+            {
+                <div class="bg-warning mt-3 rounded d-flex">
+                    <span class="p-3"><strong>Nenhum local de vacinação encontrado.</strong></span>
                 </div>
             }
         }
@@ -42,10 +89,11 @@
         {
             <div style="height: 500px;" id="mapCanvas"></div>
             <div id="modal" class="modal d-none">
+                <div class="modal-overlay" onclick="handleFecharModal()"></div>
                 <div id="paginaInformacao" class="modal-content">
                     <span class="modal-close" onclick="handleFecharModal()"><i class="fa-solid fa-xmark"></i></span>
                     <span id="localTitulo" class="h4"></span>
-                    <img id="localImg" class="img-fluid border-1 rounded" />
+                    <img id="localImg" class="img-fluid border-1" />
                     <p id="localEndereco" class="h5 my-4"></p>
                     <p><strong>Vacinas disponíveis: </strong><span>CoronaVírus, febre amarela, Penta (DTP/Hib/Hep. B), Hepatite A, Tríplice viral, Tetraviral e BCG.</span></p>
                     <button onclick="handleTrocarModal()" class="btn btn-primary text-white" type="button">Confirmar lugar e vacinação.</button>
@@ -53,32 +101,73 @@
                 <div id="paginaConfirmacao" class="modal-content d-none">
                     <span class="modal-close" onclick="handleFecharModal()"><i class="fa-solid fa-xmark"></i></span>
                     <span class="h5">Dados do atendimento</span>
-                    <div class="d-flex justify-content-between">
+                    <div class="d-flex justify-content-between flex-wrap">
                         <div>
                             <label for="iptData">Data do seu atendimento</label>
                             <input id="iptData" class="form-control" type="date" placeholder="Data que foi atendido">
                         </div>
                         <div>
-                            <label for="ipthorario">Horario do seu atendimento</label>
+                            <label for="iptHorario">Horario do seu atendimento</label>
                             <input id="iptHorario" class="form-control" type="time" placeholder="Horário que foi atendido">
                         </div>
+                        <div>
+                            <label for="iptAvaliacaoAtendimento">Nota ao atendimento</label>
+                            <select name="Atendimento" id="iptAvaliacaoAtendimento" class="form-control">
+                                <option value="">Selecione uma Nota</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                                <option value="">5</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="iptAvaliacaoEstrutura">Nota a estrutura</label>
+                            <select name="Estrutura" id="iptAvaliacaoEstrutura" class="form-control">
+                                <option value="">Selecione uma Nota</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                                <option value="">5</option>
+                            </select>
+                        </div>
+                    </div
+                    <label for="iptVacina" class="mt-3">Vacina(s) aplicada(s)</label>
+                    <div class="vacina-container">
+                        <div class="d-flex">
+                            <select name="Vacina" id="iptVacina" class="form-control rounded-0 rounded-start">
+                                @if (ListaVacinas != null)
+                                {
+                                    <option value="">Selecione uma vacina</option>
+                                    @foreach (var vacina in ListaVacinas)
+                                    {
+                                        <option value="@vacina.Id">@vacina.Nome</option>
+                                    }
+                                }
+                                else
+                                {
+                                    <option value="">Selecione uma vacina</option>
+                                    <option value="">Hepatite A</option>
+                                    <option value="">DTP (tríplice bacteriana)</option>
+                                    <option value="">Meningocócica C (conjugada)</option>
+                                    <option value="">BCG</option>
+                                    <option value="">Febre amarela</option>
+                                }
+                            </select>
+                            <button type="button" class="btn btn-warning rounded-0 rounded-end" onclick="adicionarVacina()">
+                                <i class="fa-solid fa-plus" style="color: #ffffff;"></i>
+                            </button>
+                        </div>
                     </div>
-                    <label for="iptVacina" class="mt-3">Vacina aplicada</label>
-                    <select name="plataforma" class="form-control">
-                        @if (ListaVacinas != null)
-                        {
-                            <option value="">Selecione uma vacina</option>
-                            @foreach (var vacina in ListaVacinas)
-                            {
-                                <option value="@vacina.Id">@vacina.Nome</option>
-                            }
-                        }
-                        else
-                        {
-                            <option value="">Selecione uma vacina</option>
-                        }
-                    </select>
                     <button onclick="handleCompletarModal()" class="btn btn-primary text-white mt-3" type="button">Enviar</button>
+                </div>
+                <div id="paginaAviso" class="modal-content d-none">
+                    <span class="modal-close" onclick="handleFecharModal()"><i class="fa-solid fa-xmark"></i></span>
+                    <div class="alert alert-warning mt-3">
+                        <strong>A disponibilidade de vacinas por inteligência coletiva não foi implementada a nível de protótipo.</strong>
+                    </div>
+                    <button onclick="handleFecharModal()" class="btn btn-primary text-white mt-3" type="button">Concluir</button>
                 </div>
             </div>
         }
@@ -93,12 +182,26 @@
 
 @code {
 
+    private string termoPesquisa {get;set;}
+
+    private async void RealizarPesquisa()
+    {
+        ListaPontosVacinacao = await Http.GetFromJsonAsync<IEnumerable<PontoVacinacao>>($"/PontosVacinacao/Listar/{UF}/{Quantidade}");
+        ListaPontosVacinacao = ListaPontosVacinacao.Where(x => x.Nome.ToLower().Contains(termoPesquisa.ToLower()) || x.Endereco.ToLower().Contains(termoPesquisa.ToLower()));
+        StateHasChanged();
+    }
+
+
     protected override async Task OnInitializedAsync()
     {
         Http = ClientFactory.CreateClient("public");
         ListaPontosVacinacao = await Http.GetFromJsonAsync<IEnumerable<PontoVacinacao>>($"/PontosVacinacao/Listar/{UF}/{Quantidade}");
         ListaVacinas = await Http.GetFromJsonAsync<IEnumerable<Vacina>>("Vacinas/ObterLista");
-        await GetLocation();
+        if (!ExibirBotaoVoltar)
+        {
+            await InitializeMap();
+            GetLocation();   
+        }
     }
 
     //Google Maps API - Começa aqui
@@ -229,6 +332,7 @@
     [Parameter]
     public bool ExibirBotaoVoltar { get; set; } = false;
 
+    private Random NumeroAleatorio = new Random();
     private IEnumerable<PontoVacinacao>? ListaPontosVacinacao { get; set; } = null;
     private IEnumerable<Vacina>? ListaVacinas { get; set; } = null;
     private string UF { get; set; } = "DF";

@@ -6,19 +6,25 @@
         position: fixed;
         top: 0;
         left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
         display: flex;
         align-items: center;
         justify-content: center;
     }
 
+    .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
     .modal-content {
         background-color: #fff;
         padding: 20px;
-        max-width: 600px;
-        max-height: 500px;
+        max-width: 1200px;
+        max-height: 800px;
         overflow-y: auto;
     }
 
@@ -32,15 +38,21 @@
 
 <div class="mb-3 border bg-white p-3">
     <div class="d-flex justify-content-between mb-3">
-        <div>
+        <div class="d-flex justify-content-between w-100">
             <h1>
                 <a href="/Noticias" class="text-dark text-decoration-none">
                     Notícias
                 </a>
             </h1>
+        @if (!ExibirBotaoVoltar)
+        {
+            <a class="btn btn-danger text-white d-flex align-items-center" href="/Reportar">
+                    <i class="fa-sharp fa-solid fa-circle-exclamation p-2"></i><strong>Denunciar Fake-News</strong>
+            </a>
+        }
         </div>
         @if (ExibirBotaoVoltar)
-        {
+        {   
             <button class="btn btn-outline-dark" onclick="history.back(-1)">
                 Voltar
             </button>
@@ -62,6 +74,7 @@
                 </div>
             </div>
             <div class="modal @(MostrarModal == noticia.Id ? "d-flex" : "d-none")">
+                <div class="modal-overlay" @onclick="() => {MostrarModal = Guid.Empty; MostrarAlerta = false;}"></div>
                 <div class="modal-content">
                     @if (MostrarAlerta)
                     {
@@ -81,7 +94,7 @@
                             <a class="h1" @onclick="() => MostrarAlerta = true" style="cursor: pointer; color: #7289da;"><i class="fa-brands fa-telegram"></i></a>
                             <a class="h1" @onclick="() => MostrarAlerta = true" style="cursor: pointer; color: #0088cc;"><i class="fa-brands fa-discord"></i></a>
                         </div>
-                        <img src="@noticia.UrlImagemCapa" class="img-fluid border-1 rounded" title="@noticia.Titulo">
+                        <img src="@noticia.UrlImagemCapa" class="img-fluid border-1" title="@noticia.Titulo">
                     }
                 </div>
             </div>
@@ -90,13 +103,15 @@
     else
     {
         <div class="alert alert-info">
-            Nenhum notícia cadastrada.
+            Nenhuma notícia cadastrada.
         </div>
     }
 
 </div>
 
 @code {
+    private string termoPesquisa { get; set; }
+
     private List<Noticia> NoticiasRecentes = new List<Noticia>();
     public Guid MostrarModal;
     public bool MostrarAlerta = false;

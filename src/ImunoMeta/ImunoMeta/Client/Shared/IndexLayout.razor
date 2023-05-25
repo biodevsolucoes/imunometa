@@ -1,0 +1,31 @@
+﻿@inherits LayoutComponentBase
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary py-4">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="/"><img src="/imunometa.png" alt="ImunoMeta" height="50" /> ImunoMeta</a>
+        <button class="navbar-toggler" @onclick="ToggleNavMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse @NavMenuCssClass justify-content-end" id="navbarNavAltMarkup" @onclick="ToggleNavMenu">
+            <div class="navbar-nav">
+                <NavLink class="btn text-primary" style="background-color: #fff" href="/Home">
+                    Entrar
+                </NavLink>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    @Body
+</div>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}
