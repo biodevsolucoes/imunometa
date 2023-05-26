@@ -1,6 +1,8 @@
 ﻿@page "/"
-@layout IndexLayout
+@using Microsoft.AspNetCore.Authorization;
+@attribute [Authorize]
 
-<div class="d-flex justify-content-center align-items-center mt-5">
-    <img class="img-fluid w-50 h-50" src="HomeImg.jpg" />
-</div>
+<MinhasVacinas />
+<MeusPontos/>
+<PontosVacinacao />
+<ListarNoticias Quantidade="3"  />

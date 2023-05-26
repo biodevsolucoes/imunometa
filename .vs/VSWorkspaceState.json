@@ -9,6 +9,6 @@
     "\\src\\ImunoMeta\\ImunoMeta\\Client\\Shared",
     "\\src\\ImunoMeta\\ImunoMeta\\Server"
   ],
-  "SelectedNode": "\\src\\ImunoMeta\\ImunoMeta\\Client\\Shared\\ListarNoticias.razor",
+  "SelectedNode": "\\src\\ImunoMeta\\ImunoMeta\\Client\\Shared\\PontosVacinacao.razor",
   "PreviewInSolutionExplorer": false
 }

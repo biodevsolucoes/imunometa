@@ -42,37 +42,39 @@
             {
                 foreach (var ponto in ListaPontosVacinacao)
                 {
-                    <div class="col-4 py-3 border-bottom">
-                        <div class="">
-                            <img class="w-100" src="@($"https://maps.googleapis.com/maps/api/staticmap?center={ponto.Latitude},{ponto.Longitude}&zoom=12&size=400x400&markers=color:red|label:A|{ponto.Latitude},{ponto.Longitude}&key=AIzaSyDmAW7wmqmdXGad7uTul6ziPdRaJVGnJxY")" />
-                            <h4 class="py-3">
-                                @ponto.Nome
-                            </h4>
-                            <div class="d-none d-md-block">
-                                @($"{ponto.Endereco}")
-                                <br />
-                                @($"{ponto.Cidade} - {ponto.UF}")
-                            </div>
-                            <div>
-                                <strong>Estrutura: </strong>
-                                @{
-                                    var random = new Random();
-                                    int numeroAleatorio = random.Next(1, 6);
-                                }
-                                @for (int i = 0; i < numeroAleatorio; i++)
-                                {
-                                    <span><i class="fa-solid fa-star" style="color: #e6b400;"></i></span>
-                                }
-                            </div>
-                            <div>
-                                <strong>Atendimento: </strong>
-                                @{
-                                    numeroAleatorio = random.Next(1, 6);
-                                }
-                                @for (int i = 0; i < numeroAleatorio; i++)
-                                {
-                                    <span><i class="fa-solid fa-star" style="color: #e6b400;"></i></span>
-                                }
+                    <div class="border-bottom mt-3">
+                        <div class="d-flex flex-wrap">
+                            <img src="@($"https://maps.googleapis.com/maps/api/staticmap?center={ponto.Latitude},{ponto.Longitude}&zoom=12&size=250x250&markers=color:red|label:A|{ponto.Latitude},{ponto.Longitude}&key=AIzaSyDmAW7wmqmdXGad7uTul6ziPdRaJVGnJxY")" />
+                            <div class="px-2">
+                                <h4>
+                                    @ponto.Nome
+                                </h4>
+                                <div class="d-none d-md-block">
+                                    @($"{ponto.Endereco}")
+                                    <br />
+                                    @($"{ponto.Cidade} - {ponto.UF}")
+                                </div>
+                                <div>
+                                    <strong>Estrutura: </strong>
+                                    @{
+                                        var random = new Random();
+                                        int numeroAleatorio = random.Next(1, 6);
+                                    }
+                                    @for (int i = 0; i < numeroAleatorio; i++)
+                                    {
+                                        <span><i class="fa-solid fa-star" style="color: #e6b400;"></i></span>
+                                    }
+                                </div>
+                                <div>
+                                    <strong>Atendimento: </strong>
+                                    @{
+                                        numeroAleatorio = random.Next(1, 6);
+                                    }
+                                    @for (int i = 0; i < numeroAleatorio; i++)
+                                    {
+                                        <span><i class="fa-solid fa-star" style="color: #e6b400;"></i></span>
+                                    }
+                                </div>
                             </div>
                         </div>
                     </div>

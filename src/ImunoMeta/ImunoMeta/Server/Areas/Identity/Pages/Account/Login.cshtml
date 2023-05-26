@@ -1,52 +1,102 @@
-﻿@page
+﻿@page 
 @model LoginModel
 
 @{
     ViewData["Title"] = "Login";
 }
 
-<div class="d-flex justify-content-center ">
-    <div class="col-md-4 my-5 p-5 border bg-white rounded">
-        <section>
-            <form id="account" method="post">
-                <center>
-                    <img src="~/imunometa.png" width="150" />
-                    <img src="~/nome.png" width="150" />
-                </center>
-                <h3 class="my-3">@ViewData["Title"]</h3>
-                <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
-                <div class="form-floating mb-3">
-                    <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="nome@exemplo.com" />
-                    <label asp-for="Input.Email" class="form-label">Email</label>
-                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+<style>
+    @@media (max-width: 400px) {
+      /* Estilos para o elemento específico */
+    .img-span {
+        display: none;
+      }
+    }
+
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary py-4">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="/"><img src="/imunometa.png" alt="ImunoMeta" height="50" /> ImunoMeta</a>
+        <button class="navbar-toggler border-0">
+            <a class="btn text-primary" style="background-color: white;" href="#login">Entrar</a>
+        </button>
+        <div class="navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="d-flex justify-content-between flex-wrap">
+        <div class="my-5 mx-auto px-2 col-md-7">
+            <div class="d-flex row border border-2 border-dark">
+                <h1 class="text-center display-2" style="color: #4fbcec; font-weight: bold;">ImunoMeta</h1>
+                <h3 class="text-center display-4" style="color: #4fbcec; font-weight: bold;">Seu App de imunização</h3>
+                <span class="h3 text-center display-4">Aqui Você:</span>
+                <div class="d-flex align-items-center" style="background-color: #ebf6fc;">
+                    <img class="img-fluid img-span" src="~/FakeNews.png"/>
+                    <span class="h2">Se imuniza contra Fake News</span>
                 </div>
-                <div class="form-floating mb-3">
-                    <input asp-for="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" placeholder="senha" />
-                    <label asp-for="Input.Password" class="form-label">Password</label>
-                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                <div class="d-flex align-items-center">
+                    <img class="img-fluid img-span" src="~/Mapa.png" />
+                        <span class="h2">Descobre os locais de vacinação próximos</span>
                 </div>
-                <div class="checkbox mb-3">
-                    <label asp-for="Input.RememberMe" class="form-label">
-                        <input class="form-check-input" asp-for="Input.RememberMe" />
-                        @Html.DisplayNameFor(m => m.Input.RememberMe)
-                    </label>
+                <div class="d-flex align-items-center" style="background-color: #ebf6fc;">
+                    <img class="img-fluid img-span" src="~/Vacina.png" />
+                    <span class="h2">Verifica sua cobertura vacinal</span>
                 </div>
-                <div>
-                    <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">Login</button>
+                <div class="d-flex align-items-center">
+                    <img class="img-fluid img-span" src="~/Anunciar.png" />
+                    <span class="h2">Tem informações sobre imunização</span>
                 </div>
-                <div class="text-center">
-                    <p class="mt-3">
-                        <img src="~/gov.png" alt="Login com GOV" onclick="alert('Essa opção não está disponível no protótipo.')" />
-                    </p>
-                    <p>
-                        <a id="forgot-password" asp-page="./ForgotPassword">Esqueceu a senha?</a>
-                    </p>
-                    <p>
-                        <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Cadastre-se</a>
-                    </p>
+                <div class="d-flex align-items-center" style="background-color: #ebf6fc;">
+                    <img class="img-fluid img-span" src="~/Desconto.png" />
+                    <span class="h2">Transforma tudo isso em pontos para você</span>
                 </div>
-            </form>
-        </section>
+            </div>
+        </div>
+        <div class="my-5 col-md-4 mx-auto px-4 py-3 border bg-white rounded" id="login">
+            <section>
+                <form id="account" method="post">
+                    <center>
+                        <img src="~/imunometa.png" width="150" />
+                        <img src="~/nome.png" width="150" />
+                    </center>
+                    <h3 class="my-3">@ViewData["Title"]</h3>
+                    <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+                    <div class="form-floating mb-3">
+                        <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="nome@exemplo.com" />
+                        <label asp-for="Input.Email" class="form-label">Email</label>
+                        <span asp-validation-for="Input.Email" class="text-danger"></span>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input asp-for="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" placeholder="senha" />
+                        <label asp-for="Input.Password" class="form-label">Password</label>
+                        <span asp-validation-for="Input.Password" class="text-danger"></span>
+                    </div>
+                    <div class="checkbox mb-3">
+                        <label asp-for="Input.RememberMe" class="form-label">
+                            <input class="form-check-input" asp-for="Input.RememberMe" />
+                            @Html.DisplayNameFor(m => m.Input.RememberMe)
+                        </label>
+                    </div>
+                    <div>
+                        <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">Login</button>
+                    </div>
+                    <div class="text-center">
+                        <p class="mt-3">
+                            <img src="~/gov.png" class="img-fluid" alt="Login com GOV" onclick="alert('Essa opção não está disponível no protótipo.')" />
+                        </p>
+                        <p>
+                            <a id="forgot-password" asp-page="./ForgotPassword">Esqueceu a senha?</a>
+                        </p>
+                        <p>
+                            <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Cadastre-se</a>
+                        </p>
+                    </div>
+                </form>
+            </section>
+        </div>
     </div>
 </div>
 
