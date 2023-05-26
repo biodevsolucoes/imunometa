@@ -33,7 +33,7 @@
             
             int zoom = 15;
 
-            <div class="d-flex">
+            <div class="d-flex mb-3">
                 <input @bind="termoPesquisa" class="form-control rounded-0 rounded-start" placeholder="Pesquise por endereço ou nome" type="text" />
                 <button @onclick="RealizarPesquisa" class="btn btn-outline-primary rounded-0 rounded-end">Pesquisar</button>
             </div>
@@ -42,7 +42,7 @@
             {
                 foreach (var ponto in ListaPontosVacinacao)
                 {
-                    <div class="border-bottom mt-3">
+                    <div class="border-bottom py-3" onclick="alert('A avaliação das UBSs não foi implementada nessa versão.')">
                         <div class="d-flex flex-wrap">
                             <img src="@($"https://maps.googleapis.com/maps/api/staticmap?center={ponto.Latitude},{ponto.Longitude}&zoom=12&size=250x250&markers=color:red|label:A|{ponto.Latitude},{ponto.Longitude}&key=AIzaSyDmAW7wmqmdXGad7uTul6ziPdRaJVGnJxY")" />
                             <div class="px-2">

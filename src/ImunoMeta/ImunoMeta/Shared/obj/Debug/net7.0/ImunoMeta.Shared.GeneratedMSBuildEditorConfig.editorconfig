@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows,browser
 build_property.RootNamespace = ImunoMeta.Shared
-build_property.ProjectDir = C:\Users\mieva\Source\Repos\biodevsolucoes\imunometa\src\ImunoMeta\ImunoMeta\Shared\
+build_property.ProjectDir = D:\Projetos\biodev\imunometa\imunometa\src\ImunoMeta\ImunoMeta\Shared\
