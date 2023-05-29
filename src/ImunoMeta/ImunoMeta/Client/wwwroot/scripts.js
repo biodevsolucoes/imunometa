@@ -44,7 +44,7 @@ window.initializeMap = function (latitude, longitude, locais) {
         position: { lat: latitude, lng: longitude },
         map: map,
         icon: iconeUsuario,
-        title: 'Você'
+        title: 'VocÃª'
     });
 
     locais.forEach(local => {
@@ -77,7 +77,7 @@ window.initializeMap = function (latitude, longitude, locais) {
     })
 }
 
-//Funções
+//Funï¿½ï¿½es
 function adicionarVacina() {
     var container = document.querySelector('.vacina-container');
     var divAtual = container.lastElementChild;

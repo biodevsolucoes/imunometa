@@ -15,6 +15,10 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
+using static System.Net.WebRequestMethods;
+using ImunoMeta.Server.Interfaces;
+using ImunoMeta.Client.Shared;
+using Microsoft.EntityFrameworkCore;
 
 namespace ImunoMeta.Server.Areas.Identity.Pages.Account
 {
@@ -22,12 +26,19 @@ namespace ImunoMeta.Server.Areas.Identity.Pages.Account
     {
         private readonly SignInManager<Usuario> _signInManager;
         private readonly ILogger<LoginModel> _logger;
+        private readonly IRepository<Noticia> _noticiaRepository;
+        private readonly IRepository<PontoVacinacao> _pontosVacinacaoRepository;
 
-        public LoginModel(SignInManager<Usuario> signInManager, ILogger<LoginModel> logger)
+        public LoginModel(SignInManager<Usuario> signInManager, ILogger<LoginModel> logger, IRepository<Noticia> noticiaRepository, IRepository<PontoVacinacao> pontosVacinacaoRepository)
         {
             _signInManager = signInManager;
             _logger = logger;
+            _noticiaRepository = noticiaRepository;
+            _pontosVacinacaoRepository = pontosVacinacaoRepository;
         }
+
+        public IEnumerable<Noticia>? Noticias {get; set;}
+        public IEnumerable<PontoVacinacao>? ListaPontosVacinacao {get; set;}
 
         /// <summary>
         ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
@@ -100,6 +111,11 @@ namespace ImunoMeta.Server.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
 
             ReturnUrl = returnUrl;
+
+            Noticias = await _noticiaRepository.ObterLista(0, 3);
+            Noticias = Noticias.OrderByDescending(x => x.DataCadastro);
+
+            ListaPontosVacinacao = await _pontosVacinacaoRepository._tableAsNoTracking.Where(x => x.UF == "DF").ToListAsync();
         }
 
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)

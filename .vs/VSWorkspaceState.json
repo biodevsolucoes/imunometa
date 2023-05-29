@@ -6,9 +6,12 @@
     "\\src\\ImunoMeta\\ImunoMeta",
     "\\src\\ImunoMeta\\ImunoMeta\\Client",
     "\\src\\ImunoMeta\\ImunoMeta\\Client\\Pages",
-    "\\src\\ImunoMeta\\ImunoMeta\\Client\\Shared",
-    "\\src\\ImunoMeta\\ImunoMeta\\Server"
+    "\\src\\ImunoMeta\\ImunoMeta\\Server",
+    "\\src\\ImunoMeta\\ImunoMeta\\Server\\Areas",
+    "\\src\\ImunoMeta\\ImunoMeta\\Server\\Areas\\Identity",
+    "\\src\\ImunoMeta\\ImunoMeta\\Server\\Areas\\Identity\\Pages",
+    "\\src\\ImunoMeta\\ImunoMeta\\Server\\Areas\\Identity\\Pages\\Account"
   ],
-  "SelectedNode": "\\src\\ImunoMeta\\ImunoMeta\\Client\\Shared\\PontosVacinacao.razor",
+  "SelectedNode": "\\src\\ImunoMeta\\ImunoMeta\\Client\\Pages\\Pontos.razor",
   "PreviewInSolutionExplorer": false
 }
