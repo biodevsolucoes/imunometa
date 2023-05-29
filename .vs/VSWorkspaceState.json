@@ -12,6 +12,6 @@
     "\\src\\ImunoMeta\\ImunoMeta\\Server\\Areas\\Identity\\Pages",
     "\\src\\ImunoMeta\\ImunoMeta\\Server\\Areas\\Identity\\Pages\\Account"
   ],
-  "SelectedNode": "\\src\\ImunoMeta\\ImunoMeta\\Client\\Pages\\Pontos.razor",
+  "SelectedNode": "\\src\\ImunoMeta\\ImunoMeta\\Server\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
   "PreviewInSolutionExplorer": false
 }

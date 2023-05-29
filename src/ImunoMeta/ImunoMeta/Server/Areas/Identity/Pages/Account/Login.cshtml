@@ -92,34 +92,34 @@
 
 <div class="container">
     <div class="d-flex justify-content-between flex-wrap">
-        <div class="my-5 col-md-7 ps-3 banner-span">
+        <div class="my-5 col-md-5 ps-3 banner-span">
             <div class="d-flex row border rounded">
-                <h1 class="text-center display-2" style="color: #4fbcec; font-weight: bold;">ImunoMeta</h1>
+                <h1 class="text-center display-4" style="color: #4fbcec; font-weight: bold;">ImunoMeta</h1>
                 <h4 class="text-center display-6" style="color: #4fbcec; font-weight: bold;">Seu App de Imunização</h4>
-                <span class="h4 py-4 text-center">Aqui Você:</span>
+                <span class="h5 py-4 text-center">Aqui Você:</span>
                 <div class="d-flex align-items-center div-span" style="background-color: #ebf6fc;">
-                    <img class="img-fluid img-span" src="~/FakeNews.png" />
+                    <img class="img-fluid img-span col-md-4" src="~/FakeNews.png" />
                     <span class="h3 text-span">Se imuniza contra Fake News</span>
                 </div>
                 <div class="d-flex align-items-center div-span">
-                    <img class="img-fluid img-span" src="~/Mapa.png" />
+                    <img class="img-fluid img-span col-md-4" src="~/Mapa.png" />
                     <span class="h3 text-span">Descobre os locais de vacinação próximos</span>
                 </div>
                 <div class="d-flex align-items-center div-span" style="background-color: #ebf6fc;">
-                    <img class="img-fluid img-span" src="~/Vacina.png" />
+                    <img class="img-fluid img-span col-md-4" src="~/Vacina.png" />
                     <span class="h3 text-span">Verifica sua cobertura vacinal</span>
                 </div>
                 <div class="d-flex align-items-center div-span">
-                    <img class="img-fluid img-span" src="~/Anunciar.png" />
+                    <img class="img-fluid img-span col-md-4" src="~/Anunciar.png" />
                     <span class="h3 text-span">Tem informações sobre imunização</span>
                 </div>
                 <div class="d-flex align-items-center div-span" style="background-color: #ebf6fc;">
-                    <img class="img-fluid img-span" src="~/Desconto.png" />
+                    <img class="img-fluid img-span col-md-4" src="~/Desconto.png" />
                     <span class="h3 text-span">Transforma tudo isso em pontos para você</span>
                 </div>
             </div>
         </div>
-        <div class="my-5 col-md-4 px-4 py-3 border bg-white rounded" id="login">
+        <div class="my-5 col-md-5 px-4 py-3 border bg-white rounded" id="login">
             <section>
                 <form id="account" method="post">
                     <center>
@@ -169,19 +169,19 @@
     </div>
     <div class="d-flex mt-5">
         <div class="col-md-12 border border-1 rounded px-4">
-            <h3 class="mt-2 border-bottom border-1">Locais de vacinação próximos a você</h3>
+            <h3 class="mt-2 py-3">Locais de vacinação próximos a você</h3>
             <div style="height: 500px;" class="my-2 py-3" id="mapCanvas"></div>
         </div>
     </div>
     <div class="d-flex mt-5">
         <div class="col-md-12 border border-1 rounded px-4">
-            <h3 class="mt-2">Notícias</h3>
+            <h3 class="my-3">Notícias</h3>
             @if (Model.Noticias.Any())
             {
                 @foreach (var noticia in Model.Noticias)
                 {
-                    <div class="d-flex border-top border-1 noticia-span my-2 py-3">
-                        <img src="@noticia.UrlImagemCapa" class="col-12 mb-2 mb-sm-0 col-sm-4 mx-auto" />
+                    <div class="d-flex noticia-span my-3 py-3">
+                        <img src="@noticia.UrlImagemCapa" class="col-12 col-md-3 mb-2 mb-sm-0 col-sm-4 mx-auto" />
                         <div class="d-flex flex-column ms-3">
                             <h5>
                                 @noticia.Titulo
