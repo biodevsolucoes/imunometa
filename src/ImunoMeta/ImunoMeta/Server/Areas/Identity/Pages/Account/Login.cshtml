@@ -7,7 +7,7 @@
 
 <style>
     @@media (max-width: 400px) {
-        /* Estilos para o elemento específico */
+        /* Estilos para elementos especificos(responsividade) */
         .img-span {
             margin: auto;
         }
@@ -42,6 +42,40 @@
             padding-left: 0rem!important;
             padding-right: 0rem;
         }
+    }
+
+    /* Estilos para a modal */
+    .modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-content {
+        background-color: #fff;
+        padding: 20px;
+        max-width: 1200px;
+        max-height: 500px;
+        overflow-y: auto;
+    }
+
+    .modal-close {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        cursor: pointer;
     }
 </style>
 
@@ -129,29 +163,54 @@
         </div>
     </div>
     <div class="d-flex">
+        <div class="col-md-12 border border-1 rounded px-4 bg-primary py-4">
+            <h3 class="text-center  text-white">Faça o seu cadastro para poder aproveitar tudo que o ImunoMeta pode oferecer para você!</h3>
+        </div>
+    </div>
+    <div class="d-flex mt-5">
         <div class="col-md-12 border border-1 rounded px-4">
-            <h3 class="mt-2 border-bottom border-1 ">Locais de vacinação próximos a você</h3>
+            <h3 class="mt-2 border-bottom border-1">Locais de vacinação próximos a você</h3>
             <div style="height: 500px;" class="my-2 py-3" id="mapCanvas"></div>
         </div>
     </div>
     <div class="d-flex mt-5">
         <div class="col-md-12 border border-1 rounded px-4">
             <h3 class="mt-2">Notícias</h3>
-            @foreach (var noticia in Model.Noticias)
+            @if (Model.Noticias.Any())
             {
-                <div class="d-flex border-top border-1 noticia-span my-2 py-3">
-                    <img src="@noticia.UrlImagemCapa" class="col-12 mb-2 mb-sm-0 col-sm-4 mx-auto" />
-                    <div class="d-flex flex-column ms-3">
-                        <h5>
-                            @noticia.Titulo
-                        </h5>
-                        <span class="pb-4">
-                            @noticia.Resumo
-                        </span>
-                        <a href="#login" class="btn btn-primary text-white mt-2 align-self-end mt-auto">Saiba mais</a>
+                @foreach (var noticia in Model.Noticias)
+                {
+                    <div class="d-flex border-top border-1 noticia-span my-2 py-3">
+                        <img src="@noticia.UrlImagemCapa" class="col-12 mb-2 mb-sm-0 col-sm-4 mx-auto" />
+                        <div class="d-flex flex-column ms-3">
+                            <h5>
+                                @noticia.Titulo
+                            </h5>
+                            <span class="pb-4">
+                                @noticia.Resumo
+                            </span>
+                            <a href="#login" class="btn btn-primary text-white mt-2 align-self-end mt-auto">Saiba mais</a>
+                        </div>
                     </div>
-                </div>
+                }
             }
+            else
+            {
+                <li>
+                    Carregando...
+                </li>
+            }
+            <div id="modal" class="modal d-none">
+                <div class="modal-overlay" onclick="handleFecharModal()"></div>
+                <div id="informacao" class="modal-content">
+                    <span class="modal-close" onclick="handleFecharModal()">&#x274C;</span>
+                    <span id="localTitulo" class="h4"></span>
+                    <img id="localImg" class="img-fluid border-1" />
+                    <p id="localEndereco" class="h5 my-4"></p>
+                    <p><strong>Vacinas disponíveis: </strong><span>CoronaVírus, febre amarela, Penta (DTP/Hib/Hep. B), Hepatite A, Tríplice viral, Tetraviral e BCG.</span></p>
+                    <a onclick="handleFecharModal()" href="#login" class="btn btn-primary text-white" type="button">Entre em uma conta para avaliar o local</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -160,6 +219,10 @@
     <partial name="_ValidationScriptsPartial" />
 
     <script>
+        function handleFecharModal() {
+            modal.classList.add("d-none")
+        }
+
         function getCurrentPosition(callback) {
             navigator.geolocation.getCurrentPosition(function (position) {
                 callback(true, position.coords.latitude, position.coords.longitude);
@@ -215,6 +278,23 @@
                     map: map,
                     icon: iconeVacinacao,
                     title: local.nome
+                })
+
+                marcador.addListener('click', function () {
+                    var modal = document.getElementById("modal");
+                    var informacao = document.getElementById("informacao");
+
+                    var titulo = document.getElementById("localTitulo");
+                    var endereco = document.getElementById("localEndereco");
+                    var img = document.getElementById("localImg");
+
+                    titulo.innerHTML = local.Nome
+                    img.removeAttribute("src")
+                    img.setAttribute("src", `https://maps.googleapis.com/maps/api/staticmap?center=${local.Latitude},${local.Longitude}&zoom=12&size=600x600&scale=2&markers=color:red|label:A|${local.Latitude},${local.Longitude}&key=AIzaSyDmAW7wmqmdXGad7uTul6ziPdRaJVGnJxY`)
+                    endereco.innerHTML = `${local.Endereco}, ${local.Cidade}, ${local.Uf}`
+
+
+                    modal.classList.remove("d-none");
                 })
             })
         }
